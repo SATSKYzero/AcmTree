@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Almost Acyclic",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1001",
+    "ratio": "20.00% (5/25)",
+    "accepted": 5,
+    "submitted": 25,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Assignment",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1002",
+    "ratio": "15.98% (31/194)",
+    "accepted": 31,
+    "submitted": 194,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Many Topological Problems",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1003",
+    "ratio": "86.98% (628/722)",
+    "accepted": 628,
+    "submitted": 722,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Do You Like Interactive Problems?",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1004",
+    "ratio": "28.25% (472/1671)",
+    "accepted": 472,
+    "submitted": 1671,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Equivalence",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1005",
+    "ratio": "15.96% (64/401)",
+    "accepted": 64,
+    "submitted": 401,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Fences",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1006",
+    "ratio": "3.28% (9/274)",
+    "accepted": 9,
+    "submitted": 274,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Make 2",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1007",
+    "ratio": "40.43% (19/47)",
+    "accepted": 19,
+    "submitted": 47,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "XOR Subsequence",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1008",
+    "ratio": "24.97% (600/2403)",
+    "accepted": 600,
+    "submitted": 2403,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Far Away from Home",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1009",
+    "ratio": "18.63% (273/1465)",
+    "accepted": 273,
+    "submitted": 1465,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Border Queries",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1010",
+    "ratio": "17.65% (6/34)",
+    "accepted": 6,
+    "submitted": 34,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Werewolves",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1011",
+    "ratio": "10.12% (61/603)",
+    "accepted": 61,
+    "submitted": 603,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Equalize the Array",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1103&pid=1012",
+    "ratio": "46.51% (973/2092)",
+    "accepted": 973,
+    "submitted": 2092,
+    "solved": true
+  }
+]

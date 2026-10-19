@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "树异或价值",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1001",
+    "ratio": "28.67% (277/966)",
+    "accepted": 277,
+    "submitted": 966,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "树上询问",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1002",
+    "ratio": "27.45% (202/736)",
+    "accepted": 202,
+    "submitted": 736,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "黑洞合并",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1003",
+    "ratio": "49.02% (673/1373)",
+    "accepted": 673,
+    "submitted": 1373,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "亡语",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1004",
+    "ratio": "13.35% (61/457)",
+    "accepted": 61,
+    "submitted": 457,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "怪物猎人",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1005",
+    "ratio": "22.21% (793/3571)",
+    "accepted": 793,
+    "submitted": 3571,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "融合矿石",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1006",
+    "ratio": "37.03% (404/1091)",
+    "accepted": 404,
+    "submitted": 1091,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "小猫钓鱼",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1007",
+    "ratio": "50.69% (813/1604)",
+    "accepted": 813,
+    "submitted": 1604,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "最佳选手",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1008",
+    "ratio": "12.69% (17/134)",
+    "accepted": 17,
+    "submitted": 134,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "长期素食",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1009",
+    "ratio": "10.34% (73/706)",
+    "accepted": 73,
+    "submitted": 706,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "收集签名",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1010",
+    "ratio": "32.26% (50/155)",
+    "accepted": 50,
+    "submitted": 155,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "地牢谜题：更高还是更低",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1011",
+    "ratio": "45.95% (17/37)",
+    "accepted": 17,
+    "submitted": 37,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "地牢谜题：三个怪人",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1132&pid=1012",
+    "ratio": "10.14% (7/69)",
+    "accepted": 7,
+    "submitted": 69,
+    "solved": false
+  }
+]

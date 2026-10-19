@@ -1,0 +1,132 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Submission",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1001",
+    "ratio": "14.49% (41/283)",
+    "accepted": 41,
+    "submitted": 283,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Multiple and Factor",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1002",
+    "ratio": "18.93% (1012/5347)",
+    "accepted": 1012,
+    "submitted": 5347,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Matrix Equation",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1003",
+    "ratio": "6.48% (19/293)",
+    "accepted": 19,
+    "submitted": 293,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Stocks Trading",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1004",
+    "ratio": "11.81% (73/618)",
+    "accepted": 73,
+    "submitted": 618,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Range Convex Checker",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1005",
+    "ratio": "15.87% (20/126)",
+    "accepted": 20,
+    "submitted": 126,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Oden VS Genshin Impact",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1006",
+    "ratio": "3.03% (1/33)",
+    "accepted": 1,
+    "submitted": 33,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Message Spreading",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1007",
+    "ratio": "13.86% (97/700)",
+    "accepted": 97,
+    "submitted": 700,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Repeater",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1008",
+    "ratio": "18.24% (27/148)",
+    "accepted": 27,
+    "submitted": 148,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "PalindromemordnilaP",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1009",
+    "ratio": "6.22% (15/241)",
+    "accepted": 15,
+    "submitted": 241,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Cut Check Bit",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1010",
+    "ratio": "17.17% (203/1182)",
+    "accepted": 203,
+    "submitted": 1182,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Worst Problem Of All Time",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1011",
+    "ratio": "18.62% (27/145)",
+    "accepted": 27,
+    "submitted": 145,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Counting Colorful Sequence",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1012",
+    "ratio": "41.86% (108/258)",
+    "accepted": 108,
+    "submitted": 258,
+    "solved": false
+  },
+  {
+    "problem_id": "1013",
+    "problem_id2": "M",
+    "title": "Spring River Flower Moon Night",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1181&pid=1013",
+    "ratio": "69.23% (945/1365)",
+    "accepted": 945,
+    "submitted": 1365,
+    "solved": true
+  }
+]

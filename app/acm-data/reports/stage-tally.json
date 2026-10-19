@@ -1,0 +1,229 @@
+{
+ "class": {
+  "order": [
+   "provincial",
+   "shallow",
+   "series-stop",
+   "stage"
+  ],
+  "rules": {
+   "provincial": {
+    "by": {
+     "xcpc:name-provincial": 157
+    },
+    "total": 157
+   },
+   "series-stop": {
+    "by": {},
+    "total": 0
+   },
+   "shallow": {
+    "by": {
+     "xcpc:shallow": 157
+    },
+    "total": 157
+   },
+   "stage": {
+    "by": {
+     "ccpc:name-stage": 86,
+     "xcpc:name-stage": 116,
+     "xcpc:unclassified": 5
+    },
+    "total": 207
+   }
+  },
+  "seen": 364,
+  "title": "nature 初步分类 + 分类细化（省赛 & 邀请赛）",
+  "why": {
+   "provincial": "赛名里有省/市/邀请字样（或省赛别名）⇒ 类型 + 主办两段进分类；只对 EC 赛区",
+   "series-stop": "非 EC 渠道的 icpc ⇒ 停在赛系那一段（结构说的，不是判不出）",
+   "shallow": "清单的赛系认不出 ⇒ 停在 `xcpc`（合法前缀，不是没依据）",
+   "stage": "阶段由赛名判出；判不出就记 `xcpc:unclassified`（同一次计算，依据分两档）"
+  }
+ },
+ "region.gym": {
+  "order": [
+   "region-core"
+  ],
+  "rules": {
+   "region-core": {
+    "by": {
+     "gym:region-city": 102,
+     "gym:region-foreign": 12,
+     "gym:region-none": 15,
+     "gym:region-province": 114,
+     "gym:region-tbd": 19
+    },
+    "total": 262
+   }
+  },
+  "seen": 262,
+  "title": "地区（gym）",
+  "why": {
+   "region-core": "判据全在 `region_of_contest`（网络赛 / 总决赛那几类 / 中外地名）"
+  }
+ },
+ "region.qoj": {
+  "order": [
+   "region-ucup",
+   "region-core",
+   "region-path"
+  ],
+  "rules": {
+   "region-core": {
+    "by": {
+     "qoj:region-city": 152,
+     "qoj:region-foreign": 47,
+     "qoj:region-none": 12,
+     "qoj:region-province": 71,
+     "qoj:region-tbd": 34
+    },
+    "total": 316
+   },
+   "region-path": {
+    "by": {
+     "qoj:path-city": 107,
+     "qoj:path-province": 64,
+     "qoj:region-foreign": 47
+    },
+    "total": 218
+   },
+   "region-ucup": {
+    "by": {
+     "qoj:region-ucup": 121
+    },
+    "total": 121
+   }
+  },
+  "seen": 358,
+  "title": "地区（QOJ）",
+  "why": {
+   "region-core": "判据全在 `region_of_contest`（网络赛 / 总决赛那几类 / 中外地名）",
+   "region-path": "退到 QOJ 自己的分类路径读地名；英文地名 ⇒ `不需要`",
+   "region-ucup": "UC 系列（含拿不到变体名的镜像）⇒ `待填写`：这一维由人不定期地填"
+  }
+ },
+ "region.xcpc": {
+  "order": [
+   "region-core"
+  ],
+  "rules": {
+   "region-core": {
+    "by": {
+     "xcpc:region-city": 153,
+     "xcpc:region-none": 23,
+     "xcpc:region-province": 136,
+     "xcpc:region-tbd": 52
+    },
+    "total": 364
+   }
+  },
+  "seen": 364,
+  "title": "地区（XCPC）",
+  "why": {
+   "region-core": "判据全在 `region_of_contest`（网络赛 / 总决赛那几类 / 中外地名）"
+  }
+ },
+ "season.gym": {
+  "order": [
+   "season-name",
+   "season-time"
+  ],
+  "rules": {
+   "season-name": {
+    "by": {
+     "gym:season-name": 200
+    },
+    "total": 200
+   },
+   "season-time": {
+    "by": {
+     "gym:season-time": 191
+    },
+    "total": 191
+   }
+  },
+  "seen": 262,
+  "title": "赛季年份（gym）",
+  "why": {
+   "season-name": "赛名里的 20xx —— C 明确字面词",
+   "season-time": "退到开赛时间里的 20xx —— A 权威（gym 侧的次选）"
+  }
+ },
+ "season.xcpc": {
+  "order": [
+   "season-key",
+   "season-name"
+  ],
+  "rules": {
+   "season-key": {
+    "by": {
+     "nk:season-key": 2,
+     "pta:season-key": 14,
+     "rankland:season-key": 225,
+     "srk:season-key": 2,
+     "xcpcio:season-key": 118
+    },
+    "total": 361
+   },
+   "season-name": {
+    "by": {
+     "nk:season-name": 2,
+     "pta:season-name": 7,
+     "rankland:season-name": 94,
+     "srk:season-name": 2,
+     "xcpcio:season-name": 41
+    },
+    "total": 146
+   }
+  },
+  "seen": 364,
+  "title": "赛季年份（XCPC）",
+  "why": {
+   "season-key": "清单 `mid` 里的赛季（`season` 或层 id 里的 20xx）—— B 结构",
+   "season-name": "赛名里的 20xx —— C 明确字面词"
+  }
+ },
+ "year.gym": {
+  "order": [
+   "year-fallback"
+  ],
+  "rules": {
+   "year-fallback": {
+    "by": {
+     "gym:year-name": 44,
+     "gym:year-time": 191
+    },
+    "total": 235
+   }
+  },
+  "seen": 262,
+  "title": "举办年份（gym）",
+  "why": {
+   "year-fallback": "开赛时间优先、退到赛名；总决赛没时间 ⇒ `待同步`（gym 侧）"
+  }
+ },
+ "year.xcpc": {
+  "order": [
+   "year-time"
+  ],
+  "rules": {
+   "year-time": {
+    "by": {
+     "nk:year-time": 2,
+     "pta:year-time": 14,
+     "rankland:year-tbd": 73,
+     "rankland:year-time": 154,
+     "srk:year-time": 2,
+     "xcpcio:year-time": 119
+    },
+    "total": 364
+   }
+  },
+  "seen": 364,
+  "title": "举办年份（XCPC）",
+  "why": {
+   "year-time": "开赛时间里的 20xx；没有就写 `待同步`（值在别处、还没同步过来）"
+  }
+ }
+}

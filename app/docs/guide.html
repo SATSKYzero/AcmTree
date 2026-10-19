@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acm_Tree 指南</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: #f1f5f9;
+            padding: 32px 24px;
+            color: #1e293b;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 32px 40px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0f172a;
+            border-bottom: 2px solid #eef2f6;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 24px 0 8px 0;
+            padding-top: 8px;
+            border-top: 1px solid #eef2f6;
+        }
+        h2:first-of-type { border-top: none; padding-top: 0; }
+        h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 16px 0 6px 0;
+        }
+        p { font-size: 14px; line-height: 1.7; color: #334155; margin: 6px 0; }
+        ul, ol { padding-left: 20px; margin: 6px 0 10px 0; }
+        li { font-size: 14px; line-height: 1.8; color: #334155; }
+        li strong { color: #0f172a; }
+        .badge {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 0 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+        }
+        .kbd {
+            display: inline-block;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-bottom-width: 2px;
+            border-radius: 4px;
+            padding: 0 6px;
+            font-size: 13px;
+            font-family: Consolas, monospace;
+            color: #0f172a;
+        }
+        .note {
+            background: #f8fafc;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #475569;
+        }
+        .note strong { color: #0f172a; }
+        .note.warn { border-left-color: #f59e0b; }
+        .note.new { border-left-color: #16a34a; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0 16px 0;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .status-0 { background: #ffffff; }
+        .status-1 { background: #fef9c3; }
+        .status-2 { background: #fed7aa; }
+        .status-3 { background: #d1fae5; }
+        .status-4 { background: #00db00; }
+        .status-5 { background: #e5e7eb; }
+        .status-3-color { color: #00db00; }
+        .status-4-color { color: #00db00; }
+        .toc { background: #f8fafc; border-radius: 8px; padding: 12px 20px; margin-bottom: 8px; }
+        .toc ol { margin: 0; }
+        .toc li { font-size: 13px; line-height: 1.9; }
+        @media (max-width:600px) {
+            body { padding: 16px; }
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            table { font-size: 13px; }
+            th, td { padding: 4px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📖 Acm_Tree 使用指南</h1>
+        <p style="margin:-4px 0 12px;color:#64748b;font-size:13px;">
+            正文按模块排（§一~§二十一），<strong>急着找东西就看下面那张「按任务找」表</strong>。
+            <br><span style="color:#94a3b8;font-size:12px;">
+            文中出现的具体条数（多少节点、多少条建议）取自随包那份数据；你的数据重建一次就会变，
+            它们是"当时量出来的"参考值，不是刻度。</span>
+        </p>
+
+        <div class="toc">
+            <ol>
+                <li><a href="#s1">快速上手：从零到一棵树</a></li>
+                <li><a href="#s2">节点类型与层级</a></li>
+                <li><a href="#s3">合成节点与判重整理</a></li>
+                <li><a href="#s4">性质归类（分类 / 年份 / 赛季 / 地区）</a></li>
+                <li><a href="#s5">状态值说明</a></li>
+                <li><a href="#s6">添加、编辑、删除</a></li>
+                <li><a href="#s7">两种显示模式</a></li>
+                <li><a href="#s8">两种编辑模式</a></li>
+                <li><a href="#s9">副页与题单</a></li>
+                <li><a href="#s10">批量操作</a></li>
+                <li><a href="#s11">统计与图表</a></li>
+                <li><a href="#s12">检索与定位</a></li>
+                <li><a href="#s13">保存、导出与导入</a></li>
+                <li><a href="#s14">数据安全</a></li>
+                <li><a href="#s15">快捷键</a></li>
+                <li><a href="#s16">树结构约束</a></li>
+                <li><a href="#s17">常见问题</a></li>
+                <li><a href="#s18">账户（这份数据是谁的）</a></li>
+                <li><a href="#s18b">设置页（⚙️）</a></li>
+                <li><a href="#s18c">体检 / 需求（🩺）</a></li>
+                <li><a href="#s19">数据是怎么存的（大白话）</a></li>
+                <li><a href="#s20">看着不对时，按这个顺序查</a></li>
+                <li><a href="#s21">名词小词典</a></li>
+            </ol>
+        </div>
+
+        <!-- ==========================================================
+             按任务找：正文还是按模块排的（§一~§二十一），
+             这一张表把"我要做那件事"直接接到该去的那一节。
+             改正文时不用动这张表（除非某件事换了节）。
+             ========================================================== -->
+        <div class="note new">
+            <strong>🔎 按任务找（不想按模块翻的话，从这里进）：</strong>
+            <table style="margin-top:8px;">
+                <thead><tr><th>我要……</th><th>去哪一节</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>装起来、把数据导进来</strong></td>
+                        <td><a href="#s1">一、快速上手</a> → <a href="#s13">十三、保存、导出与导入</a>
+                            （五种导入入口 + 「🛠 重建总包并导入」都在那儿）</td></tr>
+                    <tr><td><strong>看懂树上每个格子的意思</strong></td>
+                        <td><a href="#s2">二、节点类型与层级</a> → <a href="#s5">五、状态值说明</a> →
+                            <a href="#s16">十六、树结构约束</a>（派生字段怎么算的那张表）</td></tr>
+                    <tr><td><strong>改题、补题、记题解</strong></td>
+                        <td><a href="#s6">六、添加、编辑、删除</a> → <a href="#s8">八、两种编辑模式</a> →
+                            <a href="#s10">十、批量操作</a></td></tr>
+                    <tr><td><strong>判重 / 合并同题的多个来源</strong></td>
+                        <td><a href="#s3">三、合成节点与判重整理</a>（五栏、⑤ 冲突、P 层题目绑定都在那儿）
+                            → <a href="#s11">十一、统计与图表</a>（合并显示 / 计数模式）</td></tr>
+                    <tr><td><strong>补性质（分类/年份/赛季/地区）并对账</strong></td>
+                        <td><a href="#s4">四、性质归类</a> → <a href="#s3">三、判重页 ③ 性质待补</a> →
+                            <a href="#s18c">十八·补二、体检 / 需求</a></td></tr>
+                    <tr><td><strong>看统计、对账、找薄弱专题</strong></td>
+                        <td><a href="#s11">十一、统计与图表</a> → <a href="#s18c">体检 / 需求</a></td></tr>
+                    <tr><td><strong>做题单、查一个值的出处</strong></td>
+                        <td><a href="#s9">九、副页与题单</a> → <a href="#s12">十二、检索与定位</a> →
+                            <a href="#s19">十九、三层来源</a>（"这个值凭什么"）</td></tr>
+                    <tr><td><strong>这份数据是谁的 / 只读是怎么回事</strong></td>
+                        <td><a href="#s18">十八、账户（这份数据是谁的）</a></td></tr>
+                    <tr><td><strong>出问题了（界面不对 / 丢字段 / 没保存）</strong></td>
+                        <td><a href="#s17">十七、常见问题</a> → <a href="#s20">二十、按这个顺序查</a> →
+                            <a href="#s21">二十一、名词小词典</a></td></tr>
+                    <tr><td><strong>定训练目标、看完成情况</strong></td>
+                        <td><a href="#s22">二十二、训练计划</a>（题单用<a href="#s9">第九节</a>的副页）</td></tr>
+                    <tr><td><strong>备份 / 怕丢数据</strong></td>
+                        <td><a href="#s14">十四、数据安全</a> → <a href="#s13">十三、导出</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s1">一、快速上手：从零到一棵树</h2>
+        <p>这个工具用一棵树记录你的训练：<strong>平台 → 系列 → 比赛 → 题目 → 提交记录</strong>。
+        最少只要三步就能开始用：</p>
+        <ol>
+            <li>点右上方 <span class="badge">➕ 添加根节点</span>，选类型、填名字，建立入口。</li>
+            <li>在节点上点 <span class="badge">➕</span> 逐层添加子节点（如：平台 → 系列 → 比赛）。</li>
+            <li>到<strong>比赛</strong>节点后，用 <span class="badge">📥 批量导入题目</span> 一次性把整场比赛的题录进去，
+                比一个个手加快得多。</li>
+        </ol>
+        <div class="note">
+            <strong>🧭 界面分三层：</strong>最上面那条（<strong>Acm_Tree 标题 + 指南 / 宽度 / 导入 / 导出 / 清空 / 折叠全部 / 账户</strong>）
+            是<strong>全局栏</strong> —— 切到「数据统计」「判重整理」「设置」「体检」它也一直在；
+            往下是<strong>一级页签</strong>（主视图 / 数据统计 / 检索 / 节点自动导入 …）；
+            再往下、只在「主视图」里的是<strong>副页栏</strong>（主页 / 你的题单 / ＋ 新建副页）。
+        </div>
+        <div class="note">
+            <strong>💡 建议的层级用法：</strong><br>
+            <strong>平台（W）</strong>＝ Codeforces / 牛客 / 洛谷；<br>
+            <strong>系列（S）</strong>＝ Div2 / 省赛 / 某个训练专题（可嵌套，用来分组）；<br>
+            <strong>比赛（C）</strong>＝ 具体一场比赛（Round 900）；<br>
+            <strong>题目（P）</strong>＝ 比赛里的一道题；<strong>提交记录（R）</strong>＝ 这道题的每次提交。
+        </div>
+        <div class="note warn">
+            <strong>⚠️ 数据只存在这台电脑的浏览器里。</strong>换个浏览器、清了浏览器数据就没了。
+            请养成导出备份的习惯（见<a href="#s13">第十三节</a>），或依赖「定时导出」。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s2">二、节点类型与层级</h2>
+        <table>
+            <thead><tr><th>类型</th><th>含义</th><th>典型用途</th></tr></thead>
+            <tbody>
+                <tr><td class="badge">O</td><td>超级根</td><td>整棵树的根，只有一个</td></tr>
+                <tr><td class="badge">W</td><td>平台</td><td>Codeforces、牛客、洛谷</td></tr>
+                <tr><td class="badge">S</td><td>系列</td><td>Div2、省赛、某训练专题；可嵌套用来分组</td></tr>
+                <tr><td class="badge">C</td><td>比赛</td><td>某一场具体比赛</td></tr>
+                <tr><td class="badge">P</td><td>题目</td><td>比赛里的一道题</td></tr>
+                <tr><td class="badge">R</td><td>提交记录</td><td>某道题的每一次提交</td></tr>
+            </tbody>
+        </table>
+        <p>允许的父子关系见<a href="#s16">第十六节</a>。添加子节点时，界面只会列出当前允许的类型，不需要记。</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s3">三、合成节点与判重整理</h2>
+        <p>同一场比赛，往往从几个渠道各来一份（榜单一份、索引仓库一份）。它们的题号、题名多半对得上，
+        于是树上出现多份「看着像同一场」的节点。<strong>合成节点</strong>就是给这种情况准备的一个「组头」——
+        它不合并、不搬动任何数据，只是让几份原料<strong>承认自己属于同一组</strong>。</p>
+
+        <h3>两类真节点：原料 与 合成节点</h3>
+        <table>
+            <thead><tr><th></th><th>怎么认</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr><td><strong>原料</strong></td><td>节点有 <code>extKey</code>（外部身份键）</td>
+                    <td>真正装着数据的那一份，可以填「所属合成节点」</td></tr>
+                <tr><td><strong>合成节点</strong></td><td>节点有<strong>合成标识</strong>（界面显示 <span class="badge">🧩</span>）</td>
+                    <td>没有 <code>extKey</code>；<strong>不能</strong>再填「所属合成节点」（名单不能嵌套）</td></tr>
+            </tbody>
+        </table>
+        <p><strong>合成标识</strong>是它唯一的身份：一次手填、或由应用自动生成 <code>synth:1</code>、<code>synth:2</code>…
+        （保留前缀 <code>synth:</code>，你自己填的标识不许用它开头）。</p>
+
+        <h3>成员关系是「指针」，不是父子</h3>
+        <p>原料上的<strong>「所属合成节点」</strong>（字段键 <code>ownerSynth</code>）写着某个合成标识，
+        它就归入了那一组。就这么一条规则。</p>
+        <ul>
+            <li><strong>不是父子、不嵌套、没有环</strong>：归入不会让成员换个位置，节点还在它原来的地方；</li>
+            <li>树上该怎么展开还怎么展开 —— 归入<strong>不给</strong>成员任何「祖先」资格；</li>
+            <li>删掉合成节点<strong>不会带走成员</strong>，只是把指向它的指针清空（同一个事务里做完）；</li>
+            <li><strong>同类型才合</strong>：C 跟 C、P 跟 P、R 跟 R；<strong>W/S/O 不参与合成</strong>（开关是禁用的）。</li>
+        </ul>
+        <div class="note">
+            <strong>💡 页面怎么写，跟分组没关系：</strong>判定「谁和谁一组」只看指针一种凭据，
+            页面上的推荐只是提示。<b>清空指针 = 解绑</b>。
+        </div>
+
+        <h3>怎么建、怎么归入</h3>
+        <ol>
+            <li><strong>手建</strong>：走新建子节点流程，选完类型后界面多问一句
+                <span class="badge">标记为合成节点</span>（勾上再填名称与合成标识；标识留空就自动生成）。
+                合成节点挂在哪，仍受第十六节的类型约束。</li>
+            <li><strong>判重整理页</strong>（<span class="badge">🧩 判重整理</span>）：在推荐那一行直接点
+                <span class="badge">归入</span>（归到一个已有的合成节点）或
+                <span class="badge">新建合成节点并归入</span>（顺手建一个再挂上）。</li>
+            <li><strong>编辑面板也能改</strong>：节点字段里有一栏「所属合成节点」。
+                但那里要你亲手写<strong>合成标识</strong>；写错（树上没有这个标识、写成节点 id）会被直接拒绝、弹错。
+                日常归入/解绑请在判重页做。</li>
+            <li><strong>导入包也可以带合成节点与指针</strong>，但有两条硬规矩：
+                <ul>
+                    <li>包<strong>不得覆盖</strong>树上已经存在（非空）的「所属合成节点」——这类改动会被拒绝，
+                        并在预览里单独列一行告诉你有几条没写；</li>
+                    <li>目标合成标识不存在（悬空指针）、或写的是节点 id ⇒ 写路径直接拒绝：预览里报出来，
+                        树上一个字节都不落。想改请到判重整理页手动归入。</li>
+                </ul>
+                预览里能看到四项：「新建/更新合成节点」「设置成员指针」「被拒绝的指针改动」「悬空/非法指针」。
+            </li>
+        </ol>
+
+        <h3>P 层的题目绑定（P 随 C）—— 同一道题在多个来源各有一条时</h3>
+        <p><strong>C 层</strong>（上面那些）解决的是"同一场比赛在多个来源各有一条"；
+        <strong>P 层</strong>解决的是"同一道题在多个来源各有一条"（典型：CF 同轮 Div1/Div2 的复用题、
+        QOJ 与 CF 各建了一条）。做法是<strong>以比赛组为单位、按题号把 P 绑成一组</strong>
+        （链子里的 <code>problem-bind</code> 那一步，键 <code>synth:problem:&lt;场次标识&gt;-&lt;题号&gt;</code>），
+        生成的 P 合成节点<strong>挂在那一个 C 合成节点下</strong>。</p>
+        <ul>
+            <li><strong>只看题号判</strong>：题目名字只当显示名，不当判据；</li>
+            <li><strong>整组没有题名也能绑</strong>：组名用兜底名「题号（题名缺失）」；</li>
+            <li>⚠️ <strong>三种异常只报不动</strong>，等人处理：<strong>题号对不上</strong>（按题名也配不上）、
+                <strong>题名冲突</strong>（同一来源多出一条）、<strong>整组无题名</strong>。
+                它们出现在判重页的 <a href="#s3">⑤ 冲突</a> 那一栏；</li>
+            <li><strong>人怎么处理</strong>（两条路，都在应用里）：① 把那条 P 的
+                <strong>「所属合成节点」</strong>改成规范题号那一组（会写进
+                <code>ownerBindings</code>、随「📤 导出人工填写」回代）；② 在
+                <code>acm-data/synth-registry.json</code> 的 <code>problemIdMap</code> 里写一行
+                "某来源在某场次里的题号换算"（⑤ 栏会给出建议行，认就抄）。</li>
+        </ul>
+
+        <h3>判重整理页（🧩）：怎么读、怎么用</h3>
+        <p>页面分<strong>五栏</strong>（二级 tab，一次只显示一栏；栏名上带条数，哪一栏有活一眼可见）：
+            <strong>① 合成节点（N）</strong>、<strong>② 可能重复（建议）</strong>、
+            <strong>③ 性质待补</strong>、<strong>④ 概览</strong>、<strong>⑤ 冲突</strong>。
+            选好的筛选范围 / 关键词在切栏时<strong>不会被清掉</strong>（切栏只是换一块看）。
+            <strong>⑤ 是只读的</strong>：同一来源多出一条、题号错位这类异常，它<strong>只报不动</strong>，
+            改不改由你（按它给的行去改 <code>problemIdMap</code> 或改节点的「所属合成节点」）。</p>
+        <ul>
+            <li><strong>① 那块是「核对模式」</strong>：只把<strong>已经绑好的组</strong>列出来供你抽查、改名、改标识、解绑、删组，
+                <strong>不产生任何建议</strong>。</li>
+            <li><strong>② 那块才是建议</strong>，每条都写明<strong>依据</strong>。默认<strong>只出「机器能判定」的等价信号</strong>：
+                <ul>
+                    <li>双方题号（<code>problemId</code>）都非空且相同；</li>
+                    <li>归一化标题完全相同。</li>
+                </ul>
+            </li>
+            <li><strong>跨性质不建议</strong>：分类 / 年份 / 赛季 / 地区对不上的一对，直接不出建议
+                （判定口径 = 只比<strong>两边都非空</strong>的那几维；一方没标就不拿它否决）。</li>
+            <li><strong>相似度建议默认关着</strong>，要显式点 <span class="badge">开启相似度建议（噪声大）</span>；
+                开了之后页面会常驻一条黄字警示：那些<strong>只是名字像，不是同一个东西</strong>，仅供人工扫一眼。</li>
+        </ul>
+        <h4 style="font-size:14px;font-weight:600;color:#1e293b;margin:14px 0 4px 0;">筛选范围：把候选缩到「能手工处理」的规模</h4>
+        <ul>
+            <li><strong>范围</strong>三档：<strong>整棵树</strong> / <strong>某个子树（选一个节点）</strong> / <strong>单场比赛（一个 C 容器）</strong>
+                （选「单场比赛」时旁边多一个按名字/标识过滤的「场次筛选」输入框）。</li>
+            <li>再叠<strong>性质四维</strong>（从当前数据里收集，不穷举词表）、<strong>类型</strong>、
+                <strong>关键词</strong>（题名/题号包含）、<strong>归入状态</strong>（默认「只看未归入」）。</li>
+            <li>右上角永远写着 <strong>命中 N 条建议 · 当前范围</strong>（含范围里有多少个节点），
+                条件一变就重算重画；旁边有 <span class="badge">清空条件</span>。</li>
+            <li><strong>为什么「缩到单场比赛后通常只剩个位数」：</strong>整棵树上出的建议里，绝大多数是
+                同一套标题模板的噪声（<code>(I)</code> vs <code>(II)</code> 这种），缩到一场比赛之后
+                每场通常只剩个位数条 —— 所以<strong>「先缩小范围，再动手」是这一页的正确用法</strong>；
+                性质归类的用处是给出<strong>可靠的分区</strong>，不是替你消掉噪声。
+                （这套结论的来源与实测数据见 <code>field-rules.md</code> 与
+                <code>auto-import.md</code> 的相似度那一节。）</li>
+            <li>建议只是<strong>提示</strong>：不点「归入 / 新建合成节点并归入」，一个字节都不会写。</li>
+        </ul>
+        <p><strong>③ 性质待补那一栏自己有一条「分类」chip 行</strong>（<code>全部（N）</code> +
+        每个第一段一个 <code>xcpc（410）</code> 这样的 chip，外加一个 <code>没标分类（N）</code>）：
+        真实数据里待补项上千条、横跨好几支，所以先按<strong>分类的第一段</strong>缩到一支，
+        列表里的组头（<code>分类 · 年份</code>）才真的成组。</p>
+        <p><strong>入选门槛：比赛（<code>C</code>）必须有分类</strong> —— 连分类都没标的比赛
+        也会列在这里，行尾写「缺：<strong>分类</strong>、年份、地区」，填充条上有
+        <strong>「分类」下拉</strong>（Trie 里所有合法路径）可以就地补
+        （题 P / 提交 R / 容器 W·S 不背比赛级的性质，它们没有分类<strong>不算缺</strong>）。</p>
+        <p>③ 里有两行容易看混，这里分清：<strong>「筛选」那一行有四个字段
+        （分类 / 年份 / 赛季 / 地区，与 nature 四字段一一对应）</strong>，选了就真的缩列表；
+        取值从当前列表收集，每一项都带「（没标…）」与「（有标…）」—— 后者是前者的补集
+        （<code>无</code> / <code>待同步</code> 这些"不是年份但有值"的也算有标），
+        两边合起来就是全部；右边写 <code>筛后 N / M 条</code>
+        （最左边那个「分类」与上面那排 chip 是<strong>同一份状态</strong>，chip 只是"按第一段"的快捷方式；
+        下拉还能选<strong>更深的路径</strong>，选 <code>cf/contest/div2</code> 就只看它）。
+        <strong>「✍️ 批量填入」那一行才是要写入的值</strong>（每个字段都能「不改动」，
+        不改动就<strong>什么都不写</strong>），勾好条目 → 填值 → 点一次「填入选中的 N 条」，
+        同一批在一个事务里写完。</p>
+        <h3>核对与填表：链接、跳转、年份推荐</h3>
+        <ul>
+            <li><strong>每一条都能点开</strong>：①②③ 里每个节点的名字都是链接，点它 = <strong>跳到树上那个节点</strong>
+                （切页 / 展开祖先 / 滚动 / 高亮，与「🔍 题目检索」同一条路）；名字后面还有
+                <code>🔗 链接 (N)</code>，展开就是这一行的<strong>源站链接</strong>（按类别分组，与节点信息面板里那块完全一样）。
+                外链一律<strong>不带 Referer</strong>（有些源站按 Referer 防盗链，从本地页面点过去会回 403）。</li>
+            <li><strong>每行左边就是四个 nature 小标签</strong>（<code>分类:…</code> / <code>年份:…</code> /
+                <code>赛季:…</code> / <code>地区:…</code>，没标的显示 <code>—</code>）——<strong>点一下就能改</strong>：
+                弹出与「编辑节点」里同一套控件（分类是 Trie 下拉，年份/赛季带候选提示），改完走同一个事务。</li>
+            <li><strong>年份/赛季会推荐，但只推荐</strong>：③ 每行行尾可能出现 <code>✍️ A·年份 2024</code> /
+                <code>✍️ B·赛季 2023</code> —— <strong>点它才写进去</strong>；
+                按钮上那个字母就是<strong>依据强度</strong>（鼠标停着会解释）。两个字段<strong>各推各的</strong>：
+                「年份（举办）」只认<strong>本节点的开赛时间</strong>（拿不到时退到<strong>同一届的另一个来源</strong>填过的值，
+                再退到<strong>赛季反推</strong>，<code>why</code> 里会写明"可能差一年"）；「赛季」取<strong>标识 → 名字 → 父容器</strong>。
+                鼠标停在按钮上会看到"依据是什么"，请顺手核一下。
+                <strong>没有依据的条目连按钮都不画</strong> —— 不猜；<code>无</code> / <code>待同步</code> / <code>不确定</code>
+                这些值也<strong>永远不会被推荐</strong>。</li>
+            <li>勾选若干条 → 填充条上的 <code>✍️ 按推荐填年份/赛季</code>：每条填<strong>它自己</strong>那些推荐值，
+                一次事务写完；推不出来的那几条不动，提示里会如实说"还有 M 条没有依据"。</li>
+            <li><strong>地区暂时不推荐</strong>：现在库里还没有一个真实地名（脚本对线上赛填「无」，
+                XCPC 与 <code>cf gym</code> 留空等人工 —— gym 里很多其实是线下站），
+                没有可学的样本 ⇒ 这一维老老实实手填。
+                <br><strong>⚠️ 这一维基本由管线自动填</strong>（重导一次包就带上）：
+                <strong>统一成中文城市 / 省名</strong>（<code>Nanjing</code> → 南京、<code>澳門</code> → 澳门），
+                <strong>网络赛写 <code>无</code></strong>（没有场地），
+                <strong>Universal Cup 各站、EC-Final / CCPC Final、女生·高职专场写 <code>待填写</code></strong>
+                （这一维暂时由人填，但<strong>算填过了</strong> —— 不会挂在 ③ 等人补，想填时按值筛出来填），
+                <strong>本身是英文写法的国外地名/赛区名写 <code>不需要</code></strong>，
+                读不出就<strong>留空</strong>（不猜）。
+                填的时候候选里有 <code>无</code> / <code>待填写</code> / <code>不需要</code> / <code>不知道</code>
+                四个值可以直接点（脚本判不了那格时会写第五个 <code>上游异常</code>，见下）。
+                ⚠️ 四个值的分工：<code>无</code> = 没有场地；<code>待填写</code> = 暂时由人填（但算填过）；
+                <code>不需要</code> = 这一维对这类比赛不值得记；<code>不知道</code> = 人工填的（管线不产出）。</li>
+            <li><strong>顺便看"已经填好"的那些</strong>：勾上 <code>同时显示已填满的节点</code>，
+                它们会<strong>接在所有待补项之后</strong>（名字是绿色、没有勾选框、<strong>不计入条数</strong>），
+                上面那三个筛选对它们同样生效 —— 用来回答"我这一族填成什么样了"。</li>
+            <li><strong>分类那一格的级别徽标回不来了？</strong>你已经改过的会标成 <code>M</code>
+                （<strong>人工</strong>：这个值是你定的，比任何规则都硬）；只有<strong>老数据</strong>（那时还没有
+                <code>分类依据</code> 这一列）才没有徽标 —— 鼠标停在没徽标的那一格上会写明这一点。
+                "这条值是谁填的"始终能在<strong>来源面板</strong>里看到（手填的出处是 <code>manual</code>）。
+                ⚠️ 点「✍️ 按推荐填」也算<strong>你接受了那个值</strong> ⇒ 一样标 <code>M</code>。</li>
+            <li><strong>回代：把"我定的那些"带回给爬虫</strong>（本页 ③ 那一行的
+                <code>📤 导出人工填写</code>）：导出的只有<strong>人定过的</strong> nature（含你更早手填、
+                那时还没有标记的那些），直接写进磁盘上的注册表文件；之后每次产包都会把它带进包里 ——
+                规则以后再怎么改也<strong>漂不掉</strong>你的结论，换台机器导这份包也一样。
+                （它会先比一比，比磁盘上那份少了节点就拒绝并问你；机制细节见
+                <code>field-rules.md</code> §10。）</li>
+        </ul>
+        <p style="font-size:13px;color:#6b7280;">同组的 P/C 在<strong>统计</strong>里的合并显示要另外开：
+        设置面板里把<strong>计数模式</strong>从「不去重（默认）」改成「去重（以组为单位）」，
+        同一个组在范围内只算一次（判重页底部也写了这一句）。</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s4">四、性质归类（分类 / 年份 / 赛季 / 地区）</h2>
+        <p><strong>四个</strong><strong>可选</strong>字段，用来回答「这条记录是什么性质的题/比赛」。
+        它们不参与任何计算，只做两件事：<strong>判重页的分区</strong>与<strong>筛选</strong>。
+        <strong>没标就是没标</strong>，空着不代表填错。</p>
+
+        <h3>分类的第一段 = 平台 / 赛系（⭐ 不是数据渠道）</h3>
+        <table>
+            <thead><tr><th>第一段</th><th>界面显示</th><th>它是什么</th></tr></thead>
+            <tbody>
+                <tr><td><code>xcpc</code></td><td>XCPC</td><td>赛系（ICPC / CCPC / 省赛 / 邀请赛这一家）</td></tr>
+                <tr><td><code>cf</code></td><td>CF</td><td>Codeforces</td></tr>
+                <tr><td><code>atcoder</code></td><td>AtCoder</td><td>AtCoder（只认这一个写法）</td></tr>
+                <tr><td><code>qoj</code> / <code>hdu</code> / <code>nk</code> / <code>pta</code></td>
+                    <td>QOJ / 杭电 / 牛客 / PTA</td><td>各自办赛的 OJ 平台</td></tr>
+            </tbody>
+        </table>
+        <div class="note warn">
+            <strong>⚠️ 收集源 / 榜单不是性质。</strong> <code>xcpcio</code>（榜单渲染站）、<code>rankland</code>（索引仓库）、
+            <code>srk</code>（那批 repo）是<strong>数据从哪儿来</strong>，不是「这场比赛是哪家的」——
+            它们<strong>不会出现在分类里</strong>，Trie 里根本没有。
+            「这条数据是谁说的」看来源层与链接类别，那是另一回事。
+            判不出归属的场次，分类<strong>停在浅处或留空</strong>，不编占位值。
+        </div>
+
+        <h3>分类（不定层路径 + Trie）</h3>
+        <div class="note">
+            <strong>📌 这一节后面几条是"分类判定的实现口径"</strong>（各渠道怎么判、优先级怎么排、规则 id 是什么意思）。
+            只想用应用的话，<strong>看上面「什么是合法值 / 什么叫填好了 / 灰蓝无色」就够</strong>；
+            这些细节在界面上以 tooltip 出现，想深究再往下读。
+        </div>
+        <p><strong>不再有「大类 / 小类」两级</strong>，换成<strong>一个「分类」字段</strong> ——
+        值是一条<strong>不定层的路径</strong>（写进节点是 <code>/</code> 连起来的字符串），例如
+        <code>xcpc/icpc/ec/pre/official</code>（网络赛）、<code>xcpc/icpc/ec/regional/official</code>、
+        <code>xcpc/ccpc/final/official</code>、<code>cf/contest/div2</code>、<code>atcoder/arc</code>、
+        <code>nk/多校</code>。</p>
+        <ul>
+            <li><strong>合法性 = 注册表里的一棵小 Trie</strong>（<code>acm-data/nature-registry.json</code> 的
+                <code>classTrie</code>，与 <code>年份</code>/<code>地区</code> 正交）。</li>
+            <li><strong>任何前缀都合法</strong> ⇒「停在哪一层」本身就是信息：
+                <code>cf</code> = 知道是 CF、还没细分；<code>cf/contest/div2</code> = 已经细到 Div 2。
+                所以<strong>判得细就写细，判不细就停在浅处</strong>，不用编一个假值。</li>
+            <li><strong>但"填好了没有"只认叶子</strong>：<code>cf</code>、<code>xcpc/icpc</code> 这类停在中间的
+                值<strong>照样算「缺分类」</strong>（继续挂在③ 性质待补里，行尾会写「缺：分类（分类还停在 …，没到叶子）」）；
+                <code>cf/contest/div2</code>、<code>xcpc/icpc/ec/regional/official</code>、<code>qoj/无归类</code>
+                这些<strong>叶子</strong>才算填好。
+                填充条与编辑弹窗的「分类」下拉里，没到叶子的路径都标着「（还没到叶子）」。</li>
+            <li><strong>现在判到哪一层</strong>：XCPC 一侧
+                <code>xcpc/icpc/&lt;赛区 ec·eu·jp&gt;/&lt;阶段&gt;/&lt;正式 or 热身&gt;</code>、
+                <code>xcpc/ccpc/&lt;阶段&gt;/&lt;正式 or 热身&gt;</code>，
+                阶段 = <code>pre</code>（网络赛 / Online）→ <code>final</code>（总决赛）→
+                <code>regional</code>（区域赛，也认「区域」两个字）→ <code>无归类</code>，顺序就是优先级；
+                CCPC 那一侧还多两条（优先级最高）：<code>female</code>（女生）、<code>vocational</code>（高职）；
+                名字里含「中国大学生程序设计竞赛」且不含「总决赛」的，也算 <code>regional</code>；
+                省赛 / 邀请赛 进 <code>xcpc/provincial&amp;invitational/&lt;正式 or 热身&gt;</code>。
+                <br><strong>末层 = <code>official</code>（正式赛）/ <code>warm-up</code>（热身赛）</strong>
+                （xcpc 的各分支还要细分 official / warm-up）：赛名里写着
+                <code>warm up</code> / <code>warming up</code> / <code>热身</code> 的进 <code>warm-up</code>，
+                其余一律 <code>official</code>。<strong>只有 <code>无归类</code> 不带这一层</strong>
+                （它没有"正式 / 热身"之分）。
+                <br>QOJ 一侧把 xcpc 那一套<strong>镜像到自己下面</strong>：
+                <strong>看那场在 QOJ 上的所有分类路径</strong>（一场常挂好几个分类），
+                有一条过 icpc/ccpc 就算，并按路径里的<strong>赛区缩写</strong>落到那一段 ——
+                <code>aa</code> / <code>ec</code> / <code>ap</code> / <code>aw</code> / <code>eu</code> /
+                <code>la</code> / <code>na</code> / <code>ne</code>（ICPC 官方 8 个赛区，
+                见 <code>qoj.ac/category/17</code>）：例如 <code>qoj/xcpc/icpc/ec/regional/official</code>、
+                <code>qoj/xcpc/icpc/eu/regional/official</code>。
+                路径里是缩写表外的赛区 ⇒ <strong>停在 <code>qoj/xcpc/icpc</code></strong>
+                （合法值，会挂在③ 等人补 Trie）；所有路径都不过 icpc/ccpc ⇒ 仍是 <code>qoj/无归类</code>。</li>
+            <li><strong>⚠️ 如果看到新分类被标成「（还没到叶子）」/蓝色</strong>：那是浏览器缓存了<strong>旧的注册表</strong>
+                （应用拿旧 Trie 判"到没到叶子"），<strong>硬刷新一次</strong>（Ctrl+F5）就好 ——
+                注册表现在是 <code>cache: no-store</code> 每次现取（<code>core/natureFields.js</code>），
+                以后换注册表不会再出现这种情况。</li>
+            <li><strong>「年份」填的是<u>举办年份</u>，「赛季」填的是<u>赛季年份</u>（两个字段）</strong>：
+                EC-Final / CCPC Final 常在次年办（2023 赛季的 EC-Final 在 2024 年 1 月举行），
+                两个概念必须分开存。<strong>除那两种"总决赛"，其余比赛可以认为两者相同</strong>，
+                所以脚本在拿不到开赛时间时会用赛季年顶 —— <strong>只有那两种总决赛例外</strong>：
+                它们的举办时间落在「赛季年 9 月 ~ 次年 8 月」，<u>不唯一</u>，硬填就可能差一年，
+                所以脚本给它们写 <strong><code>待同步</code></strong>（= 判过了、值在别处还没同步过来），
+                而不是空着 —— 空着会永远挂在③ 里等人填一个只能靠别的来源才知道的值。
+                真要取值时，判重页会用「<strong>同一届的另一个来源填过什么</strong>」给你推荐
+                （同一场在别的来源树上常有真实日期，比如 QOJ 那场的 XCPC 镜像），点一下就填上。
+                <br>⚠️ <strong>QOJ 的年份另有两条口径</strong>：非总决赛的举办年
+                <strong>直接 = 赛季年</strong>（QOJ 记的那些日期常是<u>镜像/重跑时间</u>：2022 的场次会被记成 2026）；
+                总决赛拿不到日期时写 <code>待同步</code>。
+                <br><strong>「赛季」除了 <code>20xx</code> 还会是 <code>无</code></strong>：
+                只有<strong>没有赛季概念</strong>的那些才这么写 —— CF 的<strong>正式轮次</strong>（<code>/contests</code> 那张表里的）、
+                AtCoder 的 ABC/ARC/AGC。写 <code>无</code> = 「不适用」（与地区的 <code>无</code> 同一个意思，不是"没填"）。
+                <strong>⚠️ <code>cf gym</code> 不写 <code>无</code></strong>（原因：
+                "单说 cf 有仅 cf contest 的含义" —— gym 不是 cf contest）⇒ <strong>gym 的赛季 = 举办年份</strong>；
+                牛客 / 杭电的<strong>多校</strong>同理（有赛季概念 ⇒ 赛季 = 举办年份）。
+                <br><strong>年份与赛季都可以写 <code>无</code> / <code>待同步</code> / <code>不确定</code></strong>（<code>无</code> = 这一维不适用；后两个是为了"以后有用"）：前者 = 值在别处还没同步过来，后者 = 看过了但拿不准。
+                它们<strong>算「填过了」</strong>（不会挂在③ 待补里），但<strong>推荐绝不会给它们</strong>
+                （推荐 = "我有证据说是 20xx"）。填空的框里有候选提示（原生 datalist，只提示、不禁手输）。
+                判重页行尾的推荐按钮也是各推各的：「✍️ 年份 20xx」只认开赛时间、
+                「✍️ 赛季 20xx」认标识/名字/容器，一键按钮把两个一起填。
+            <li><strong>★ 依据强度（A…E）</strong>：这不是"正确率"，是<strong>"这个值凭什么"</strong>。
+                <code>A 权威</code>（官方分类表 / 官方开赛时间）＞ <code>B 结构</code>（清单与注册表 / 标识 slug /
+                同一届的另一个来源）＞ <code>C 明确字面词</code>（赛名里的区域赛、总决赛、省份…）＞
+                <code>D 推断</code>（城市→赛区、省份词→EC、用赛季反推）＞ <code>E 无依据</code>。
+                填充条上那个「<strong>依据≥</strong>」下拉就是<strong>按推荐填的门槛</strong>：
+                选了 <code>A</code> 就只有"官方开赛时间"这类会写进去，<code>D</code>（默认）等于收下今天全部的依据。
+                ⚠️ 级别<strong>只控制"批量按推荐填"</strong>，不影响每行那个单独的 ✍️（那是你点名要写的），
+                也<strong>绝不按级别回删</strong>已有值（库里大量分类本来就是 C/D 级得来的）。
+                <br><strong>分类那一格也会带级别</strong>（<code>分类:xcpc / icpc · A</code>，鼠标停着会写清"是哪条规则判的"，
+                比如 <code>qoj:path-icpc</code> = QOJ 自己的分类路径、<code>gym:infer-region</code> = 靠城市/大区词推赛区）——
+                那是<strong>爬虫写进包里</strong>的（每条判据一个稳定 id，记的是<strong>最弱的那一环</strong>，
+                因为值的可信度由最弱证据决定）。③ 的「<strong>依据</strong>」筛选就是按它挑活儿：
+                <code>≤ C</code>（"只看 C 以下"）= 把<strong>靠赛名/城市推出来的那些</strong>挑出来复核。
+                ⚠️ <strong>人填的 / 老数据没有级别</strong>（<code>分类依据</code> 那一列是空的）⇒
+                不画徽标、也<strong>不进任何一档"≤ X"</strong>：那不是"依据弱"，是"没有依据这回事"；
+                <strong>你手改了分类，旧依据会被清掉</strong>（值换了、依据没跟上就是撒谎）。</li>
+            <li>判重页每行那几个小标签<strong>按状态上色（四态）</strong>：<strong>绿</strong> = 填好了
+                （分类到叶子；年份/地区有值就算）、<strong>蓝</strong> = 有值但<strong>没到叶子</strong>
+                （还得往下补一层）、<strong>灰</strong> = <strong>确定不用</strong>（特殊的"已填"，见下条）、
+                <strong>无色</strong> = 还没判。</li>
+            <li><strong>灰 ≠ 空</strong>：<strong>空（无色）= 还没标</strong>，会一直挂在 ③ 性质待补里；
+                灰的那几个值都是<strong>判定结果</strong> —— 从待补里消失，而且判冲突时<strong>当作"没有主张"</strong>。
+                灰值有三个，别混：
+                <ul>
+                    <li><code>无归类</code>（分类维）= <strong>判过了、这一支里没有它可归的一项</strong>
+                        （比如 CF 这场比赛既不在 rated 全分类里、也没有 team / april / kotlin 的标记）；</li>
+                    <li><code>未归类</code>（分类维）= <strong>脚本判不出、等人补</strong> ⇒
+                        <strong>算没填好</strong>：照旧挂在 ③ 里、也会被「（分类不完全）」筛出来
+                        （只在省赛那一支的类型失配时由脚本写，是唯一一处）；</li>
+                    <li><code>上游异常</code>（四个维都能用）= <strong>上游本身坏了</strong>
+                        （抓不到那一页 / 403…）⇒ 这一格<strong>判不了</strong>，灰、算填过。</li>
+                </ul></li>
+            <li><strong>CF 那一支按 CF 自己的 <code>filterTypes</code> 字段严格分类</strong>（不看赛名、也不管是否真的 rated）：
+                正式轮次全在 <strong><code>cf/contest/</code></strong> 下（cf/div1 等（除了 gyms）
+                改为 cf/contest/div1）—— rated 的全分类 = <code>div1</code>~<code>div4</code> / <code>div1+2</code> / <code>edu</code>；
+                不在其中 ⇒ 先套 <code>others</code>，再按 <code>team</code> &gt; <code>april</code> &gt; <code>kotlin</code>
+                取第一个命中，都没有就 <code>cf/contest/others/无归类</code>。CF gym 上那些镜像/练习场是<strong>另一支
+                <code>cf/gyms</code></strong>（刻意<strong>不在</strong> <code>cf/contest</code> 下 —— gym 不是 cf contest，
+                而且它根本不在 <code>filterTypes</code> 表里，"表里查不到"不等于"归不了"）。
+                <br><strong>gym 自己再细分一层</strong>（按这个方案）：gym 的赛名基本就是原比赛的名字，
+                所以那棵子树<strong>整棵照抄 xcpc</strong>：<code>cf/gyms/xcpc/icpc/ec/regional/official</code>、
+                <code>cf/gyms/xcpc/ccpc/final/official</code>、
+                <code>cf/gyms/xcpc/provincial&amp;invitational/official</code>，
+                外加 <code>cf/gyms/ucup</code>（只有 Universal Cup 身份的）与 <code>cf/gyms/无归类</code>。
+                ⚠️ <strong>优先级 = 省赛/邀请赛 → CCPC → ICPC → UC → 无归类</strong>：又含 CCPC 又含省赛/邀请赛的，
+                一律按「<strong>只是与 CCPC 有关系的省赛/邀请赛</strong>」算。
+                <br><strong>UC Stage 特殊处理</strong>：标题写着 <code>Universal Cup</code> 的场次，<strong>主节点就是 <code>qoj/ucup</code></strong>（那场自己的名字就是 UC 的一站）；若它的分类路径再过 icpc/ccpc（或落省赛），那份 xcpc 读法会<strong>另出一个 <code>qoj:c:&lt;id&gt;:xcpc</code> 节点</strong>（挂在对应的 icpc/省赛容器下，只照抄题单、不抄提交）——同一个 <code>natureClass</code> 装不下两种身份，之后在判重页把它们绑到一起即可。纯 UC 的只出一个节点。
+                ⚠️ 但<strong>「省赛/邀请赛」那一档只对 EC（中国）生效</strong> —— 省、市、邀请赛本来就是中国的概念，
+                套到别的大区上就是错的（比如波兰的 <code>Polish Collegiate Programming Contest</code> 是他们的全国赛，
+                不是我们的"省赛"）。判 EC = 赛名里写着 <code>China</code>/<code>Chinese</code>/<code>中国</code>/<code>CCPC</code>，
+                或读出赛区 <code>ec</code>，或出现中国省名/大区词（<code>Zhejiang</code>、<code>东北</code>…）；
+                <strong>判不出就当不是 EC</strong>，落回赛区那一支。这条在 xcpc / qoj / gym 三处共用。</li>
+            <li>筛选<strong>按前缀</strong>：选 <code>cf</code> 命中 <code>cf/contest/div2</code>、
+                <code>cf/contest/others/无归类</code> 等全部后代；选到 <code>cf/contest/div2</code> 就只看它。</li>
+            <li><strong>加一层 = 改注册表文件那一行</strong>（<code>classTrie</code> 里加一段），不用动代码。</li>
+        </ul>
+
+        <h3>年份与地区</h3>
+        <ul>
+            <li><strong>年份只认 <code>20xx</code> 四位</strong>（<code>2026</code> 对；<code>26</code>、<code>2026年</code>、
+                <code>1999</code> 都不对）；此外还允许 <code>无</code>（这一维<strong>不适用</strong>，如 <code>qoj/ucup</code>）、
+                <code>待同步</code> / <code>不确定</code>、<code>上游异常</code>（上游坏了、这一格判不了 —— 见上文"四态"那条）。
+                它<strong>不会替你补全或猜测</strong>：写 <code>26</code> 就永远是 <code>26</code>，
+                代价是「先缩到同一年」这条最有效的筛选会筛不到一起。</li>
+            <li><strong>地区是自由文本</strong>（成都 / Asia East / 澳門 都行）。刻意<strong>不穷举</strong>一份地区表 —— 写法在源头就不统一，穷举必然过期。
+                约定：<strong>判得出"线上赛、没有场地"的才写 <code>无</code></strong>（CF 的正式轮次 / AtCoder / 牛客 / 杭电，由脚本自动填）；
+                <strong>拿不准就留空</strong> —— XCPC 那类<strong>有真实场地</strong>的、<code>cf gym</code>（很多是线下站）
+                与 <strong>QOJ</strong>（上面挂着大量线下场次）脚本都<strong>留空</strong>，它们会留在③ 性质待补里等人补。</li>
+        </ul>
+
+        <h3>哪些是脚本自动填的，哪些要人补</h3>
+        <table>
+            <thead><tr><th>字段</th><th>现状</th></tr></thead>
+            <tbody>
+                <tr><td><strong>分类</strong></td><td><strong>脚本会填，而且是唯一被明确要求先填好的</strong>：
+                    每个适配器都在自己那一侧写下路径（<code>xcpc</code> / <code>cf/…</code> / <code>atcoder/abc</code> /
+                    <code>qoj/无归类</code> / <code>hdu/多校</code> / <code>nk/多校</code>）；
+                    <strong>判定得到多细就写多细，判不细就停在浅处</strong>（停在 <code>xcpc</code> 完全合法）；
+                    XCPC 这一侧是<strong>每一场 C 都写</strong>，包括三个收集源那几棵树。
+                    ⚠️ 归属判得出但归不进某一项的，写 <code>无归类</code>（≠ 留空）</td></tr>
+                <tr><td><strong>（更深的层）</strong></td><td>脚本<strong>已经判到叶子</strong>：XCPC 是
+                    <code>xcpc/&lt;赛系&gt;/&lt;阶段&gt;/&lt;official·warm-up&gt;</code>（如
+                    <code>xcpc/icpc/ec/pre/official</code>、<code>xcpc/ccpc/final/warm-up</code>）、
+                    CF 是 <code>cf/contest/div2</code> 这类。判不细的<strong>停在浅处</strong>（合法值，
+                    但会挂在③ 等人补——"没到叶子"）；想加一层就改注册表 <code>classTrie</code>，不用动代码</td></tr>
+                <tr><td><strong>年份</strong></td><td><strong>能取就取</strong>：XCPC 取开赛时间（拿不到时非总决赛用赛季年顶）；
+                    CF / AtCoder / 牛客 / 杭电取比赛时间；<strong><code>cf gym</code> 的赛季取<u>赛名</u>里的年份、年份取 CF 的开赛时间</strong>（两个都没有才留空；总决赛没有开赛时间写 <code>待同步</code>）；<strong><code>qoj/ucup</code> 的年份与赛季都写 <code>无</code></strong>（UC 既没有赛季概念、QOJ 那边也基本没记时间，与其空着挂 ③ 不如标成"不适用"）；
+                    <strong>QOJ 其余非总决赛直接 = 赛季年</strong>（它记的日期常是镜像/重跑时间）、
+                    总决赛拿不到日期写 <code>待同步</code>；取不到一律留空（不猜）</td></tr>
+                <tr><td><strong>地区</strong></td><td>判得出"线上赛、没有场地"的写 <code>无</code>（CF 正式轮次 / AtCoder / 牛客 / 杭电）；
+                    <strong>XCPC / <code>cf gym</code> / QOJ 一律留空</strong>（前两者源头只有拼音目录名或本来就是线下站，
+                    QOJ 上挂着大量线下场次 —— 拿不准就不填，别把"不知道"说成"不适用"）</td></tr>
+            </tbody>
+        </table>
+        <p>从包里进来的这四个字段一律是<strong>「只补空」</strong>：树上已经有值就<strong>不动</strong>
+        （哪怕这个值是别的包或你直接改数据文件写进去的），只有空着的才让包补上 ——
+        所以「填过一次之后，重导不会被冲掉」。</p>
+        <div class="note">
+            <strong>这四个字段在编辑面板里都能改</strong>（「✏️ 编辑」页有分类 / 年份 / 赛季 / 地区四个控件，分类是 Trie 下拉、
+            年份与赛季带候选提示），判重页每行左边那四个小标签点一下也打开同一套控件。
+            从包里进来的值一律是<strong>「只补空」</strong>：树上已经有值就<strong>不动</strong>，只有空着的才让包补上。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s5">五、状态值说明</h2>
+
+        <h3>比赛节点 (C) – statusComplete2</h3>
+        <table>
+            <thead><tr><th>值</th><th>含义</th></tr></thead>
+            <tbody>
+                <tr><td class="badge">0</td><td>未动：该比赛下没有题目或尚未开始处理</td></tr>
+                <tr><td class="badge">1</td><td>有接触：至少有一道题有提交（无论是否通过）</td></tr>
+                <tr><td class="badge">2</td><td>全部处理：所有题目均已标记为“已处理”（status1=1）</td></tr>
+                <tr><td class="badge status-3-color">3</td><td>AK：所有题目均已通过（status2=3 或 4）</td></tr>
+                <tr><td class="badge">4</td><td>忽略：手动忽略该比赛（不参与统计）</td></tr>
+            </tbody>
+        </table>
+
+        <h3>题目节点 (P) – status2</h3>
+        <table>
+            <thead><tr><th>值</th><th>含义</th></tr></thead>
+            <tbody>
+                <tr><td class="badge status-0">0</td><td>未使用：尚未开始做题</td></tr>
+                <tr><td class="badge status-1">1</td><td>待写：计划做题但尚未提交</td></tr>
+                <tr><td class="badge status-2">2</td><td>已提交未通过：有提交但未AC</td></tr>
+                <tr><td class="badge status-3">3</td><td>赛后补题：比赛结束后通过</td></tr>
+                <tr><td class="badge status-4">4</td><td>赛时通过：比赛期间通过</td></tr>
+                <tr><td class="badge status-5">5</td><td>忽略：手动忽略该题目（不参与统计）</td></tr>
+            </tbody>
+        </table>
+        <p><strong>3 和 4 是怎么分开的？</strong>看那次 AC 提交的<strong>性质</strong>
+        （每一条提交记录 R 上都有一个「性质」：<strong>赛时 / VP / 补题</strong>）——
+        有一条<strong>赛时</strong>的 AC ⇒ <code>4 赛时通过</code>；全是 VP/补题的 AC ⇒ <code>3 赛后补题</code>；
+        判不出性质就按 3 算。<strong>性质是导入时由爬虫判断写进去的</strong>（判不出就留空，
+        界面上可以自己改）。你要"手动把它钉成赛时通过/忽略"也行：这两个是<strong>你按下的覆盖</strong>，
+        会存进来源层、不参与重算。</p>
+
+        <h3>题目节点 (P) – status1（已处理）</h3>
+        <p>表示“这道题我已经处理完了”，与是否 AC 无关，<strong>由你手动设置</strong>（0=未处理，1=已处理）。
+        它决定了比赛能否算作「全部处理」，也是统计筛选的依据之一。</p>
+
+        <div class="note">
+            <strong>💡 大多数状态是自动算的。</strong>你只需录入<strong>提交记录</strong>，
+            P 的 <code>status2</code>、<code>acTime</code>、<code>lastSubmitTime</code> 与
+            C/W/S 的 <code>statusComplete1/2</code> 会按<a href="#s16">规则</a>自动推导。
+            <br>两个<strong>手动例外</strong>：把 P 的 status2 设为 <span class="badge">5 忽略</span>、
+            或把容器 statusComplete2 设为 <span class="badge">4 忽略</span> 之后，自动计算不会再改动它们。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s6">六、添加、编辑、删除</h2>
+
+        <h3>添加</h3>
+        <ul>
+            <li><span class="badge">➕ 添加根节点</span>：在顶部工具栏，用于建立入口（平台/系列）。</li>
+            <li>节点上的 <span class="badge">➕</span>：添加子节点，会列出允许的类型。</li>
+            <li><span class="kbd">Ctrl</span> + 点击 <span class="badge">➕</span>：跳过类型选择，直接用第一种允许类型添加。</li>
+            <li>添加题目时如果留空题号，会自动按顺序生成（A、B、C…）。</li>
+        </ul>
+
+        <h3>编辑</h3>
+        <ul>
+            <li><strong>树形模式</strong>：<strong>双击</strong>节点 → 打开编辑面板。</li>
+            <li><strong>文件夹模式</strong>：<span class="kbd">Ctrl</span> + <strong>单击</strong>节点 → 打开编辑面板。</li>
+            <li>节点上的 <span class="badge">✏️</span> 按钮同样可以编辑。</li>
+            <li>如果在副页上编辑，会弹出<strong>「选择编辑对象」</strong>让你挑：两个按钮是
+                <strong>「编辑所映射主树节点」</strong>（改主树上的真实节点）与 <strong>「编辑本身」</strong>
+                （改这个虚拟节点自己的附加字段）。</li>
+        </ul>
+
+        <h3>题目的字段</h3>
+        <table>
+            <thead><tr><th>字段</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr><td>题号 / 名称</td><td>题号如 A、B；名称是题目标题</td></tr>
+                <tr><td>CF 难度</td><td>数字，如 1800（留空/0 视为未填写）</td></tr>
+                <tr><td>通过率 (ratio)</td><td>百分比，如 <code>12.5</code>。<strong>XCPC 难度由它自动推导</strong>，越小越难</td></tr>
+                <tr><td>状态1 / 状态2</td><td>见<a href="#s5">第五节</a></td></tr>
+                <tr><td>标签</td><td>知识点标签，可带颜色，用于分类与筛选</td></tr>
+                <tr><td>链接</td><td>题目地址</td></tr>
+            </tbody>
+        </table>
+
+        <h3>标签与备注</h3>
+        <ul>
+            <li><strong>标签</strong>：在编辑面板里增删，也可用节点菜单的 <span class="badge">🏷️ 批量管理标签</span>
+                给一整场比赛的题统一加/删某个标签。</li>
+            <li><strong>备注</strong>：节点菜单 <span class="badge">📝 备注</span>。多行文本，适合写题解与踩坑记录。</li>
+        </ul>
+        <div class="note warn">
+            <strong>⚠️ 备注（<code>remark</code>）是私有笔记，用之前先看这四条：</strong>
+            <ul style="margin-top:4px;">
+                <li><strong>导入永不写它</strong>：这是写死的规矩（不管包里写了什么、也不管节点是新建还是已存在）。
+                    所以爬虫/脚本<strong>产不出</strong>「注意」「这题有坑」这类内容 —— 要写得你自己动手。</li>
+                <li><strong>它会进撤销快照</strong>：备注是节点字段，节点表整张进快照，
+                    所以<strong>不要把大量文本放进去</strong>（写得越长，每一步撤销占的内存越多）。</li>
+                <li>编辑入口就一个：节点菜单的 <span class="badge">📝 备注</span>（弹出「编辑备注」，多行文本框）。
+                    保存走统一入口，会记一条「这是你手改的」来源。</li>
+                <li><strong>不限制长度</strong>，只提示你；想放长内容（题解正文、整段代码）请用别的地方（外部文件）。</li>
+            </ul>
+        </div>
+
+        <h3>删除</h3>
+        <ul>
+            <li>节点上的 <span class="badge">✖</span>：删除该节点及其全部子孙。</li>
+            <li><span class="kbd">A</span> + <span class="kbd">Q</span>：在选中节点上快速删除（跳过确认）。</li>
+            <li><span class="kbd">Ctrl</span> + 点击 <span class="badge">✖</span>：走带倒计时的确认框。</li>
+        </ul>
+
+        <!-- ========================================================== -->
+        <h2 id="s7">七、两种显示模式</h2>
+        <p><strong>按住 <span class="kbd">Ctrl</span></strong> 才会露出左下角那几个悬浮件
+            （<strong>展开节点数</strong>、<strong>🌳 树形 / 📁 文件夹</strong>、<strong>✏️ 属性 / 🎯 选中</strong>）——
+            松开就收回去，平时整页干净。在这个页面上切换也可以在设置面板里切。</p>
+        <ul>
+            <li><strong>🌳 树形模式</strong>：递归展开/折叠，适合浏览全局结构。</li>
+            <li><strong>📁 文件夹模式</strong>：点击节点进入子目录，大数据量下性能更优。</li>
+        </ul>
+        <table>
+            <thead><tr><th></th><th>树形模式</th><th>文件夹模式</th></tr></thead>
+            <tbody>
+                <tr><td>看到的内容</td><td>多层，可展开折叠</td><td>单层列表，一次一个目录</td></tr>
+                <tr><td>导航</td><td>点箭头展开/收起</td><td>点节点进入，面包屑返回上级</td></tr>
+                <tr><td>翻页</td><td>每个节点各自翻页</td><td>整个列表一起翻页</td></tr>
+                <tr><td>视图页签</td><td><strong>没有</strong></td><td><strong>有</strong>（子节点 / 题目分布统计 / 插件页）</td></tr>
+            </tbody>
+        </table>
+        <div class="note warn">
+            <strong>⚠️ 「子节点」「题目分布统计」「🏁 比赛补题概览」这些页签只在文件夹模式出现。</strong>
+            树形模式下看不到它们不是故障，是该模式本来就没有这一栏。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s8">八、两种编辑模式</h2>
+        <p>顶栏左下角的悬浮按钮可切换，或在设置面板中切换。</p>
+        <ul>
+            <li><strong>✏️ 属性编辑</strong>：默认模式，可添加/删除/修改节点。</li>
+            <li><strong>🎯 选中状态编辑</strong>：点击节点上的圆点切换选中状态，用于统计筛选。</li>
+        </ul>
+        <p style="font-size:13px;color:#6b7280;">选中状态编辑模式下，双击/Ctrl+单击不会打开编辑面板，避免误操作。
+        顶部还有 <span class="badge">🗑️ 清空选择</span>（需按住 <span class="kbd">Ctrl</span> 点击）。</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s9">九、副页与题单</h2>
+        <p>顶栏下方可新建副页，每个副页是一份独立的主树节点映射视图。</p>
+        <ul>
+            <li>可把主树里的节点「复制到副页」作为题单。</li>
+            <li>副页内可添加虚拟节点、调整顺序，不影响主树。</li>
+            <li>副页节点删除不影响主树；主树节点删除时，副页对应节点同步清理。</li>
+            <li>副页的汇总状态读的是<strong>主树节点的实时状态</strong>——主树里标了通过，副页会自动跟着变。</li>
+        </ul>
+
+        <h3>按条件挑题 → 生成题单页</h3>
+        <p>题单不用一道一道手动加：在任意节点上点 <strong>「更多操作」→「📋 待办题单」</strong>，
+            它会按条件把这个子树里的题<strong>复制到某个副页</strong>（那就是题单）。可勾的条件：</p>
+        <ul>
+            <li><strong>状态2</strong>（未使用 / 待写 / 已提交未通过 / 赛后补题 / 赛时通过 / 忽略）——
+                默认只勾前三档，另有一个「只要没处理过的也算」。</li>
+            <li><strong>XCPC 档位</strong>（签到 … 金牌 … C+）、<strong>数值难度区间</strong>（留空 = 不限）、
+                <strong>标签</strong>、<strong>平台 / 赛系</strong>。多条之间是「与」，同一条里是「或」。</li>
+            <li>目标副页可以<strong>选已有的</strong>，也可以当场 <strong>「➕ 新建一个副页…」</strong>并起名。</li>
+            <li>⚠️ 设了数值难度区间时，<strong>没填难度</strong>的题会被排除（并单独提示），不会被当成 0 分混进来。</li>
+            <li>条件会<strong>记着上次用的那份</strong>（只在这次会话里）——「再补一批」时不用重填；
+                重复的题会自动跳过，所以反复补不会越补越重。</li>
+        </ul>
+
+        <h3>副页的日常操作（新增 / 改名 / 删除 / 编辑虚拟节点）</h3>
+        <ul>
+            <li><strong>新建副页</strong>：副页 Tab 栏上的 <strong>「+ 新建副页」</strong> 按钮。⚠️ 副页数量上限 <strong>50</strong>
+                （到顶时新建会被拒，删掉不用的再来）。</li>
+            <li><strong>改名 / 删除副页</strong>：两样都在副页 Tab 上，不用去设置页 ——
+                <strong>按住 <span class="kbd">Ctrl</span> 点 Tab 上的 ✖</strong> 删副页；
+                <strong>按住 <span class="kbd">Ctrl</span> 点副页 Tab</strong> 改名，会弹出「📄 副页设置」让你改名称
+                （删副页会连带它的虚拟节点一起没，但不碰主树）。</li>
+            <li><strong>编辑虚拟节点</strong>：副页里的节点点开是<strong>它自己那一页</strong>，
+                字段与主树编辑同一套界面 —— 改的是<strong>虚拟节点自己的附加字段</strong>
+                （题单里想单独记的东西），<strong>不会</strong>写回主树那个真实节点。</li>
+            <li><strong>顺序 / 层级</strong>：虚拟节点之间可以上下移、也可以套一层文件夹；
+                它只是"看的组织方式"，主树结构一个字节都不动。</li>
+            <li><strong>副页节点详页头部那两颗入口，各管一件事</strong>（从 v9.0.17 起）：
+                · 那串<strong>蓝色的节点 id</strong> 点一下 = <strong>跳到这个副页里的对应位置</strong>
+                （进它所在的页内文件夹 / 翻到它那一页 / 滚过去并高亮）；
+                · <strong>「🔎 跳到它引用的主节点」</strong>按钮 = 跳回<strong>主树</strong>上那个真实节点。
+                ⚠️ 副页<strong>根</strong>节点（代表"这一页"本身）没有页内位置也不引用主节点，那两样都不出现。</li>
+            <li><strong>副页里的题目列表也带那三样</strong>（从 v9.0.19 起）：副页节点详页的
+                「📊 题目分布统计」点柱筛出来的那批题，和主页同一处一样带着
+                <strong>「🔎 跳到这一页的位置 / 📋 打开详页 / 面包屑」</strong>三样
+                —— 🔎 用的是<strong>页内位置</strong>（切到它所属的那个副页再定位），
+                面包屑是<strong>页内</strong>祖先链（带「📄 页名」前缀），不是主树那条。</li>
+        </ul>
+
+        <h3>待办题单（把未通过的题一次挑出来）</h3>
+        <p>在 <strong>平台 / 系列 / 比赛</strong> 节点的菜单里点 <span class="badge">📋 待办题单</span>，
+        它会挑出该节点下<strong>未通过或待处理</strong>的题目，让你选择复制到哪个副页。</p>
+        <div class="note warn">
+            <strong>⚠️ 它是一次性快照。</strong>复制完成后再改主树状态，那份题单<strong>不会自动更新</strong>，
+            需要重新执行一次。<br>另外必须先建好副页才能用。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s10">十、批量操作</h2>
+        <p>入口都在节点的 <span class="badge">⚙️</span>（更多操作）菜单里，按节点类型显示不同项。</p>
+
+        <h3>四种批量导入</h3>
+        <table>
+            <thead><tr><th>菜单项</th><th>在哪</th><th>用途</th></tr></thead>
+            <tbody>
+                <tr><td>📥 批量导入题目</td><td>比赛 (C)</td><td>把一场比赛的题目一次性录入</td></tr>
+                <tr><td>📋 批量导入提交记录</td><td>比赛 (C)</td><td>录入该场比赛的提交</td></tr>
+                <tr><td>📝 题目信息批量导入</td><td>比赛 (C)</td><td>批量补全难度、通过率等信息</td></tr>
+                <tr><td>📥 批量导入比赛</td><td>系列 (S)</td><td>一次往一个系列里加多场比赛</td></tr>
+            </tbody>
+        </table>
+        <p>它们都支持<strong>字段映射</strong>：把你粘贴内容的列对应到节点字段。
+        映射配置会被记住，下次导入同类内容不用重配。</p>
+        <div class="note">
+            <strong>💡 粘贴格式：</strong>通常是一行一题、列之间用 Tab 或逗号分隔。导入时界面会先预览解析结果，
+            确认无误再写入。
+        </div>
+
+        <h3>其他批量操作</h3>
+        <ul>
+            <li><span class="badge">🎯 批量设置题目状态</span>（W/S/C）：一次改多道题的 status1/status2。</li>
+            <li><span class="badge">🎯 批量设置比赛状态</span>（W/S）：一次改多场比赛的状态。</li>
+            <li><span class="badge">🏷️ 批量管理标签</span>（C）：给整场比赛的题统一加/删标签。</li>
+            <li><span class="badge">📊 题目排序</span> / <span class="badge">📅 排序提交记录</span>（O/W/S/C）：
+                在 C 上 = 只排这一场；在 W/S/O 上 = 排这一整支下的所有比赛（按钮上写「（这一支）」）。
+                两种都带「恢复自动」那一项（题目 = 题号升序；提交 = 提交时间倒序）。</li>
+            <li><span class="badge">🧹 清空所有题目</span> / <span class="badge">🧹 清空所有提交记录</span>（W/S/C）：危险操作，带倒计时确认。</li>
+        </ul>
+
+        <!-- ========================================================== -->
+        <h2 id="s11">十一、统计与图表</h2>
+
+        <h3>总览统计（顶部栏）</h3>
+        <ul>
+            <li><strong>C: AK/已处理/有接触/加忽略/总比赛数</strong>
+                <ul>
+                    <li>AK = statusComplete2=3 的比赛数</li>
+                    <li>已处理 = statusComplete2=2 或 3 的比赛数</li>
+                    <li>有接触 = statusComplete2=1,2,3 的比赛数</li>
+                    <li>加忽略 = statusComplete2=1,2,3,4 的比赛数</li>
+                </ul>
+            </li>
+            <li style="margin-top:6px;"><strong>P: 赛时过题/已过题/已处理/加忽略/总题数</strong>
+                <ul>
+                    <li>赛时过题 = status2=4 的题目数</li>
+                    <li>已过题 = status2=3 或 4 的题目数</li>
+                    <li>已处理 = status1=1 的题目数</li>
+                    <li>加忽略 = status1=1 或 status2=5 的题目数</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>这一条右边那颗 <span class="badge">📋</span> = 超级根自己的详页</strong>：树只画超级根的<strong>孩子</strong>、
+        文件夹模式停在根目录时这一格只画统计 —— 所以超级根<strong>没有自己的方框</strong>，
+        这颗 📋 是它唯一的入口（副页停在它的「🏠 根目录」时同样有一颗，那是<strong>那一页</strong>的详页，
+        不是主树的）。</p>
+
+        <h4>这些数字"按什么数"（计数标准）</h4>
+        <p>上面那张表只说"哪一档算哪一类"。<strong>"数什么"是另一条口径</strong>，由
+        <strong>设置 → 📊 统计 → 计数模式</strong>决定（默认<strong>不去重</strong>）：</p>
+        <ul>
+            <li><strong>不去重（默认）</strong>：<strong>子树里每个原料节点各算一次</strong>；
+                而<strong>合成节点只在"它本次子树内没有任何成员"时才算一次</strong>
+                —— 只要有一个成员在里面就不数它，否则同一场会被数两遍。</li>
+            <li><strong>去重（以组为单位）</strong>：<strong>同一个「组」只算一次</strong>。
+                <strong>组</strong> = 一个合成节点 + 它的全部成员；没有合成节点的节点<strong>自己就是一组</strong>。
+                ⚠️ 去重是 <strong>scope-local</strong>：只看"这一次的范围（这一屏 / 这棵子树）"，<strong>不是全局去重</strong>。</li>
+            <li>两种模式都<strong>按类型分别数</strong>：P 侧只数 P、C 侧只数 C（合成节点若不是 P 类型，本来就不进 P 的分档）。</li>
+        </ul>
+        <p><strong>档位从哪读</strong>：一律按<strong>当前「查看账户」现算</strong>（投影值），不是读节点上那个缓存；
+        <strong>去重模式</strong>下取<strong>「组那份」</strong> ——
+        P 侧把组内各来源的状态合并（有一处"过"就是过）；
+        C 侧取<strong>两边的较大值</strong>（① 合成 C <em>自己子树</em>汇总出来的那份，
+        ② 组内各 C <em>成员自己那份</em>的聚合）。</p>
+        <p>⚠️ <strong>「忽略」不是"从总数里减掉"</strong>：
+        C 侧<strong>加忽略 = 总数 −「未动」</strong>（0 未动只进总数）；
+        P 侧<strong>加忽略 = 已处理 ∪ 已忽略</strong>。所以别拿"加忽略"当"有效数"，它只是"没被漏掉"的那一档。</p>
+        <p>★ <strong>「查看范围」还可以带子账户</strong>（设置 → 📊 统计）：
+        勾上之后，看某个账户时<strong>它的直接子账户</strong>的提交也算进"我这份"
+        （状态、树上显示、统计都跟着变）；<strong>只看直接子账户，不递归到孙辈</strong>。默认不勾 = 只看本账户。</p>
+
+        <h3>题目分布统计</h3>
+        <p><strong>文件夹模式</strong>下进入任意节点，点视图页签 <span class="badge">📊 题目分布统计</span>。
+        它把该节点下所有题目按难度分档，用柱状图展示，柱子里按状态2 分层着色。</p>
+        <ul>
+            <li><strong>XCPC难度 / CF难度</strong>：两套难度体系可切换。CF 是数值区间，XCPC 是等级档位。</li>
+            <li><strong>显示「未填写」项</strong>：是否把没有难度的题目也算进去。</li>
+            <li><strong>筛选模式</strong>：决定哪些题目参与统计
+                <table>
+                    <thead><tr><th>模式</th><th>含义</th></tr></thead>
+                    <tbody>
+                        <tr><td>无限制</td><td>当前节点下所有题目，不做筛选</td></tr>
+                        <tr><td>全局覆盖</td><td>自身或祖先满足「主树选中」<strong>或</strong>「副页映射覆盖」</td></tr>
+                        <tr><td>仅主页覆盖</td><td>自身或祖先满足「主树选中」</td></tr>
+                        <tr><td>仅选中副页映射覆盖</td><td>自身或祖先满足「副页映射覆盖」</td></tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <div class="note">
+            <strong>点柱段 = 看这一批题</strong>（从 v9.0.18 起）：柱子里的每一段都能点，鼠标悬停会写清
+            「哪一档 · 什么状态：多少题」。点一下，这一批题就按<strong>只读列表</strong>列在图表下面
+            （每题带「🔎 跳到树上 / 📋 打开详页 / 面包屑」）；换一段就换一批，再点同一段收起。
+            ⚠️ 列出来的条数与柱子上那个数字<strong>同源</strong>（同一份分档口径），点它<strong>不筛数据、不改任何东西</strong>。
+        </div>
+
+        <h3>AC 追踪（📊 数据统计页签）</h3>
+        <p>顶部 <span class="badge">📊 数据统计</span> 页签下有三个二级页签：</p>
+        <ul>
+            <li><strong>训练强度追踪</strong>：按天/周的热力图，看做题的密度与连续性。</li>
+            <li><strong>最近AC题目列表</strong>：按时间倒序列出最近通过的题，支持时间范围筛选。</li>
+            <li><strong>👥 账户对比</strong>：一屏里看多个人各自的补题情况（见下）。</li>
+        </ul>
+
+        <h3>👥 账户对比（一队 3 人各自的补题情况）</h3>
+        <p>同一个页签下选「👥 账户对比」：左边一行是<strong>要对比谁</strong>（勾选账户，
+        默认就是<strong>你 + 你名下的子账户</strong>，最多 6 列），下面是表格。</p>
+        <ul>
+            <li><strong>第一眼</strong>：每一场比赛一行，格子里是<strong>那个人在这场比赛的完成状态</strong>
+                （未动 / 有接触 / 已处理 / AK / 忽略）—— 一眼看出"哪场谁还没补完"；</li>
+            <li><strong>点比赛那一行展开</strong>：变成题目逐行，格子里是那个人在这道题的
+                <strong>状态2</strong>（赛时通过 / 赛后补题 / 已提交未通过 / 待写 / 未使用 / 忽略）；
+            </li>
+            <li><strong>列头</strong>写着每人"通过 x / 共 y"；</li>
+            <li><strong>筛选</strong>：默认「只看差异（有人过、有人没过）」—— 这正是对比最有用的视角；
+                也可以切「只看有人没过的」「全部」，或只看某个人没过的题；右边还能搜题号/题名；</li>
+            <li><strong>点题目行</strong>直接打开那道题的编辑面板。</li>
+        </ul>
+        <div class="note">
+            <strong>💡 这里只是"换个口径看"，不改任何数据、也不会偷偷切换你在查看谁。</strong>
+            每个人那一列，都是拿他自己的账户当"眼睛"算出来的 —— 所以"我过了、他没碰"
+            会老老实实显示成一边绿一边空，而不是两边都显示同一个值。
+        </div>
+
+        <h3 class="status-3-color">🏁 比赛补题概览<span style="color:#16a34a;font-size:12px;">（插件）</span></h3>
+        <div class="note new">
+            <strong>✨ 位置：</strong>文件夹模式下进入任意节点 → 视图页签
+            <span class="badge">🏁 比赛补题概览</span>（在「题目分布统计」右边）。
+        </div>
+        <p>它把<strong>该节点下的每一场比赛画成一行</strong>，一行里横着排开这场比赛的所有题目：</p>
+        <ul>
+            <li><strong>横坐标 = 难度</strong>，越靠右越难。背景的竖向色带就是难度档（XCPC 每档等宽；CF 完全线性）。</li>
+            <li><strong>每个点 = 一道题</strong>，按状态2 着色，点下方是题号。</li>
+            <li><strong>带橙色圈的题</strong>表示已被你「选中」（status1=1）。</li>
+            <li>不支持难度的题会排在<strong>最左边的灰色带</strong>里（可用开关隐藏）。</li>
+        </ul>
+        <p>看一眼就知道「哪场比赛补得最烂、欠在哪个难度段」，很适合赛后复盘。
+        控件与「题目分布统计」一致（筛选模式 / 显示未填写 / XCPC↔CF 切换）。</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s12">十二、检索与定位</h2>
+        <h3 class="status-3-color">🔍 检索<span style="color:#16a34a;font-size:12px;">（插件）</span></h3>
+        <div class="note new">
+            <strong>✨ 位置：</strong>顶部一级页签 <span class="badge">🔍 检索</span>，
+            里面分两条子页：<span class="badge">🏆 比赛检索</span> / <span class="badge">📝 题目检索</span>。
+        </div>
+        <p><strong>🏆 比赛检索</strong>筛的是「比赛」（C 节点）：</p>
+        <table>
+            <thead><tr><th>条件</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr><td>名称 / 时间 / 地区</td><td>包含匹配，忽略大小写（时间是 <code>2025-10</code> 这样的前缀也认）</td></tr>
+                <tr><td>年代</td><td>多选年份；<code>无</code> / <code>待同步</code> / <code>不确定</code> 这些<strong>也是选项</strong>（它们是结论，不是空缺）；<strong>没填的那批显示成「未标」</strong></td></tr>
+                <tr><td>性质</td><td>多选分类路径（按<strong>前缀</strong>命中：选 <code>cf/contest</code> 就含 <code>cf/contest/div2</code>）</td></tr>
+                <tr><td>种类 / 平台 / 系列</td><td>多选，按归属筛选</td></tr>
+            </tbody>
+        </table>
+        <p>结果表列出：名称 · 时间 · 年代 · 性质 · 地区 · <strong>题目</strong> · 归属；可按时间 / 名称 / 年代 /
+        题目等排序。<strong>没有开赛时间的比赛永远排在最后</strong>（不来回跳）。</p>
+
+        <h3 class="status-3-color">📝 题目检索</h3>
+        <p>跨整棵树的题目搜索，支持这些条件（可任意组合，条件之间是「且」）：</p>
+        <table>
+            <thead><tr><th>条件</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr><td>题号 / 题名 / 比赛</td><td>包含匹配，忽略大小写</td></tr>
+                <tr><td>标签</td><td>命中任一标签即可</td></tr>
+                <tr><td>平台 / 系列</td><td>多选，按归属筛选</td></tr>
+                <tr><td>状态2</td><td>多选，如只看「待写 + 已提交未通过」</td></tr>
+                <tr><td>XCPC 档</td><td>多选难度档，含「未填写」</td></tr>
+                <tr><td>CF 难度</td><td>范围，可只填一端（如 min=1900 表示只看 1900 以上）</td></tr>
+            </tbody>
+        </table>
+        <p>筛选之后还能<strong>再排序</strong>（CF难度 / XCPC难度 / 题号 / 题名 / 状态2 / 所属比赛 / 平台），
+        升序降序皆可。未填写难度的题永远排在最后。</p>
+        <div class="note">
+            <strong>💡 最有用的用法：</strong>点一下结果里的任意一行，页面会<strong>自动跳到树上那个节点</strong>
+            并高亮它——不管它藏在多深、需要展开多少层。<br>
+            在<strong>文件夹模式</strong>下会帮你进入对应目录并翻到正确的页。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s13">十三、保存、导出与导入</h2>
+        <ul>
+            <li><strong>自动保存</strong>：数据定期保存到浏览器 IndexedDB（默认间隔 10 分钟，可配置）</li>
+            <li><strong>定时导出</strong>：当数据修改后，若超过设定间隔未手动导出，将自动导出 JSON 文件（可配置导出类型）</li>
+            <li><strong>手动导出</strong>：顶部工具栏提供 4 种导出方式</li>
+        </ul>
+
+        <h3>导出类型</h3>
+        <ul>
+            <li><strong>📦 完整数据</strong> – 含主树、副页、设置、元信息、来源层、<strong>账户</strong>（JSON）</li>
+            <li><strong>📦 完整数据 (.gz)</strong> – 完整数据的 gzip 压缩版</li>
+            <li><strong>📝 Markdown</strong> – 所有 P 节点的表格（路径 / 题号 / 名称 / 比例 / 难度 / 状态 / 标签 / 链接）</li>
+            <li><strong>📊 CSV</strong> – 同上，CSV 格式</li>
+        </ul>
+
+        <div class="note">
+            <strong>💡 提示：</strong>只有「完整数据」及其压缩版可以再次导入。Markdown / CSV 是单向导出，仅用于外部查看。
+        </div>
+
+        <h3>导入</h3>
+        <p>顶部工具栏「📥 导入」按钮可导入完整数据文件（<code>.json</code> 或 <code>.json.gz</code>）。</p>
+        <p style="font-size:13px;color:#475569;">爬虫包（<code>acm-data/nodes/*.json</code>）走的是
+            <strong>节点自动导入</strong>那一页：预览里会逐条列出"新增 / 更新 / 跳过"。
+            <strong>包里的「性质」判定与树上已有的值不一样时会单独报出来</strong>
+            （汇总栏「⚠️ 性质不一致 N 条」+ 记录表最右那一列，鼠标停着能看到
+            "树上「A」→ 包里「B」（依据 规则id）"，点「只看这几条」就只留它们）。
+            默认<strong>不会覆盖</strong>已有的性质（<code>fill-if-empty</code>：你手填过的值不该被一次重导冲掉）；
+            想让<strong>包里的判定说了算</strong>，就勾上旁边的「<strong>以包里为准</strong>」——
+            计划会当场重算，那几处的 tooltip 变成「★ 本次会覆盖」，点执行才真的写。
+            ⚠️ 勾了会<strong>顶掉你手填的值</strong>（且不能撤回），所以它<strong>默认关</strong>、
+            换一份新包时也会自动回到"关"。⚠️ 只覆盖<strong>非空</strong>的（不会把值抹空）。</p>
+        <div class="note warn">
+            <strong>⚠️ 警告：</strong>导入会<b>完全替换</b>当前数据（含主树、副页、设置、账户），并重置撤回历史。导入前请先导出当前数据备份。
+        </div>
+        <div class="note">
+            <strong>💡 较早导出的存档</strong>里没有账户数据。导入这种文件时，
+            <b>你现在的账户注册表会被保留</b>（不会被清空）——否则"谁是谁"这套映射会凭空消失。
+        </div>
+        <p style="font-size:13px;color:#6b7280;">注意区分：这里的「导入」是<b>整库恢复</b>；
+        往某场比赛里录题目请用节点菜单的「📥 批量导入题目」（见<a href="#s10">第十节</a>）。</p>
+
+        <h3>「📥 节点自动导入」那一页上还有这几样</h3>
+        <ul>
+            <li><strong>「🛠 重建总包并导入」</strong> —— 一键让<strong>本机主脚本</strong>把整条链
+                （清单 → 分类规则 → 产包 → 合成绑定 → 题目绑定 → 落位 → 难度 → 试跑 → 体检 → 需求 → 报告随包）
+                跑一遍，跑完<strong>自动把新包导入</strong>。这个按钮<strong>无条件出现</strong>：启动脚本带本机接口
+                （默认开）时正常跑；用 <code>--no-build-api</code> 关掉接口后按钮照样在，点了只会在日志里报
+                「用不上本机"主脚本"」，并提示你双击一次 <code>启动AcmTree.bat</code>。跑的过程中别关标签页。
+                <br><strong>那个日志框</strong>：标题那行就写着进度（每步 ✅/⏳、当前档位、耗时）；
+                右边的「▾」可以把它<strong>收起来</strong>（只留标题，随时再展开）；
+                <strong>跑完不会自己消失</strong>（以前点一下别处就没了）—— 想清掉就按「✕」。
+                <br>⚠️ <strong>这份文件夹里没有抓取缓存时</strong>（刚拿到的副本、新机器）：第一步「注册表」需要的
+                <code>rankland</code> 索引本来不存在，它会<strong>先自动跑一遍 <code>build_rankland_index.py</code>
+                把它建出来</strong>再继续 —— <strong>要联网，可能要十几分钟</strong>，日志里会有那句
+                「⚠️ 缺 … 现场建一份」。等它建完就正常往下走；中途断了就重来（已经建好的不会再建）。</li>
+            <li><strong>「离线重建（不联网，用现有原料）」</strong> —— 是工具栏上<strong>「档位」下拉</strong>里的
+                一项（6 个档位都在这个下拉里）。选它只跑
+                不需要网络的步骤（跳过联网抓取与 CLIST 难度），用本地已有原料重建。适合"我只改了分类规则 / 绑定，
+                想重出一份包"。</li>
+            <li><strong>「全删重爬（先去无用原料，再整份重抓）」</strong> —— 下拉里<strong>最重</strong>的那一档，
+                也是<strong>唯一会删东西</strong>的一档：先把"已经确定用不上"的原料去掉
+                （比如 gym 白名单改小之后，白名单外那些 gym 的榜单/提交缓存），再把各来源<strong>整份重抓</strong>。
+                判断"用不上"的规则只有一处（<code>acm-data/raw/Scaper/lib/material.py</code>），
+                <strong>说不清的一律留着</strong>。其余五个档位<strong>只增不删</strong>：
+                缺的才抓，抓不到就保留旧文件。</li>
+            <li><strong>「🔑 补身份键」</strong> —— 给<strong>树上已有、但没有 <code>extKey</code> 的节点</strong>补写身份键
+                （老节点 / 手建节点没有身份键 ⇒ 下次导入会当成新节点又建一条）。它有独立一页：
+                按父容器列出缺键的节点，预览要补什么，提交时<strong>先预检冲突</strong>（与别的节点撞 key 会拒）。</li>
+            <li><strong>自动监测新包</strong> —— 点 <strong>「📂 选择爬虫输出目录」</strong>授权一个目录后，
+                新包一出现会自动提示（浏览器需要你授权那个目录）。<br>
+                导入记录（最近 50 次导入的来源 / 时间 / 新增·更新·跳过）<strong>只在数据里记着</strong>
+                （<code>settings.autoImport.history</code>），<strong>界面上没有任何入口</strong>能看到它。</li>
+            <li><strong>「🔎 / 📋」逐条记录表</strong> —— 表里那份「这一包会动什么」的清单默认<strong>只画前 250 行</strong>
+                （真包一次导入能有两万多条），下面那行灰字写清「还有 N 行未显示」，旁边一颗
+                <strong>「显示全部 N 行」</strong>按钮点了才全量铺开（<strong>行数多时页面会卡</strong>，所以不默认铺）。
+                ⚠️ 那只影响<strong>画出来的行</strong>：计数与真正要写入的内容一个字不变。</li>
+        </ul>
+
+        <h3>「合并显示」：判重开了之后，树与统计按"组"算</h3>
+        <p>判重整理把同一道题 / 同一场比赛的多个来源绑成一组之后，<strong>显示</strong>与<strong>计数</strong>
+        有两种口径。开关是 <strong>设置 → 📊 统计 → 计数模式</strong>，判重整理页 ④ 概览上那个
+        <code>[不判重 / 判重]</code> 按钮是<strong>同一个键</strong>（没有第二套口径）：</p>
+        <table>
+            <thead><tr><th>口径</th><th>树上显示</th><th>统计 / 图表</th><th>导出</th></tr></thead>
+            <tbody>
+                <tr><td><strong>不去重（默认）</strong></td>
+                    <td>每个节点显示自己那份值</td><td>每个节点各算一次</td><td>原样（每个节点一条）</td></tr>
+                <tr><td><strong>去重（以组为单位）</strong></td>
+                    <td>组里的 <code>状态1</code> / <code>状态2</code> 显示<strong>「组那份」</strong>
+                        —— A 平台 AC 了，B 平台的副本也亮</td>
+                    <td>一组只算<strong>一次</strong>（分布 / 总览 / 热力图 / AC 列表都按组）</td>
+                    <td><strong>不受影响</strong>（导出的永远是数据本身）</td></tr>
+            </tbody>
+        </table>
+        <p>⚠️ 三点：① 有「组那份」的字段<strong>不止状态</strong> —— <code>状态1</code> / <code>状态2</code>、
+        <code>AC时间</code> / <code>最新提交</code>、各难度（CF / AtCoder / CLIST / XCPC 通过率与等级）
+        都有；比赛时间与「链接分类」按需合并。② <strong>编辑表单与导出里看到的永远是你自己那份</strong>
+        （否则一保存就把组值写成了你的值）。③ 判重模式下还能<strong>逐字段</strong>挑读哪一份：
+        <strong>设置 → 显示 → 「判重模式下：各字段读哪一份」</strong>（自动 / 本份 / 合并那份）——
+        选「本份 / 合并那份」只在<strong>判重模式</strong>下生效（不判重时一律读本份）。</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s14">十四、数据安全</h2>
+        <ul>
+            <li><strong>历史撤回</strong>：所有写操作均自动记录历史，可撤回最近 n 步（默认 25 步，可配置 1~100）</li>
+            <li><strong>存储提醒</strong>：估算体积 ≥40MB 时信息栏出现黄色「存储接近上限」，≥45MB 时变成红色「存储已满」并弹一次提示</li>
+            <li><strong>展开节点保护</strong>：展开节点数超阈值（L1=2500）时悬浮提醒，超 L2=5000 时阻止展开</li>
+        </ul>
+        <div class="note warn">
+            <strong>⚠️ 存储提醒只是提醒，不会阻止保存。</strong>
+            它的数值是<strong>估算</strong>的：按每个节点各自的 JSON 长度<strong>缓存起来累加</strong>
+            （不是每次整份序列化），而且<strong>改完数据后大约 5 秒</strong>才刷新那行数字 ——
+            所以刚改完看到的是上一次的值，别拿它当"我刚写了多少"。
+            它也不等于浏览器存储的真实占用。
+            看到红色提示请<strong>主动导出备份并清理</strong>——它不会替你停下。
+        </div>
+        <div class="note">
+            <strong>💡 提示：</strong>所有危险操作（删除、清空、撤回、清空历史）均带有 <strong>3 秒倒计时确认</strong>，请谨慎操作。
+        </div>
+        <div class="note">
+            <strong>💡 信息栏还会显示两个状态：</strong>
+            <span class="badge">✅ DB已保存</span> 表示已写进浏览器存储；
+            <span class="badge">✅ JSON已导出</span> 表示当前数据版本已经导出成文件了。
+            如果显示「JSON未导出」而你又改过数据，说明该备份了。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s15">十五、快捷键</h2>
+        <ul>
+            <li><span class="kbd">Alt</span> + <span class="kbd">S</span> – 导出完整 JSON</li>
+            <li><span class="kbd">A</span> + <span class="kbd">Q</span> – 在选中节点上快速删除（无需确认）</li>
+            <li><span class="kbd">Ctrl</span> + 点击删除按钮 – 弹出确认框删除（带倒计时）</li>
+            <li><span class="kbd">Ctrl</span> + 点击副页 Tab – 编辑副页名称</li>
+            <li><strong>双击节点</strong>（树模式） / <span class="kbd">Ctrl</span> + <strong>单击节点</strong>（文件夹模式）– 编辑节点属性</li>
+            <li><span class="kbd">Ctrl</span> + 点击「➕」 – 快速添加子节点（跳过类型选择）</li>
+            <li><span class="kbd">Ctrl</span> + 点击「清空选择」 – 执行清空（防误触）</li>
+            <li><span class="kbd">Ctrl</span> + 点击「📋」（打开详页） – <strong>新开一个详页页签</strong>，
+                但<strong>当前页不动</strong>（像浏览器里按住 Ctrl 点链接；从 v9.0.18 起。
+                普通点击仍是"开着就切过去"）。⚠️ 这个 <span class="kbd">Ctrl</span> <strong>只在这一颗 📋 上生效</strong>，
+                别处（树上的多选 / 折叠 / 显示 nature）一切照旧。</li>
+        </ul>
+        <div class="note">
+            <strong>⚠️ 撤回没有快捷键</strong>（刻意设计，避免误触）：在<strong>设置面板</strong>里点
+            <span class="badge">↩️ 撤回</span>，旁边会写明当前有几个可撤回版本。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s16">十六、树结构约束</h2>
+        <p>节点类型间的父子关系有严格约束：</p>
+        <table>
+            <thead><tr><th>父类型</th><th>允许的子类型</th></tr></thead>
+            <tbody>
+                <tr><td>O（超级根）</td><td>W / S</td></tr>
+                <tr><td>W（平台）</td><td>S / W</td></tr>
+                <tr><td>S（系列）</td><td>C / S</td></tr>
+                <tr><td>C（比赛）</td><td>P</td></tr>
+                <tr><td>P（题目）</td><td>R（提交记录）</td></tr>
+                <tr><td>R（提交记录）</td><td>（无子节点）</td></tr>
+            </tbody>
+        </table>
+
+        <h3>派生字段的自动计算规则</h3>
+        <p>这些字段<strong>不用手填</strong>，核心会按下面的规则算（先算子节点、再算父节点）：</p>
+        <table>
+            <thead><tr><th>字段</th><th>怎么算</th></tr></thead>
+            <tbody>
+                <tr><td>P.acTime</td><td>它下面最早的 AC 提交时间；没有则显示占位符</td></tr>
+                <tr><td>P.lastSubmitTime</td><td>它下面最晚的一次提交时间</td></tr>
+                <tr><td>P.status2</td><td>有 AC → <strong>4（那次 AC 是<strong>赛时</strong>打的，或有 <code>4</code> 的覆盖）/ 3（其余：VP / 补题）</strong>；有提交无 AC → 2；无提交 → 1（有 <code>1</code> 的覆盖）或 0；<strong>=5 时无条件保留</strong></td></tr>
+                <tr><td>C/W/S.statusComplete1</td><td>子树里所有 P 的 status1 都是 1 → 1，否则 0</td></tr>
+                <tr><td>C/W/S.statusComplete2</td><td>全部通过 → 3；全部已处理（或忽略）→ 2；有通过 → 1；否则 0；<strong>=4 时无条件保留</strong></td></tr>
+            </tbody>
+        </table>
+
+        <!-- ========================================================== -->
+        <h2 id="s17">十七、常见问题</h2>
+
+        <h3>改了东西，界面没反应 / 重启后没了</h3>
+        <p>极少见。先看信息栏是否显示「DB未保存」；如果一直这样，可能是浏览器存储被占满（见<a href="#s14">第十四节</a>的存储警戒）。</p>
+
+        <h3>看不到「子节点」「题目分布统计」「比赛补题概览」页签</h3>
+        <p>这些页签<strong>只在文件夹模式</strong>显示。切到文件夹模式即可（见<a href="#s7">第七节</a>）。</p>
+
+        <h3>改了代码/更新了版本，但页面像是旧的</h3>
+        <p>按 <span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">R</span> 强制刷新。
+        浏览器会缓存 JS 模块，偶尔会新旧混用。启动脚本用的开发服务器已经禁用了缓存，若仍反复出现，
+        确认启动的是 <code>scripts/dev-server.py</code> 而不是旧的 <code>python -m http.server</code>。</p>
+
+        <h3>难度统计里为什么有「未填写」一堆</h3>
+        <p>题目没录 CF 难度或通过率时就会归到这里。可以用「显示未填写项」开关把它隐藏，
+        或先用「📝 题目信息批量导入」把难度补齐。</p>
+
+        <h3>XCPC 难度是怎么来的</h3>
+        <p>由题目填的<strong>通过率</strong>自动推导成等级（签到 / 铁牌 / 铜牌 / 银牌 / 金牌 / R / C 等档位，
+        每档还有 +/-）。所以想让它准确，关键是<strong>填对通过率</strong>，不必手选等级。</p>
+
+        <h3>副页会跟着主树变吗</h3>
+        <p><strong>汇总状态会，节点本身不会。</strong>副页节点通过映射指向主树节点，所以主树里标了通过，
+        副页的统计会自动更新；但副页的节点列表是你当初复制/映射的结果，主树新增的节点不会自动出现在副页里。</p>
+
+        <h3>「待办题单」为什么不更新</h3>
+        <p>它是一次性快照（见<a href="#s9">第九节</a>）。改了主树状态后需要重新执行一次。</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s18">十八、账户（这份数据是谁的）</h2>
+        <p>顶栏那个 <span class="badge">👤 本机</span> 就是账户入口。账户<strong>不是树的节点</strong>，
+        它只是一张名单，回答一个问题：<strong>某个值是"谁的"</strong>。</p>
+        <p>界面上只有两个概念：</p>
+        <ul>
+            <li><span class="badge">✅ 以它登录</span>：你<strong>手改</strong>的值以谁的名义记下来（当前那个按钮上就是 ✅）；</li>
+            <li><span class="badge">👁 查看它</span>：点了就用<strong>谁的眼睛</strong>看数据（正在查看的那张卡上标着 <span class="badge">👁 查看中</span>）。</li>
+        </ul>
+        <div class="note warn">
+            <strong>⚠️ 两者不同时，手改会被拒绝</strong>（这样才不会把自己的修改混进别人的数据）。
+            此时顶栏标记会变红并写出"在查看谁"。<strong>导入不受影响</strong> ——
+            导入是客观数据入库，与"现在登录的是谁"无关。
+        </div>
+        <p>每个账户下面可以填一串<strong>映射</strong>，格式是「源 : 字段 ＝ 值」，例如
+        <code>qoj : 提交者 ＝ someone</code>。导入时应用会拿记录里的线索去查这张表：
+        认得出就记在该账户名下，认不出就<strong>报出来</strong>（提示你去补一条映射），
+        <strong>绝不自动新建账户</strong>。</p>
+        <p>归认的结果在三个地方看得到：</p>
+        <ul>
+            <li><strong>导入预览</strong>（还没点执行时）：「归认：N 条 → 主号」；</li>
+            <li><strong>导入完成提示</strong>：「…… ｜ 归认：认出 N 条」；</li>
+            <li><strong>值级来源面板</strong>（双击节点 → 编辑弹窗里每个字段下面）：
+                <code>← 来源 · 👤主号 #后4位</code>；没有账户的值会明确写成
+                <code>· 客观</code>（意思是"这条值不属于任何账户"，比如榜单算出来的通过率）。</li>
+        </ul>
+        <p>⚠️ <strong>一条提交只归一个账户</strong>，而且<strong>父子账户不会自动合并</strong>：
+        "谁认领了那条线索，这条提交就归谁"。所以两个账户的热力图里出现<strong>完全不同</strong>的题是正常的
+        （例：个人号是 cf/atcoder/qoj 的账号、队赛是 hdu / 牛客 / PTA 的<strong>队号</strong>），
+        两边既不是子集也不是超集。要让"看我的时候也算上队的"，就
+        <strong>把队挂成我的子账户</strong>，再勾上 <strong>设置 → 📊 统计 → 查看范围 →
+        把我的子账户也算进我这份</strong>（见上面「这些数字"按什么数"」那一节的最后一段）。
+        ⚠️ 别让两个账户<strong>都</strong>认领同一条线索：那会被判成"冲突"、<strong>谁都不给</strong>，
+        整条线索变成"客观值"（反而两边都算）。</p>
+        <p>每个账户都有一个 <span class="badge">活跃</span> 开关（默认开）。
+        <strong>只有活跃账户</strong>能当登录/查看账户、参与归认、出现在字段来源里；
+        <strong>停用</strong>只是"先收起来"——账户、它填的映射、它名下的值全都还在，随时可以启用回来。
+        以后想换号或做账户迁移时，先停用旧号是更安全的做法。
+        <strong>停用的账户收在单独一页</strong>（账户列表上方的 <span class="badge">活跃</span> /
+        <span class="badge">已停用</span> 那一行），不跟活跃的混在一起。</p>
+        <p><strong>新建一个账户</strong>：在 <strong>账户（N）</strong> 那一行右边的
+        <span class="badge">＋ 新建账户</span> 上点一下 —— 弹窗里填名字、性质（默认「本人唯一账号」）、
+        可挂父账户、再一行行填映射（源:字段=值），保存后就是一个真账户（可撤回、随导出走）。
+        ⚠️ 这块界面<strong>有两个入口、是同一份</strong>：点顶栏的
+        <span class="badge">👤 本机</span> 直接弹窗，或者 <strong>设置 → 🔑 账户/名册 →
+        账户</strong> 那一栏（和 me.json 名册同屏）。两处改的是同一份数据。</p>
+        <p>⚠️ <strong>它和下面 me.json 那份名册是两套存储</strong>：账户建在应用数据里，
+        me.json 的 <code>accounts[]</code> 是"从账户算出来的派生"（要同步就按那颗
+        <span class="badge">📤 写进 me.json（爬虫用）</span>），<strong>改 me.json 不会反过来长出账户</strong>。
+        账户编辑窗里，<strong>映射行</strong>与<strong>已选的子账户</strong>都有 <span class="badge">↑</span> /
+        <span class="badge">↓</span>（顺序会存下来：映射的顺序就是 me.json 里 <code>mappings</code> 的顺序）；
+        me.json 表单里每一格也有 <span class="badge">↑</span> / <span class="badge">↓</span>，
+        换的就是<strong>文件里键的先后</strong>。</p>
+        <p>账户列表里的 <span class="badge">↑</span> / <span class="badge">↓</span> 可以        <strong>调整顺序</strong>（顺序记在数据里、随导出走；默认账户「本机」恒在第一位）。
+        「<span class="badge">以它登录</span>」「<span class="badge">查看它</span>」这一对按钮
+        <strong>每张卡上都在</strong>：当前那个是高亮（点它本来就没事可做），点另一个就切过去 ——
+        这样按钮不会因为"谁是当前"而忽隐忽现、行也不会跳。</p>
+        <p><strong>设置页</strong>「🔑 账户/名册」那一栏分两页：
+        <span class="badge">👤 账户</span>（应用数据里的账户与映射，<strong>这里是真源</strong>）与
+        <span class="badge">🔑 名册 / 凭据（me.json）</span>（磁盘上那份抓取脚本的配置）。
+        名册那页顶上还有一块 <span class="badge">🔐 登录态</span>：把抓取要用的凭据
+        （QOJ 的 cookie、CF 的 key/secret、CLIST 的用户名/key）<strong>直接手输</strong>，
+        每行一个「🔎 探活」—— 用<strong>框里现在的值</strong>试一发（1 个请求，不用先保存），
+        过期就把"去 me.json 改哪一份"那句话原样告诉你。</p>
+        <div class="note">
+            <strong>💡 第一次装、或刚拿到一份发布副本时，那份 <code>me.json</code> 还不存在</strong> ——
+            <strong>这不算出错</strong>（发布包里本来就不带个人数据）：名册那页照旧是<strong>空白、可以填</strong>的，
+            账户页那颗 <span class="badge">📤 写进 me.json（爬虫用）</span> 也照旧点得动。
+            <strong>保存一次它就把 <code>个人数据\me.json</code> 建出来</strong>（连目录一起建），
+            不用先去跑一趟抓取脚本。</div>
+        <p>一个值的归属是<strong>记录级</strong>的：同一条提交的结果、时间、链接都算在提交人头上；
+        题目的通过率、比赛时间这类客观数据则没有账户。你手改的值，会记在<strong>当前登录账户</strong>名下。</p>
+        <div class="note">
+            <strong>💡 树上显示的值是"现算"的：</strong>它按你现在<strong>在查看</strong>的账户算
+            （换一个人看，同一个节点会显示不同的值，但<strong>数据一个字节都不会变</strong>）。
+            不属于你在看的人的值不会参与统计；万一某个字段只有别人的值，树上会先显示它并加上悬停说明，
+            而不是让字段凭空消失。<br>
+            信息栏最后一句写着当前"口径"。<strong>派生结论</strong>（过题状态 / 完成状态 / AC 时间 /
+            难度等级）也已经按<strong>在查看</strong>的账户算 —— 也就是"各自看到自己的补题情况"；
+            只有「我处理了吗」（状态1）还按登录账户算。
+        </div>
+        <div class="note">
+            <strong>💡 "手改"怎么算：</strong>必须在编辑弹窗里<strong>真的输入过</strong>那个字段、
+            而且<strong>值确实变了</strong>——两条都成立才留一条手改记录。打开弹窗直接点确定不算手改；
+            点来源面板的「优先」也不算什么（那是程序在改值）。<br>
+            派生字段（状态1/状态2/完成状态这类自动算出来的）不记手改——它们的值不是你填的。
+        </div>
+        <div class="note">
+            <strong>💡 提示：</strong>多个账户填了同一行映射时，导入会把它当成冲突并<strong>不认领</strong>
+            （不猜是谁的）。这时请自己判断该归谁，删掉多余那条。
+        </div>
+        <div class="note">
+            <strong>💡 补映射之后怎么修历史值：</strong>点账户界面里的
+            <span class="badge">🔁 用当前映射重跑归认</span>。它会先告诉你"会改几条"，
+            确认后只改"这是谁说的"，不动值本身，而且可以撤销。<br>
+            重新导入同一个包也能达到同样效果（同一个线索只留一条，账户按最新一次算），
+            不会在旁边多叠一条。
+        </div>
+
+        <h3>清除本机的个人数据（凭据 / 抓取产物）</h3>
+        <p>把这份文件夹交给别人、或者自己不想留着那些"看得出是谁的"东西时，用仓库根目录下的
+        <span class="badge">清除个人数据</span> 文件夹里那个脚本：
+        <code>清除个人数据\确认要清除个人数据\点错了请直接关窗口\清除个人数据.bat</code>。
+        <strong>双击它本身什么都不会改</strong>（埋三层 + 纯 ASCII，就是防误点），它会问你三次：
+        先敲 <code>go</code>，再选级别 <code>1 / 2 / 3</code>，最后敲 <code>yes</code> ——
+        <strong>最后那个 yes 之前，一个字节都不写</strong>；任何一步答错或直接关窗口 = 什么都不做。</p>
+        <table>
+            <thead><tr><th>级别</th><th>清什么</th></tr></thead>
+            <tbody>
+                <tr><td><code>1</code> 只凭据</td>
+                    <td><code>me.json</code> 与它的备份 → 换成空模板（cookie、key/secret 全没）</td></tr>
+                <tr><td><code>2</code> 凭据 + 提交/榜单</td>
+                    <td>再加本人与他人的提交导出、榜单统计（<code>*_submits.json</code>、<code>*_rank_stats.json</code>、
+                        <code>*_standings_*.json</code>、<code>*.srk.json</code>、<code>PTA_rankings.json</code>、
+                        <code>team_submissions*.json</code> 等）</td></tr>
+                <tr><td><code>3</code> 全部</td>
+                    <td>再加抓取缓存与页面归档（<code>cache\</code>、<code>pages\</code>、<code>*.html</code>、
+                        <code>*.log</code>、<code>*.png</code>、<code>*.bak</code>）</td></tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>⛔ 无论选哪一级，这些都不会被删：</strong>
+            · 全部源码与文档（<code>*.py</code> / <code>*.js</code> / <code>*.mjs</code> / <code>*.md</code> / <code>*.bat</code>）；
+            · <strong>注册表与题库比赛清单</strong>（<code>cache\</code> / <code>pages\</code> <strong>之外</strong>、
+            名字里含 <code>problems</code> / <code>registry</code> / <code>contests</code> /
+            <code>whitelist</code> / <code>tasks</code> 的一律不动：<code>field-registry.json</code>、<code>nature-registry.json</code>、
+            <code>synth-registry.json</code>、<code>nature-assignments.json</code>、<code>xcpc_registry.json</code>、
+            <code>xcpc_contests.json</code>、<code>gym_whitelist.json</code>、各 <code>*_problems.json</code> / <code>*_contests.json</code>）；
+            <strong><code>cache\</code> 里那些名字像"题单"的（<code>*_problems.json</code>、<code>*.tasks.html</code>）
+            照删</strong> —— 它们是抓来的缓存，不是题库清单；
+            · <code>acm-data\nodes\</code> 里的产出包（含 <code>all_nodes.json</code>）、<code>merged\</code> 的示例、
+            <code>reports\</code> 的报告；<code>acm-data\raw</code> 之外的一切；仓库外的任何文件。
+            脚本运行时会先把这份清单打印出来给你看。
+        </div>
+        <p>清完自己核一下：仓库根目录跑 <code>npm test</code> —— 应该全绿，只有几处依赖"个人提交导出 / 树包"的用例会自己
+        <code>skip</code> 并打印原因。</p>
+
+        <h3 id="browser-data">另一层"个人数据"：浏览器里的那份 —— 什么时候清、怎么清</h3>
+        <p>这个应用有两层"个人数据"，<strong>清文件只能清掉第一层</strong>：</p>
+        <table>
+            <thead><tr><th>哪一层</th><th>里面是什么</th><th>怎么清</th></tr></thead>
+            <tbody>
+                <tr><td><strong>磁盘上的</strong></td>
+                    <td><code>me.json</code>（凭据）、提交/榜单导出、抓取缓存与页面归档、<code>_chrome-profile\</code>（登录 cookie）</td>
+                    <td>上面那个 <span class="badge">清除个人数据</span> 脚本（1 / 2 / 3 级）</td></tr>
+                <tr><td><strong>浏览器里的</strong></td>
+                    <td><strong>树上全部节点、提交、副页、训练计划</strong> —— 真源就在浏览器的 IndexedDB 里（见第十九节）</td>
+                    <td><strong>只有在那个页面的控制台里跑 <code>clearAll()</code></strong>（或者设置页 Ctrl+点「🗑 清空」）</td></tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <strong>⚠️ 两件最容易误解的事（都实测过）：</strong>
+            <ul>
+                <li><strong>"硬刷新"（<span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">R</span>）
+                    不会清浏览器数据。</strong>它只是"绕过缓存重新取 JS/HTML" —— IndexedDB 一个字都不动。
+                    所以刷新完页面还是满的，<strong>不是"没刷新成功"，是数据本来就没清</strong>。
+                    反过来，<strong>改完 <code>me.json</code> 之后要刷新一次</strong>才能让设置页读到新值 ——
+                    <em>那一步是刷新，不是清数据</em>，两件事别混。</li>
+                <li><strong>同一个地址 = 同一份浏览器数据。</strong>浏览器按"源"（协议 + 主机 + 端口）隔离，不看磁盘上那份文件夹。
+                    只要都在 <code>http://127.0.0.1:8321</code> 上打开，<strong>换一份工作区副本（比如 release 包）拿到的还是同一份
+                    IndexedDB</strong>；而且如果 8321 上已经蹲着原来那份的服务器，启动脚本会<strong>礼让</strong>
+                    （只开浏览器、不换服务）⇒ 你看到的可能仍是<strong>原来那份</strong>，连 <code>me.json</code> 都是原来那份。
+                    <strong>判据</strong>：副本里没有 <code>个人数据\me.json</code> ⇒ 真连到副本时「🔐 登录态」应该是<strong>空的</strong>
+                    （表单空白可填，不是报错 —— 见上面那条）；
+                    如果它还是满的，说明连的是别的服务器（看 <code>http://127.0.0.1:8321/api/ping</code> 里的
+                    <code>root</code> 指向哪个文件夹，以及设置页底部的版本号）。</li>
+            </ul>
+        </div>
+
+        <p><strong>什么时候需要清</strong>（清磁盘和清浏览器是两件事，按需做）：</p>
+        <ul>
+            <li>要把文件夹<strong>交给别人 / 公开发布</strong>之前，想确认"对方打开看到的是空树"；</li>
+            <li><strong>换了一份工作区副本</strong>、或换了 <code>me.json</code>，想从零开始（旧树还躺在浏览器里）；</li>
+            <li>导入"<strong>全量包</strong>"之前，不想让旧数据混进来（也可以先导出备份再清）；</li>
+            <li>排查"数据看着不对"（怀疑浏览器里存的与包不一致）。</li>
+        </ul>
+
+        <p><strong>怎么清</strong>：在<strong>那个页面</strong>按 <span class="kbd">F12</span> 打开控制台，粘这两句、回车：</p>
+        <pre><code>const { clearAll } = await import('/src/persistence/index.js');
+await clearAll();
+location.reload();</code></pre>
+        <p>跑完会自己刷新成<strong>空树</strong>。它清掉的是：
+        <strong>全部节点（只留根）+ 全部副页（整页删掉）+ 全部训练计划</strong>；
+        <strong>不动</strong>你的账户、设置与抓取来源（与设置页 Ctrl+点「🗑 清空」<strong>完全同一件事</strong>，
+        只是不用点界面 —— 想点界面就走那一条，效果一样）。</p>
+
+        <p><strong>想彻底回到"出厂状态"</strong>（连<strong>账户 / 设置 / 来源注册表</strong>都回默认，
+        用来模拟"第一次拿到这份文件夹的人"）：在上面两句之外，把浏览器那点小配置也一起清掉 ——</p>
+        <pre><code>const { clearAll } = await import('/src/persistence/index.js');
+await clearAll();          // 树 / 副页 / 计划（IndexedDB）
+localStorage.clear();      // 剩下的本机小配置（宽度、页签、视图态…）
+location.reload();</code></pre>
+        <div class="note">
+            <strong>⚠️ 不可撤销</strong>：这些一跑，浏览器里那份就没了（磁盘上的 <code>me.json</code> 不受影响，
+            它仍归那个 <code>.bat</code> 或设置页的「🔐 登录态」管）。
+            <strong>要留底就先「📤 导出全量包」</strong>（它含<strong>设置 / 来源注册表 / 账户 / 信任表</strong>），
+            清完再「📥 导入」回去。
+            想"连磁盘也一起清"：先跑 <code>.bat</code>（选 1 / 2 / 3 级），再在页面里跑上面那几句 ——
+            顺序无所谓，两条都要做。
+        </div>
+        <p>⚠️ 只跑 <code>clearAll()</code>（不清 <code>localStorage</code>）时，<strong>账户还在</strong> ——
+        想验证"新用户看到什么"，看的是<strong>一个没有用过这应用的浏览器</strong>；同一个浏览器里账户是应用数据，
+        不会被清磁盘或清树的那几下带走。</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s18b">十八·补一、设置页（⚙️）</h2>
+        <p>顶栏的 <span class="badge">⚙️ 设置</span> 是<strong>一个独占的一级页签</strong>（不再是弹窗）：整页按卡片排，
+        控件占满一列，改完即生效。</p>
+        <table>
+            <thead><tr><th>那一栏</th><th>改的是什么</th><th>存哪儿</th></tr></thead>
+            <tbody>
+                <tr><td>🖥️ 显示 / 💾 保存 / ⚡ 性能 / 📊 统计</td>
+                    <td><strong>应用设置</strong>（每页几个、方框数、撤回步数上限、计数模式…；<strong>编辑模式</strong>在「显示」那张卡里、<strong>自动保存/定时导出</strong>在「保存」里）</td>
+                    <td>进存档（<code>AppState.settings</code>），<strong>能撤回</strong>、跟着「完整数据导出」走</td></tr>
+                <tr><td>🔑 账户 / 名册</td>
+                    <td>上面那半是<strong>应用账户</strong>（真源，见第十八节）；切到「名册 / 凭据」那半改的是磁盘上的
+                        <code>me.json</code>（抓取脚本的配置：CF/CLIST 的 key、QOJ cookie、各站用户名）</td>
+                    <td><code>me.json</code> 由本机主脚本读写；<strong>不进撤回历史、不随导出走</strong>（那是爬虫的配置，
+                        不是这份数据）</td></tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>💡 两件事别混：</strong>页头那句提示就是给这件事的 —— 上面是"这份数据怎么显示/怎么算"，
+            右下那栏是"爬虫拿什么凭据去抓"。前者改错了可以撤回，后者改错了要自己再改回来。
+        </div>
+        <p><code>me.json</code> 那一栏的<strong>「登录态」块里，每一行一个「🔎 探活」</strong>：一键问抓取侧"这份凭据
+        还有效吗"（与脚本用同一套判据），不用等下一次抓取才发现过期。</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s18c">十八·补二、体检 / 需求（🩺）</h2>
+        <p><strong>这一页的数据来自你导入的那个包</strong>（包顶层带着两份报告），不联网、不重算 ——
+        所以"重建一次包、再导入"之后它才会更新。</p>
+        <h3>字段体检</h3>
+        <p>每一行是一个"某类节点上的某个字段"，按四档看：</p>
+        <ul>
+            <li><strong>已填</strong>：有值；</li>
+            <li><strong>缺</strong>：该有却没有（<span style="color:#b91c1c;">红</span>）；</li>
+            <li><strong>豁免</strong>：有证据表明"实际没有"（比如上游根本没这场）；</li>
+            <li><strong>多半拿不到</strong>：注册表里标了"追也多半追不到"—— <strong>也不算缺</strong>，
+                与「豁免」并列。</li>
+        </ul>
+        <p>页头那句小结会把"真缺多少 / 豁免多少 / 多半拿不到多少"分开念，别把后两档当成欠账。</p>
+        <h3>🩺 小结（最左边那一栏）</h3>
+        <p>这一栏是"这一页到底想说什么"：页头那句结论 + <strong>与上次体检比</strong>
+        （哪些字段<strong>变差了</strong>（红）/ <strong>变好了</strong>（绿），带 Δ 数字）+ 缺得最多的几行 +
+        最划算的几条需求。<strong>判断"这次重建是变好还是变差"就看它</strong>，不用自己对数字。</p>
+        <p>⚠️ 比的是<strong>随包的快照</strong>：没重新出包、没重新导入，这一栏不会变
+        （"没有可比的上一次"时它会直说）。</p>
+        <h3>原料需求</h3>
+        <p>把"缺的格子"翻译成"要去抓什么"：每条需求带着<strong>可直接粘贴的命令</strong>和一行"为什么缺"
+        （"没抓到" / "上游没有" 是两回事）。按来源分成几组，同一条命令的合并成一条。</p>
+        <div class="note">
+            <strong>💡 什么时候该来这页：</strong>① 觉得"某类数据怎么总是空的"；
+            ② 想补一批数据但不知道从哪一步开始。按需求上的命令跑完，再重建一次包导入，这一页就变干净了。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s19">十九、数据是怎么存的（大白话）</h2>
+
+        <p>这一节回答一个最容易被绕晕的问题：<strong>我没填过的值，为什么树上会出现？</strong>
+        答案是这个应用为每个字段存了三样东西，各管一件事。</p>
+
+        <h3>一个字段的三层</h3>
+        <ul>
+            <li><strong>① 你在树上看到的值</strong> —— 只是"显示"，它随时按你现在的查看身份重新算；</li>
+            <li><strong>② 缓存值</strong> —— 应用内部记的"当前值"，老数据基本只有这一层；</li>
+            <li><strong>③ 来源清单</strong> —— <strong>谁说过什么</strong>：手改说的、榜单说的、脚本说的、算出来的。
+                同一个字段可以躺着好几条互相矛盾的说法，这很正常。</li>
+        </ul>
+        <p>看到的值就是从 <strong>③</strong> 里<strong>挑一条</strong>当代表（挑的规则见下）。
+        如果 <strong>③ 是空的</strong>，那就是<strong>没有出处</strong> —— 面板会如实写「没有来源值」，
+        并说明是哪种情况：<strong>派生字段</strong>（值是算出来的）还是<strong>常规字段</strong>（值是新建节点时的默认值）。
+        ⚠️ 面板<strong>不会</strong>再去拿 <strong>②</strong>（缓存字段）当"出处" —— 那条回退已经删了：
+        应用里的数据都是新导入的，来源层总是有值。</p>
+
+        <h3>多个来源打架时，谁赢</h3>
+        <p>按顺序比，先比出来的赢：</p>
+        <ol>
+            <li><strong>你手改的</strong>（最高 —— 你自己填的永远优先）；</li>
+            <li><strong>你点过「优先」的那个来源</strong>（见下面三个按钮）；</li>
+            <li><strong>来源类型</strong>：手改 &gt; 权威榜单 &gt; 脚本 &gt; 算出来的；</li>
+            <li><strong>同类型的等级</strong>（每个来源自带的可信度分数，由来源/插件声明）；</li>
+            <li><strong>时间新的</strong>；</li>
+            <li>全都一样 → <strong>先来的赢</strong>（所以显示是稳定的，不会每次刷新都换）。</li>
+        </ol>
+
+        <h3>来源面板上的那几个按钮</h3>
+        <ul>
+            <li><span class="badge">优先</span>：以后这个字段<strong>尽量用这个来源</strong>说的话（只要没有手改压着它）；</li>
+            <li><span class="badge">不用</span>：这条<strong>不采用</strong>（可恢复，不会删掉，只是不参与挑选）——
+                注意只有"还有别的可用值"时才给这个按钮，最后一个留在场上的值不许被踢掉；</li>
+            <li><span class="badge">恢复</span>：把之前标「不用」的放回来。</li>
+            <li><span class="badge">真删</span>：把<strong>这条值从来源层里移除</strong>（只给<strong>手改值</strong>：
+                你自己改的那些，以及带 <strong>🌐「所有人共用」</strong>的那些 —— 所以点完
+                「转成所有人共用」也删得掉；<strong>队友账户的手改值不给</strong>，榜单/脚本抓来的值也不给）。
+                <strong>能撤销</strong>。它和「不用」不是一回事：<strong>「不用」只是标记</strong>（值留着留痕、随时可恢复），
+                「真删」才是真去掉。</li>
+            <li>另外，这个字段<strong>设过「优先」</strong>时，面板底下会多一个
+                <span class="badge">取消偏好</span>：退回按来源类别/等级自动选值。</li>
+        </ul>
+        <p>面板顶部那句"理由"就是它为什么选中的大白话（例如「手改优先」「权威榜单优先」「唯一来源」）。</p>
+
+        <h3>题目「AC 时间」怎么取（设置 → 📊 统计）</h3>
+        <p>一道题<strong>可能被训练很多次</strong>（间隔很久）。默认的规则是<strong>取最早</strong> —— 也就是"第一次 AC"，
+        于是后面几次重训在「训练强度追踪 / 最近 AC 题目列表」里就<strong>看不见</strong>了。设置页那一栏可以换：</p>
+        <ul>
+            <li><strong>取最早（第一次 AC）</strong>：默认，与老行为逐字相同；</li>
+            <li><strong>取最近（最后一次 AC）</strong>：Heatmap / AC 列表落到最后一次；</li>
+            <li><strong>取「截断时间」之后的最早一次</strong>：填一个时间（8 位 = 到天、12 位 = 到分、14 位 = 到秒，
+                分隔符随便写），取<strong>不早于它</strong>的那些里最早的一条；
+                <strong>这道题一次都没有</strong>（全在截断之前）⇒ 取它<strong>最后一次</strong> AC。</li>
+            <li><strong>取「截断时间」之后的最早一次，并忽略截断前的所有提交</strong>：在上一档的基础上，
+                <strong>早于截断的提交整体不算</strong> —— 不算提交、不算 AC、也不算"最新提交"
+                （树上那些行会<strong>变淡</strong>，但仍在、仍能点开）。截断之后一条提交都没有 ⇒
+                这题回到<strong>「未使用」</strong>。用途：<strong>重复利用训练资源</strong> ——
+                早先过过的题重新练时，让它重新回到待办里。</li>
+        </ul>
+        <p>⚠️ <strong>第 4 种是"会改行为"的那一档</strong>（前三种只改"树上那格 AC 时间显示哪一条"）：
+        它同时管着<strong>这题过没过（状态2）、AC 时间、最新提交</strong>，也会影响统计与判重模式下的「组那份」。
+        被忽略的提交<strong>不写任何标记</strong>（纯按条件算出来的）⇒ 随时换回前三种就完全复原。</p>
+        <p>它管的是<strong>整条口径</strong>：树上那格「AC时间」、训练追踪、判重模式下「组那份」全都跟着一致。
+        改完点保存会当场重算一次（大表上约几十到一百多毫秒）。</p>
+
+        <h3>哪些值是"算出来的"，为什么不能直接填</h3>
+        <p>有几类字段是应用自己算的：<strong>状态2、完成状态、AC 时间、最后提交时间、XCPC 难度</strong>。
+        它们由子节点或通过率推出来，所以编辑弹窗里<strong>不记手改</strong>（记了也会被下一次重算冲掉）。
+        其中有两个允许你<strong>按一下</strong>覆盖自动结果（这是"你的决定"，不是"你填的值"）：</p>
+        <ul>
+            <li>题目的状态2：<strong>待写 / 赛时通过 / 忽略</strong>（"忽略"= 这题别算进统计）；</li>
+            <li>比赛/系列/平台的完成状态：<strong>忽略</strong>。</li>
+        </ul>
+        <p>只有「我处理了吗」（状态1）例外：它是<strong>用户输入</strong>，按<strong>登录账户</strong>算，
+        与"在查看谁"无关。</p>
+
+        <h3>存档里到底存了什么</h3>
+        <p>点「完整数据」导出的文件（含主树、副页、设置）里，会带走这些东西：</p>
+        <ul>
+            <li>整棵树：节点、父子关系、每个字段的<strong>来源清单</strong>（含"这是谁说的"）、
+                每个节点的"创建归属"（谁让它出现的）；</li>
+            <li><strong>账户注册表</strong>（账户名、性质、映射、活跃开关）与"登录/在查看"两个指针；</li>
+            <li>来源注册表与优先级设置（你说的「优先」就是它）。</li>
+        </ul>
+        <p><strong>不</strong>带走的：撤回历史（导入后从零开始）、当前打开的是哪个页签、
+        "展开到哪一层"这类纯界面状态。</p>
+        <div class="note">
+            <strong>💡 为什么值得信任一份导出文件：</strong>它能把以上全部<strong>原样</strong>搬回来
+            （包括"这条通过率是榜单说的、那条是你手改的"）。所以做实验之前先导出一次，
+            是这里最省事的安全网。
+        </div>
+
+        <h3>撤回能退回什么（在设置面板里点，没有快捷键）</h3>
+        <p>每一步"改动"都能一步步退回：改字段、增删/移动/复制节点、改标签、<strong>副页操作</strong>、
+        <strong>账户的新建/改名/映射/停用/删除</strong>、切换"在查看"、跑一次归认、清空数据。
+        按一次<strong>只退一步</strong>；退到头会提示没有可撤回的了。
+        （导入整库文件、以及"展开/勾选"这类纯界面动作不进撤回历史。）</p>
+
+        <!-- ========================================================== -->
+        <h2 id="s20">二十、看着不对时，按这个顺序查</h2>
+        <p>遇到"这不对吧"的时候，照这个表走一遍，基本能自己定位到是哪一类问题。
+        每一步都只用到界面上能看到的东西。</p>
+        <table>
+            <thead><tr><th>你看到的现象</th><th>先看这一处</th><th>最可能的原因</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td>某个字段的值<strong>不是我填的</strong> / 突然变了</td>
+                    <td>编辑弹窗里字段下面那句来源，点开 ⓘ 看清单</td>
+                    <td>这个字段本来就该有多条来源，现在挑中的是别人或榜单那条。
+                        想固定成你要的：找到那条点「优先」。</td>
+                </tr>
+                <tr>
+                    <td>改名 / 删除 / 加标签<strong>被拒绝</strong></td>
+                    <td>顶栏那个账户标记有没有写成 <strong>「👁 &lt;账户名&gt;（只读）」</strong></td>
+                    <td>你现在"在查看"的是另一个账户。切回自己的账户即可（见<a href="#s18">十八节</a>）。</td>
+                </tr>
+                <tr>
+                    <td>统计数字和树上显示<strong>对不上</strong></td>
+                    <td>信息栏最后一句的"口径"，以及顶栏在查看谁</td>
+                    <td>统计按"在查看"的账户算；换了人看，数字本来就该变。
+                        另外「我处理了吗」仍按<strong>登录账户</strong>算。</td>
+                </tr>
+                <tr>
+                    <td>导入完了，但树上<strong>看不到变化</strong></td>
+                    <td>打开那道题的 ⓘ 来源清单</td>
+                    <td>导入只往"来源清单"里加一条，显示值由挑选规则决定 ——
+                        新来的可能没被选中（比如它是脚本、原来那条是榜单）。</td>
+                </tr>
+                <tr>
+                    <td>标签管理里是<strong>空白行</strong>或删不掉</td>
+                    <td>先刷新一次页面再试</td>
+                    <td>老版本导入留下的坏数据，打开时会被自动修回来；刷新后仍不对，就把「你点了什么 + 屏幕上出现的提示原文」记下来。</td>
+                </tr>
+                <tr>
+                    <td>值那一格写着<strong>「没有来源值」</strong></td>
+                    <td>——</td>
+                    <td>正常：<strong>派生字段</strong>的值是算出来的、<strong>常规字段</strong>的值来自新建节点时的默认值 ——
+                        面板里会写明是哪一种（见<a href="#s19">第十九节</a>「三层来源」）。</td>
+                </tr>
+                <tr>
+                    <td>改了东西，界面没反应 / 重启后没了</td>
+                    <td>见<a href="#s17">十七节常见问题</a></td>
+                    <td>多半是浏览器还在跑旧版本（敲 <code>__ACM_BUILD__</code> 看一眼版本号）。</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <strong>💡 出问题时的三步安全动作：</strong>
+            ①先「导出完整数据」留个备份；②刷新页面（Ctrl+F5）再试一次；
+            ③还是不对，就把"你点了什么 + 屏幕上出现什么（提示原文）"记下来。
+            <strong>数据本身很难被弄坏</strong>：导入只加来源、不改写你没让它改的东西，
+            而且大部分改动能退回（<strong>设置面板 → ↩️ 撤回</strong>，没有快捷键）。
+        </div>
+
+        <!-- ========================================================== -->
+        <h2 id="s21">二十一、名词小词典</h2>
+        <table>
+            <thead><tr><th>界面/文档里的词</th><th>大白话</th></tr></thead>
+            <tbody>
+                <tr><td><strong>来源 / 值级来源</strong></td><td>"这条数据是谁说的"：手改、榜单、脚本、还是应用自己算的。</td></tr>
+                <tr><td><strong>来源清单</strong></td><td>同一个字段上所有说法的集合（可以有好几条互相矛盾的）。</td></tr>
+                <tr><td><strong>挑选 / 投影</strong></td><td>从清单里按优先级挑一条作为"现在显示的值"。</td></tr>
+                <tr><td><strong>客观值</strong></td><td>不属于任何账户的值（例如榜单算出来的通过率）。面板上标「· 客观」。</td></tr>
+                <tr><td><strong>归属 / 这是谁的</strong></td><td>这条值算在哪个账户名下。导入时靠"映射"认出来。</td></tr>
+                <tr><td><strong>线索</strong></td><td>记录里能指出"是谁"的那一列（如 QOJ 的"提交者"）。</td></tr>
+                <tr><td><strong>映射</strong></td><td>账户里写的「源 : 字段 ＝ 值」，用线索来认账户。</td></tr>
+                <tr><td><strong>归认</strong></td><td>导入时拿线索查映射表，把记录记到某个账户名下。认不出会报出来，不会瞎猜。</td></tr>
+                <tr><td><strong>手改</strong></td><td>你在弹窗里真的输入过、而且值确实变了 —— 两条都成立才留记录。</td></tr>
+                <tr><td><strong>派生 / 算出来的</strong></td><td>由子节点或通过率推出来的值（状态2、完成状态、AC 时间、难度）。</td></tr>
+                <tr><td><strong>覆盖</strong></td><td>你对"算出来的值"按下的决定：待写 / 赛时通过 / 忽略。</td></tr>
+                <tr><td><strong>缓存值</strong></td><td>应用内部记的"当前值"，老数据只有这一层。</td></tr>
+                <tr><td><strong>没有来源值</strong></td><td>这一格没有出处：要么是<strong>派生字段</strong>（值是算出来的），要么是<strong>常规字段</strong>（值来自新建节点时的默认值）。见第十九节。</td></tr>
+                <tr><td><strong>身份键</strong></td><td>导入包的"这道题是谁"的编号，用来避免同一道题被导两次。</td></tr>
+                <tr><td><strong>导入包（crate）</strong></td><td>爬虫整理好的一个文件，里面是"要写进树里的记录"。</td></tr>
+                <tr><td><strong>只读 / 在查看</strong></td><td>用别人的眼睛看数据的状态：这时手改被拒，导入照常。</td></tr>
+                <tr><td><strong>活跃 / 停用</strong></td><td>账户的开关。停用只是先收起来，数据一个都不删。</td></tr>
+                <tr><td><strong>口径</strong></td><td>信息栏最后那句：现在这些数字是按哪个账户算的。</td></tr>
+                <tr><td><strong>合成节点 / 合成标识</strong></td><td>树上给一批原料当「组头」的真节点；它的身份是合成标识（<code>synthKey</code>，界面显示 <span class="badge">🧩</span>）。见<a href="#s3">第三节</a>。</td></tr>
+                <tr><td><strong>所属合成节点</strong></td><td>原料上的指针（<code>ownerSynth</code>），写着某个合成标识 —— 填了它就归入那一组。归入/解绑在判重整理页做。</td></tr>
+                <tr><td><strong>性质</strong></td><td>分类 / 年份 / 赛季 / 地区<strong>四个</strong>可空字段，只用于分区与筛选。见<a href="#s4">第四节</a>。</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="s22">二十二、训练计划</h2>
+        <p>在某一个<strong>副页</strong>上，「总览统计」下面、树上面，有一条<strong>训练计划</strong>栏。一条计划 = 一个<strong>题集</strong> + 一个<strong>目标</strong>：
+            题集默认就是那个副页里的题（<a href="#s9">第九节</a>），也可以改成"树上某个范围 + 条件"（见下），完成情况<strong>每次现算</strong>（不存快照）。</p>
+        <h3>怎么建一条计划</h3>
+        <ul>
+            <li>计划栏上点<strong>「＋ 新建计划」</strong>：填名字、选一个副页当题单、填开始时间、定目标。</li>
+            <li><strong>目标只填一份</strong>（例如「每天 3 强度」或「每周 2 题」）。看图表时可以随时换粒度
+                （日 / 周 / 月），目标会按「每天配额 × 这一期的天数」自动折算 —— 你填的那个数不会变。</li>
+            <li>计划的<strong>题集 = 那个副页里的全部题</strong>（副页里放了整场比赛，它下面的题也算）。
+                所以在哪一页挑题，是「副页」那一层的事，计划这边不再筛一遍。</li>
+        </ul>
+        <h3>题集的规则（详细页 → ⚙️ 计划设置）</h3>
+        <p><strong>先记一条总规则：题集永远只从这条计划绑的那个副页里取</strong>（副页 = 你的题单池）。
+            在这之上只有两个旋钮：<strong>范围根</strong>（留空 = 整个副页）与<strong>条件</strong>
+            （难度/标签/平台）。想做"<strong>CCPC 2023 的银牌题</strong>"，给个范围根 + 勾上档位就行，
+            不必一道道手工加 —— 而且<strong>以后新导入的比赛只要落在这个范围里，就自己进来</strong>
+            （前提是它也在那个副页里：副页里放着整场/整个系列时，它的子树长大 ⇒ 新题自己跟上）。</p>
+        <ul>
+            <li><strong>范围根</strong>：<strong>留空 = 整个副页</strong>（系统自动用"超级根"，也就是
+                "就用这个副页里的题"）。想缩小：<strong>在树上或这个副页里</strong>把要的节点
+                <strong>行上那颗 ○ 点亮</strong>，回设置里点<strong>「⭯ 取当前选中」</strong>把那份标记
+                <strong>存成范围根</strong>（勾了父又勾了子 ⇒ 只算父那一棵）。「清空」回到整个副页。
+                ⚠️ 这是<strong>一次性的快照</strong>：存好之后<strong>别处怎么点 ○ 都不会改</strong>这条计划的题集，
+                想改就回副页再标记一次、再点「取当前选中」。
+                ⚠️ 范围根<strong>必须落在这个副页里</strong>才有用（题集只从副页里取）—— 全是副页外的根时，
+                界面上会写"这些范围根不在这个副页里"，题集自然是 0。</li>
+            <li><strong>题集条件</strong>（难度区间 / 标签 / 平台 / XCPC 档位）：不勾 / 留空的那一维 = 不限。
+                它<strong>一直生效</strong>（哪怕没选范围根，也是在"整个副页"里按它筛）；
+                改它 <strong>题集就变</strong>（强度、达成、两张图全跟着变）⇒ 记得点「💾 保存计划」。
+                判据与「📋 按条件挑题」<strong>是同一份</strong>。
+                ⚠️ 它与下面那张列表的「列表筛选」<strong>不是一回事</strong>：那个只看这一屏，不改题集。</li>
+            <li><strong>这套规则现在算出来什么，卡里直接写着</strong>：改任一处，下面那句就会跟着变 ——
+                <code>这条计划的题集 = 副页「X」里的题 ∩ 子树「CCPC 2023」 ∩ 题集条件：档位 银牌… ⇒ 现在 111 道</code>。
+                （没设范围根时，中间那段"子树"不会出现。）</li>
+            <li><strong>筛选模式</strong>：计划这边<strong>没有这一档</strong> —— 范围是<strong>一次性取好的</strong>
+                （见上一条），计划不会因为你在别处点 ○ 而变。统计页那张「筛选模式」是另一套东西
+                （它的主语是主树节点），与计划无关。</li>
+            <li>⚠️ 「取当前选中」是<strong>一次快照</strong>：它记下的是<strong>点那一下</strong><strong>行上那颗 ○</strong>勾着的东西
+                （主树上的勾 + <strong>当前这个副页</strong>里的勾）；之后改勾选<strong>不会</strong>自动改计划，
+                要么再点一次，要么直接改条件。<br>
+                两条要知道的：① <strong>勾了父又勾了子 ⇒ 只算父那一棵</strong>（子那棵本来就在父里，题集一样）——
+                界面会写明"你勾了 N 个、哪几个没单列"；② <strong>副页页签上那颗 ○ 不算</strong>，
+                那是「整页映射覆盖」的意思、归下面的<strong>筛选模式</strong>管（想在整页范围内取题，就把筛选模式选成
+                「仅选中副页映射覆盖」）。</li>
+            <li>副页<strong>仍然要绑一个</strong>（它决定这条计划显示在哪个副页上、以及「去题单页」去哪）；
+                范围型计划的题集与那个副页里有什么<strong>无关</strong>。</li>
+        </ul>
+        <h3>这条栏在哪儿出现</h3>
+        <p><strong>只在计划绑的那个副页上出现</strong>：主页（主树）上没有这条栏；切到某个副页，就只看到<strong>绑到它</strong>的计划
+            （别的副页的计划不在这一页上占地方）。副页上还没有计划时，这条栏给一句提示 + 「＋ 新建计划」——
+            新建的计划默认就绑当前这个副页。</p>
+
+        <h3>栏上看得见什么</h3>
+        <ul>
+            <li>每一行：计划的<strong>这一期</strong>（实际 / 目标）与<strong>累计</strong>；点「▾ 收起」折起明细。</li>
+            <li>整条栏也能收起（点「▾ 收起」）—— <strong>折叠状态只存在本地</strong>，不进数据、不进导出包。</li>
+            <li>明细里逐期列出题数 / 总强度 / 目标 / 是否达标，<strong>越新的期排得越靠前</strong>；
+                并如实报一句「N 道题没填难度，不计入强度」。
+                （<strong>没有 AC 时间不再提醒</strong> —— 那很正常，那些题只是不进任何一期。）</li>
+            <li>「📖 完整信息」进详细页；「✖」删计划（<strong>题单页会留着</strong>）。
+                题单页被删掉时，计划还在，行上会写明「题单页已删除」。</li>
+        </ul>
+        <h3>训练强度怎么算（映射表）</h3>
+        <ul>
+            <li>每道题的<strong>训练强度</strong>由它的难度<strong>查一条曲线</strong>得来。表在<strong>设置 → 🏋️ 训练强度</strong>里：
+                可以有好几张<strong>有名字</strong>的表（例如「日常」「集训」），计划引用其中一张。</li>
+            <li>一张表里填两组<strong>控制点</strong>：每个点是「<strong>通过率 / 数值难度取它时，强度是多少</strong>」
+                （不是"不超过它就算这一档"），点与点之间默认按<strong>指数曲线</strong>相接（也可选线段 / 平滑曲线）。
+                <strong>XCPC 难度</strong>那一组<strong>通过率越低越重</strong>：
+                C / R 那一头约 <strong>113</strong>，一路降到签到的约 <strong>1.3</strong>；
+                难到一定程度就不再涨了（那一点写着「0.031%及更小」）。
+                <strong>数值难度</strong>那一组出厂是 <strong>2600 取 10、每差 400 分强度翻倍</strong>，
+                <strong>最低 1</strong>（CF 大约 1271 分以下都一样轻）、<strong>最高 4000 及以上</strong>（再高也一样重）。</li>
+            <li><strong>没填难度</strong>（连通过率/难度都没有）的题<strong>强度记 0</strong> ——
+                它<strong>不计入任何强度合计</strong>（热身赛那类没有难度数据的题不会把账抬高）；
+                计划那一行仍会提醒你「N 道题没填难度」。
+                <strong>题数</strong>那一侧照旧算（"这道题做过"是事实）。</li>
+            <li>这一栏的表<strong>自带保存按钮</strong>（改完点「💾 保存这张表」），与底部那个「保存设置」不是一回事。</li>
+        </ul>
+
+        <h3>点「📖 完整信息」进详细页</h3>
+        <p>计划那一行上的 <strong>「📖 完整信息」</strong> 会开一个<strong>详细页</strong>
+            （与"节点详页"同一个机制：上面那条独立的页签栏、可以同时开好几个、各自关掉）。里面有四块：</p>
+        <ul>
+            <li><strong>📄 题单来源</strong>：这条计划的题集是从哪来的、一共几道题 ——
+                副页型的写"副页「X」里的全部题"，范围型的写"树上范围（N 个范围根）…"；
+                范围根不存在 / 一个都没选时，这里会<strong>如实写一句</strong>（不会假装是 0 道题）。
+                「去题单页」会<strong>回到主视图</strong>并切到那个副页（一步到位，不用你自己再点页签）。</li>
+            <li><strong>📋 题目列表</strong>：逐题列出题号 / 题名 / 难度 / 状态2 / AC 时间 / 强度
+                （<strong>难度带自己的颜色</strong>；没填难度的强度记 0 并标出来）。
+                开头那行写着<strong>「列表筛选：」</strong>—— 它只决定<strong>这一屏列出哪几行</strong>
+                （<strong>不动题集、不进数据、不进包</strong>；要改题集请回「计划设置」的「题集条件」）。
+                一共四行：
+                <strong>XCPC 难度</strong>（多选芯片，按难度<strong>从易到难</strong>排 —— 签到在最前、
+                末了还有一个「未填写」；<strong>芯片上的档名也带各自的颜色</strong>）、
+                <strong>数值难度</strong>（一行：下限 / 上限）、
+                <strong>标签</strong>、<strong>平台 / 赛系</strong>；再加快捷的<strong>关键字与状态2</strong>。
+                还能<strong>排序</strong>（AC 时间、强度、难度、题号）与<strong>选每页几条</strong>；
+                也能<strong>翻页</strong>、<strong>收起</strong>；<strong>点某一行就跳到树上那个节点</strong>。
+                （标签与平台芯片是从<strong>这个题集里</strong>现收的，所以只有这里真出现过的才列。）</li>
+            <li><strong>📊 状态 × 难度</strong>：与「数据统计」页<strong>一模一样的那张网格</strong>
+                （同一份渲染：行 = 状态2、列 = 难度档、<strong>列头的难度名带自己的颜色</strong>、格底同色、带合计）。<strong>点某一格</strong>就把上面的题目列表筛成那一批。</li>
+            <li><strong>📈 每期完成情况</strong>：这<strong>一整块</strong>（表 + 下面那两张图）共用<strong>同一个时间区间</strong>
+                —— 上面那段范围筛选一改，表和两张图<strong>一起</strong>只算那一段（「全部」清掉）。
+                表按期列出题数 / 总强度 / 目标 / 是否达标，<strong>越新的期排在越前面</strong>；
+                <strong>表按 3 列排</strong>（列优先：一列读到底再换下一列），一页就是
+                3 × 每列条数（默认 3×12 = <strong>36 条</strong>）—— 一次能看很长一段；
+                范围筛选用的是<strong>「训练强度追踪」那一套</strong>（起止各三个下拉：年 / 月 / 日，再点「确定」）；
+                <strong>按了「确定」之后，那段时间就是期窗口本身</strong> —— 拉到计划开始之前、或拉到未来也照排
+                （那些期是空的，一眼能看出"哪几天荒了"）；点「全部」回到<strong>计划开始到现在</strong>。
+                也能收起、翻页。</li>
+            <li><strong>点某一期 ⇒ 看那一期做了哪些题</strong>：表格里<strong>点某一行</strong>，或者干脆
+                <strong>点图里某一根柱子 / 折线上某一个点</strong>，这一块下面就列出那一期<strong>做完的题</strong>
+                （题号 / 题名 / 难度 / 状态2 / AC 时间 / 强度），点题就跳到树上 —— 与「训练强度追踪」一个意思。
+                表和图说的是同一件事：选中的那一期两边<strong>一起高亮</strong>；点「✖ 收起」放掉。</li>
+            <li><strong>图上看得到数</strong>：每根柱子顶上写着<strong>数值</strong>，折线的点上也标了累计值；
+                鼠标<strong>悬停</strong>在柱子/点上会写清「这一期/累计完成多少、目标多少、做了几题、达没达标」。</li>
+            <li><strong>🏋️ 当前强度表</strong>：这条计划引用的那张强度表<strong>长什么样</strong> —— 每个 XCPC 档位、
+                每段数值难度各算多少强度、没填难度记 0，都能在这儿<strong>看一眼</strong>（只读，默认收起）。
+                要改就点那块里的「⚙️ 去设置里编辑」，直接跳到设置页那一栏。</li>
+            <li><strong>⚙️ 计划设置</strong>：名字、起止时间、目标（口径 + 值 + 基准粒度）、
+                「算做完」的状态2 是哪几档、强度按哪个难度源、引用哪张强度表，
+                以及<strong>题集来源</strong>（副页里的题 / 树上范围 + 条件）与<strong>筛选模式</strong>
+                —— 后两样见上面那节「题集还能从"树上范围 + 条件"来」。改完点 <strong>「💾 保存计划」</strong>。</li>
+        </ul>
+
+        <h3>💰 强度总账（详细页最上面那块）</h3>
+        <ul>
+            <li><strong>已写 / 总训练强度</strong>：分母是<strong>题单里填了难度的那些题的强度之和</strong>
+                （还没做的也算进去；<strong>没填难度的记 0、不进账</strong>），
+                分子是其中<strong>已经做完</strong>的那些。</li>
+            <li><strong>目标训练强度</strong>：就是计划里填的那份目标，折算成<strong>每天</strong>多少
+                （"每周 20 强度"⇒ 显示约 2.9 / 天）。</li>
+            <li><strong>推荐训练强度</strong>：<strong>填了结束时间</strong>才算 —— 它把"还差的强度"按剩余天数摊平，
+                意思就是"<strong>恰好按时完成</strong>每天要做多少"。没填结束时间就给「—」，不会瞎猜。</li>
+            <li><strong>预计完成（按目标）</strong>：按上面的目标速度，从今天起还要几天、哪天能写完。</li>
+        </ul>
+
+        <h3>「每期完成情况」那两张图</h3>
+        <ul>
+            <li><strong>图① 累计</strong>：从计划开始那一期起<strong>逐期累加</strong>的折线，配一条<strong>斜直线</strong>目标线
+                （斜率 = 每期目标）—— 一眼看出"追不追得上"。</li>
+            <li><strong>图② 每期</strong>：每期各自的量（柱），配一条<strong>目标线</strong> —— 一眼看出"哪几期偷懒了"。</li>
+            <li><strong>两张图各有自己的查看粒度</strong>（默认：折线按<strong>日</strong>、柱状按<strong>周</strong>），
+                随时可切日 / 周 / 月 / 整段；<strong>切换只改"怎么看"</strong>，不动计划的执行粒度、也不改你填的目标值
+                （目标按"每天配额 × 期天数"折算）。</li>
+            <li>每张图都能<strong>单独收起</strong>，还有一颗 <strong>「⇅ 换序」</strong>把两张图上下对调。
+                图上的文字与按钮都做得<strong>小巧</strong>（与块里那句灰色说明同字号）；横轴上的期标签
+                遇到放不下会<strong>自动换行</strong>，还挤就<strong>横向滚动</strong> —— 不会叠成一团。</li>
+            <li>目标口径选"题数"时，两张图的纵轴就是<strong>题数</strong>（同一张图的形状不变）。</li>
+        </ul>
+
+        <p style="margin-top:24px;font-size:13px;color:#94a3b8;border-top:1px solid #eef2f6;padding-top:16px;">
+            Acm_Tree · v9.5.0
+        </p>
+    </div>
+</body>
+</html>

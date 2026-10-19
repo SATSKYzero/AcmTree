@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "博弈",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1001",
+    "ratio": "28.51% (542/1901)",
+    "accepted": 542,
+    "submitted": 1901,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "夜世界",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1002",
+    "ratio": "19.44% (358/1842)",
+    "accepted": 358,
+    "submitted": 1842,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "奸商",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1003",
+    "ratio": "32.33% (900/2784)",
+    "accepted": 900,
+    "submitted": 2784,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "串串",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1004",
+    "ratio": "22.12% (190/859)",
+    "accepted": 190,
+    "submitted": 859,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "传送门",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1005",
+    "ratio": "30.33% (1439/4745)",
+    "accepted": 1439,
+    "submitted": 4745,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "景区建设",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1006",
+    "ratio": "36.13% (995/2754)",
+    "accepted": 995,
+    "submitted": 2754,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "树上LCM",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1007",
+    "ratio": "36.47% (1003/2750)",
+    "accepted": 1003,
+    "submitted": 2750,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "mod 2",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1008",
+    "ratio": "15.53% (66/425)",
+    "accepted": 66,
+    "submitted": 425,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "子序列",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1009",
+    "ratio": "23.96% (1418/5919)",
+    "accepted": 1418,
+    "submitted": 5919,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "中位数",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1010",
+    "ratio": "26.12% (1479/5663)",
+    "accepted": 1479,
+    "submitted": 5663,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "决斗",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1011",
+    "ratio": "8.28% (12/145)",
+    "accepted": 12,
+    "submitted": 145,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "请输入文本",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1172&pid=1012",
+    "ratio": "16.90% (85/503)",
+    "accepted": 85,
+    "submitted": 503,
+    "solved": false
+  }
+]

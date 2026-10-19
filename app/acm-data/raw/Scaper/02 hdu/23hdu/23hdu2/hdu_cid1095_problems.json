@@ -1,0 +1,132 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Alice Game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1001",
+    "ratio": "11.75% (349/2971)",
+    "accepted": 349,
+    "submitted": 2971,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Binary Number",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1002",
+    "ratio": "16.38% (937/5719)",
+    "accepted": 937,
+    "submitted": 5719,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Counter Strike",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1003",
+    "ratio": "19.43% (41/211)",
+    "accepted": 41,
+    "submitted": 211,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Card Game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1004",
+    "ratio": "72.29% (981/1357)",
+    "accepted": 981,
+    "submitted": 1357,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Or",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1005",
+    "ratio": "18.65% (36/193)",
+    "accepted": 36,
+    "submitted": 193,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Fencing the cows",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1006",
+    "ratio": "36.07% (66/183)",
+    "accepted": 66,
+    "submitted": 183,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "foreverlasting and fried-chicken",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1007",
+    "ratio": "12.44% (457/3674)",
+    "accepted": 457,
+    "submitted": 3674,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Hello World 3 Pro Max",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1008",
+    "ratio": "39.47% (45/114)",
+    "accepted": 45,
+    "submitted": 114,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "String Problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1009",
+    "ratio": "63.45% (1097/1729)",
+    "accepted": 1097,
+    "submitted": 1729,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Klee likes making friends",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1010",
+    "ratio": "12.31% (183/1486)",
+    "accepted": 183,
+    "submitted": 1486,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "SPY finding NPY",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1011",
+    "ratio": "20.72% (231/1115)",
+    "accepted": 231,
+    "submitted": 1115,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Coin",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1012",
+    "ratio": "25.53% (97/380)",
+    "accepted": 97,
+    "submitted": 380,
+    "solved": false
+  },
+  {
+    "problem_id": "1013",
+    "problem_id2": "M",
+    "title": "Turret",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1095&pid=1013",
+    "ratio": "23.77% (53/223)",
+    "accepted": 53,
+    "submitted": 223,
+    "solved": false
+  }
+]

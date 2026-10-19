@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "让路径生存吧！",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1001",
+    "ratio": "41.91% (831/1983)",
+    "accepted": 831,
+    "submitted": 1983,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "会自动求和的序列",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1002",
+    "ratio": "47.67% (817/1714)",
+    "accepted": 817,
+    "submitted": 1714,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "太近就不合法了",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1003",
+    "ratio": "38.10% (538/1412)",
+    "accepted": 538,
+    "submitted": 1412,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "用一棵树给另一棵树染色",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1004",
+    "ratio": "10.14% (103/1016)",
+    "accepted": 103,
+    "submitted": 1016,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "买最小的或最大的",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1005",
+    "ratio": "22.92% (11/48)",
+    "accepted": 11,
+    "submitted": 48,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "颜色不同距离翻倍",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1006",
+    "ratio": "25.73% (88/342)",
+    "accepted": 88,
+    "submitted": 342,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "用传送门来让网格连通吧",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1007",
+    "ratio": "19.46% (762/3915)",
+    "accepted": 762,
+    "submitted": 3915,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "分数越小还是越大越好",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1008",
+    "ratio": "40.99% (241/588)",
+    "accepted": 241,
+    "submitted": 588,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "价值总是越大越好",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1009",
+    "ratio": "44.28% (678/1531)",
+    "accepted": 678,
+    "submitted": 1531,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "合并之后字典序就变小了",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1010",
+    "ratio": "39.94% (141/353)",
+    "accepted": 141,
+    "submitted": 353,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "数轴上的染色翻转怎么还有恢复与加密",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1011",
+    "ratio": "40.00% (38/95)",
+    "accepted": 38,
+    "submitted": 95,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "数一数环的个数",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1236&pid=1012",
+    "ratio": "51.13% (839/1641)",
+    "accepted": 839,
+    "submitted": 1641,
+    "solved": true
+  }
+]

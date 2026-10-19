@@ -1,0 +1,812 @@
+{
+  "registryVersion": 1,
+  "note": [
+    "性质注册表（唯一真源）。Python 侧 scripts/crate.py 与浏览器/单测侧 src/core/natureFields.js",
+    "读的都是这一份文件 —— 不再有第二份镜像、也不需要跨语言同步测试。",
+    "「分类」= 有序字符串列表，写进节点的形态是用 `/` 连起来的字符串（字段/来源层是标量）：",
+    "  [xcpc, icpc, ec, pre]  ⇔  \"xcpc/icpc/ec/pre\"",
+    "「年份」= **举办年份**；「赛季」= **赛季年份**（用户 2026-09-30 定：EC-Final 常跨年，",
+    "  2023 赛季的 EC-Final 在 2024-01 办 ⇒ 两个概念必须分开存）。",
+    "  「赛季」除了 `20xx` 还允许写 **`无`**：**没有赛季概念的那些比赛**（CF 的正式轮次、",
+    "  AtCoder 的 ABC/ARC/AGC…）按用户 2026-09-30 的要求直接写 `无`（= 「不适用」，",
+    "  与地区的 `无` 同一个语义）；牛客/杭电的**多校**有赛季概念，赛季 = 举办年份。",
+    "  ⚠️ `cf gym` **不写 `无`**（用户 2026-09-30：『我说 cf 无赛季，但通常单说 cf 有仅 cf contest 的含义』",
+    "  —— gym 不是 cf contest）⇒ 它的赛季 = 举办年份。",
+    "  地区：`无` = 判过了、**没有场地**（线上赛）；**留空** = 还没判（用户 2026-09-30：",
+    "  『gym 有很多线下赛，很多能和 qoj/xcpc 绑定，只是暂时不填』⇒ cf gym 的地区留空；",
+    "  用户 2026-10-01：『qoj 不要随便填地区无』⇒ QOJ 也留空）。",
+    "—— 2026-10-01 三处结构改动（用户）——",
+    "  ① CF 的正式轮次**收进一层 `contest`**（用户：『cf/div1 等（除了 gyms）改为 cf/contest/div1』）：",
+    "     `cf/contest/{div1,div2,div3,div4,div1+2,edu,others/*}`；`cf/gyms` **不动**（它本来就不是",
+    "     cf contest，见上面那条）。",
+    "  ② XCPC 每一支再分 **`official` / `warm-up`**（用户：『xcpc 的各分支还要细分 official/warm-up』，",
+    "     选定方案 = 每个阶段叶子下再分、现有场次一律迁成 …/official）：`xcpc/…/<阶段>/official`、",
+    "     `…/<阶段>/warm-up`（qoj 下同样镜像）。⚠️ **只有 `无归类` 不带这一层** —— 它的意思是",
+    "     「这一支里没有它可归的一项」，再分正式/热身没有意义。",
+    "  ③ QOJ 的 icpc 段按**赛区**落地（用户 2026-10-01：「见 https://qoj.ac/category/17，",
+    "     缩写依次为 aa, ec, ap(jp 改 ap), aw, eu, la, na, ne」= ICPC 官方 8 个赛区：",
+    "     Africa & Arab / Asia East Continent / Asia Pacific / Asia West / Europe /",
+    "     Latin America / North America / Northern Eurasia）；缩写表外的赛区**停在 `qoj/xcpc/icpc`**",
+    "     （合法前缀，会挂在 ③ 等人补 —— 不硬塞某一个赛区）。",
+    "  ⑤ **`cf/gyms` 再细分一层**（用户 2026-10-01，选了 A 方案）：gym 的名字基本就是原比赛的名字",
+    "     （实测 67 个名字全都命中至少一个可用信号），所以**把 xcpc 子树原样镜像到 `cf/gyms/xcpc/…`**",
+    "     下（`icpc/<赛区>/<阶段>/<official|warm-up>`、`ccpc/<阶段>/…`、`provincial&invitational/…`），",
+    "     另有 `cf/gyms/ucup`（只有 UC 身份的那些）与 `cf/gyms/无归类`。⚠️ 精度天生比 QOJ 低 ——",
+    "     gym 没有权威分类表，只能读赛名。",
+    "  ⚠️ **优先级（用户 2026-10-01 点名）**：**省赛/邀请赛 > CCPC > ICPC > UC > 无归类**。",
+    "     『比如又含 CCPC 又含省赛/邀请赛，那就一定是「只是与 CCPC 有关系的」省赛/邀请赛，",
+    "     省赛/邀请赛的判定一定要最靠前』 —— 这条在 xcpc / qoj / cf gym 三处**共用同一份判据**。",
+    "  ⚠️ 但它**只对 EC 赛区生效**（用户 2026-10-01 追加：『省赛/邀请赛判定只对 ec 赛区生效』）：",
+    "     省赛/邀请赛是**中国**的概念，套到别的大区就是错的 —— 实测踩到",
+    "  ⑥ **`cf/gyms` 的年份 / 赛季**（用户 2026-10-01：『cf/gyms 的年份与赛季也补一补（可能只能靠名字）』）：",
+    "     **赛季 = 赛名里第一个 20xx**（gym 的名字就是原比赛的名字），赛名里没有才退到 CF 开赛时间；",
+    "     **年份（举办）= CF 开赛时间**，拿不到才退到赛名；**总决赛没有开赛时间就写 `待同步`**。",
+    "     实测 13 场靠赛名把年份补上、4 场出现「赛季年 ≠ 举办年」（银川 2020 赛季 2021 才办、",
+    "     CCPC 2024 邀请赛 2023-12 办、EC-Final 2021 赛季 2022 办、筑波 2017-2018 赛季取 2017）。",
+    "     `The 2022 ICPC Polish Collegiate Programming Contest (AMPPZ 2022)`（波兰全国赛）",
+    "     因为名字里有 `Collegiate` 被判成「省赛」。判 EC 用 `xcpc_common.is_ec_name()`：",
+    "     写着 China/Chinese/中国/CCPC，或读出 `ec`，或出现中国省名/大区词（`Zhejiang`/`东北`…）；",
+    "     **判不出就当不是 EC**（宁可落回赛区那一支，也不把外国的全国赛说成省赛）。",
+    "  ④ **`qoj/ucup`**（用户 2026-10-01：『新增 qoj/ucup，年份=qoj端比赛时间，赛季填无』）：",
+    "     **Universal Cup** 那些场次单独一支（它们不是 XCPC —— 用户：『ucup 的题目有时很混合』）；",
+    "     判据 = **本节点在 QOJ 的标题**里写着 `Universal Cup`（标题是 QOJ 自己的元数据，不是猜），",
+    "     **且分类路径没有过 icpc/ccpc** —— 过了的照旧走 `qoj/xcpc/…`（那些有确切的 ICPC 身份，",
+    "     如 `Stage 23: Shanghai` = EC-Final 2023）。**赛季一律 `无`**；年份取 QOJ 端比赛时间，",
+    "     QOJ 没记的才写 `无`（用户：『两届 Semifinals + 两届 Finals 有自带日期就挂上吧，没有才填无』）。",
+    "     ★ **两种读法两个节点、互不绑定也不互相干扰**（用户 2026-10-07：『希望 ucup 单独出节点与",
+    "     extkey 格式，ucup 与省赛等为同一场时就出两个节点，互不绑定与干扰』）：",
+    "     · **基键 `qoj:c:<id>`** = 那份 **XCPC 读法**（名字用变体名、分类/年份/赛季/地区/挂位全按那一支，",
+    "       例：`The 2025 ICPC Asia Wuhan Regional Contest`）—— **题（P）与提交（R）都在这份下**；",
+    "     · **`qoj:c:<id>:ucup`** = 那份 **UC 读法**（UC 标题、`qoj/ucup`、赛季 `无`、地区 `待填写`、",
+    "       挂在 `Universal Cup` 那条链下）—— **不带题、不带提交**（同一道题/同一条提交在树里只该有一份，",
+    "       否则计数直接翻倍；而提交必须落在『你要收的那场』上）。",
+    "     · **纯 UC**（QOJ 的分类路径本来就没过 icpc/ccpc）**没有第二份**：照旧只出 `qoj:c:<id>`、",
+    "       分类 `qoj/ucup` —— 键与行为同从前。",
+    "     · ⚠️ UC 不在算键范围里（只做国内）⇒ 那份**永远进不了任何组**，这就是『互不绑定』的保证；",
+    "       题那边没有复制品 ⇒ `synth:problem:*` 也不会跨场把它们绑一起。",
+    "     · ⚠️ 早先那套『一个 cid 一个节点（取 XCPC 读法）』（2026-10-06～10-07）**已废** —— 它会让",
+    "       读法一变就把**手填值**（按 extKey 存、优先级 M）套到『改了名字的同一场』上",
+    "       （25/24 浙江省赛就是这么烂的）。旧写法的 `:xcpc` 尾巴**不再产出**；应用侧",
+    "       『同一场被拆成两个 C』的清理只认 `:xcpc`，**别收 `:ucup` 那份**。",
+    "  两个字段都允许两个**占位取值**（用户 2026-09-30：『年份/赛季提供「待同步」「不确定」选项，以后有用』）：",
+    "    · `待同步`  = 值在别处（比如另一棵树）还没同步过来；",
+    "    · `不确定`  = 看过了但拿不准。",
+    "  它们都算「填过了」（不会挂在 ③ 待补里），但**推荐绝不给这两个值、也不给 `无`**。",
+    "合法性 = classTrie：**任何前缀都合法**（可以停在任一深度）——",
+    "  \"cf\"          = 知道是 CF，还没细分；",
+    "  \"cf/无归类\"   = 判过了，CF 里没有它可归的一项（原「无」的语义）；",
+    "  \"\"（空）      = 还没标 ⇒ 进「性质待补」。",
+    "**但\"填好了没有\"只认叶子**（2026-09-30 用户）：停在中间的照样算「缺分类」。",
+    "qoj 那一支下**镜像了 xcpc 的整棵子树**（用户 2026-09-30：\"将 xcpc 的分类复制到 qoj 下\"）——",
+    "  QOJ 场次自带分类路径，过 icpc/ccpc 的走 qoj/xcpc/…，不过的一律 qoj/无归类。",
+    "改这里就够了：加一个分支 = 往 classTrie 里加一层；改完重跑 npm test（Trie 自检在 natureFields.js 与 crate.py 各有一份）。"
+  ],
+  "fields": {
+    "natureClass": {
+      "label": "分类",
+      "kind": "classPath"
+    },
+    "natureYear": {
+      "label": "年份",
+      "kind": "pattern",
+      "pattern": "^(20\\d{2}|无|待同步|不确定|上游异常)$"
+    },
+    "natureSeason": {
+      "label": "赛季",
+      "kind": "pattern",
+      "pattern": "^(20\\d{2}|无|待同步|不确定|上游异常)$"
+    },
+    "natureRegion": {
+      "label": "地区",
+      "kind": "text"
+    }
+  },
+  "classTrie": {
+    "xcpc": {
+      "icpc": {
+        "aa": {
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "ec": {
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "ap": {
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "aw": {
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "eu": {
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "la": {
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "na": {
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "ne": {
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        }
+      },
+      "ccpc": {
+        "female": {
+          "official": {},
+          "warm-up": {}
+        },
+        "vocational": {
+          "official": {},
+          "warm-up": {}
+        },
+        "pre": {
+          "official": {},
+          "warm-up": {}
+        },
+        "regional": {
+          "official": {},
+          "warm-up": {}
+        },
+        "final": {
+          "official": {},
+          "warm-up": {}
+        },
+        "无归类": {},
+        "上游异常": {}
+      },
+      "provincial&invitational": {
+        "IC&CC": {
+          "省赛暨邀请赛": {
+            "official": {},
+            "warm-up": {}
+          },
+          "省赛": {
+            "official": {},
+            "warm-up": {}
+          },
+          "邀请赛": {
+            "official": {},
+            "warm-up": {}
+          }
+        },
+        "IC": {
+          "省赛暨邀请赛": {
+            "official": {},
+            "warm-up": {}
+          },
+          "省赛": {
+            "official": {},
+            "warm-up": {}
+          },
+          "邀请赛": {
+            "official": {},
+            "warm-up": {}
+          }
+        },
+        "CC": {
+          "省赛暨邀请赛": {
+            "official": {},
+            "warm-up": {}
+          },
+          "省赛": {
+            "official": {},
+            "warm-up": {}
+          },
+          "邀请赛": {
+            "official": {},
+            "warm-up": {}
+          }
+        },
+        "无": {
+          "省赛暨邀请赛": {
+            "official": {},
+            "warm-up": {}
+          },
+          "省赛": {
+            "official": {},
+            "warm-up": {}
+          },
+          "邀请赛": {
+            "official": {},
+            "warm-up": {}
+          }
+        },
+        "无归类": {},
+        "上游异常": {},
+        "未归类": {}
+      },
+      "无归类": {},
+      "上游异常": {}
+    },
+    "cf": {
+      "contest": {
+        "div1": {},
+        "div2": {},
+        "div3": {},
+        "div4": {},
+        "div1+2": {},
+        "edu": {},
+        "others": {
+          "team": {},
+          "april": {},
+          "kotlin": {},
+          "无归类": {},
+          "上游异常": {}
+        }
+      },
+      "gyms": {
+        "xcpc": {
+          "icpc": {
+            "aa": {
+              "pre": {
+                "official": {},
+                "warm-up": {}
+              },
+              "regional": {
+                "official": {},
+                "warm-up": {}
+              },
+              "final": {
+                "official": {},
+                "warm-up": {}
+              },
+              "无归类": {},
+              "上游异常": {}
+            },
+            "ec": {
+              "pre": {
+                "official": {},
+                "warm-up": {}
+              },
+              "regional": {
+                "official": {},
+                "warm-up": {}
+              },
+              "final": {
+                "official": {},
+                "warm-up": {}
+              },
+              "无归类": {},
+              "上游异常": {}
+            },
+            "ap": {
+              "pre": {
+                "official": {},
+                "warm-up": {}
+              },
+              "regional": {
+                "official": {},
+                "warm-up": {}
+              },
+              "final": {
+                "official": {},
+                "warm-up": {}
+              },
+              "无归类": {},
+              "上游异常": {}
+            },
+            "aw": {
+              "pre": {
+                "official": {},
+                "warm-up": {}
+              },
+              "regional": {
+                "official": {},
+                "warm-up": {}
+              },
+              "final": {
+                "official": {},
+                "warm-up": {}
+              },
+              "无归类": {},
+              "上游异常": {}
+            },
+            "eu": {
+              "pre": {
+                "official": {},
+                "warm-up": {}
+              },
+              "regional": {
+                "official": {},
+                "warm-up": {}
+              },
+              "final": {
+                "official": {},
+                "warm-up": {}
+              },
+              "无归类": {},
+              "上游异常": {}
+            },
+            "la": {
+              "pre": {
+                "official": {},
+                "warm-up": {}
+              },
+              "regional": {
+                "official": {},
+                "warm-up": {}
+              },
+              "final": {
+                "official": {},
+                "warm-up": {}
+              },
+              "无归类": {},
+              "上游异常": {}
+            },
+            "na": {
+              "pre": {
+                "official": {},
+                "warm-up": {}
+              },
+              "regional": {
+                "official": {},
+                "warm-up": {}
+              },
+              "final": {
+                "official": {},
+                "warm-up": {}
+              },
+              "无归类": {},
+              "上游异常": {}
+            },
+            "ne": {
+              "pre": {
+                "official": {},
+                "warm-up": {}
+              },
+              "regional": {
+                "official": {},
+                "warm-up": {}
+              },
+              "final": {
+                "official": {},
+                "warm-up": {}
+              },
+              "无归类": {},
+              "上游异常": {}
+            }
+          },
+          "ccpc": {
+            "female": {
+              "official": {},
+              "warm-up": {}
+            },
+            "vocational": {
+              "official": {},
+              "warm-up": {}
+            },
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          },
+          "provincial&invitational": {
+            "IC&CC": {
+              "省赛暨邀请赛": {
+                "official": {},
+                "warm-up": {}
+              },
+              "省赛": {
+                "official": {},
+                "warm-up": {}
+              },
+              "邀请赛": {
+                "official": {},
+                "warm-up": {}
+              }
+            },
+            "IC": {
+              "省赛暨邀请赛": {
+                "official": {},
+                "warm-up": {}
+              },
+              "省赛": {
+                "official": {},
+                "warm-up": {}
+              },
+              "邀请赛": {
+                "official": {},
+                "warm-up": {}
+              }
+            },
+            "CC": {
+              "省赛暨邀请赛": {
+                "official": {},
+                "warm-up": {}
+              },
+              "省赛": {
+                "official": {},
+                "warm-up": {}
+              },
+              "邀请赛": {
+                "official": {},
+                "warm-up": {}
+              }
+            },
+            "无": {
+              "省赛暨邀请赛": {
+                "official": {},
+                "warm-up": {}
+              },
+              "省赛": {
+                "official": {},
+                "warm-up": {}
+              },
+              "邀请赛": {
+                "official": {},
+                "warm-up": {}
+              }
+            },
+            "无归类": {},
+            "上游异常": {},
+            "未归类": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "ucup": {},
+        "无归类": {},
+        "上游异常": {}
+      }
+    },
+    "atcoder": {
+      "abc": {},
+      "arc": {},
+      "agc": {},
+      "ahc": {},
+      "无归类": {},
+      "上游异常": {}
+    },
+    "qoj": {
+      "xcpc": {
+        "icpc": {
+          "aa": {
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          },
+          "ec": {
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          },
+          "ap": {
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          },
+          "aw": {
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          },
+          "eu": {
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          },
+          "la": {
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          },
+          "na": {
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          },
+          "ne": {
+            "pre": {
+              "official": {},
+              "warm-up": {}
+            },
+            "regional": {
+              "official": {},
+              "warm-up": {}
+            },
+            "final": {
+              "official": {},
+              "warm-up": {}
+            },
+            "无归类": {},
+            "上游异常": {}
+          }
+        },
+        "ccpc": {
+          "female": {
+            "official": {},
+            "warm-up": {}
+          },
+          "vocational": {
+            "official": {},
+            "warm-up": {}
+          },
+          "pre": {
+            "official": {},
+            "warm-up": {}
+          },
+          "regional": {
+            "official": {},
+            "warm-up": {}
+          },
+          "final": {
+            "official": {},
+            "warm-up": {}
+          },
+          "无归类": {},
+          "上游异常": {}
+        },
+        "provincial&invitational": {
+          "IC&CC": {
+            "省赛暨邀请赛": {
+              "official": {},
+              "warm-up": {}
+            },
+            "省赛": {
+              "official": {},
+              "warm-up": {}
+            },
+            "邀请赛": {
+              "official": {},
+              "warm-up": {}
+            }
+          },
+          "IC": {
+            "省赛暨邀请赛": {
+              "official": {},
+              "warm-up": {}
+            },
+            "省赛": {
+              "official": {},
+              "warm-up": {}
+            },
+            "邀请赛": {
+              "official": {},
+              "warm-up": {}
+            }
+          },
+          "CC": {
+            "省赛暨邀请赛": {
+              "official": {},
+              "warm-up": {}
+            },
+            "省赛": {
+              "official": {},
+              "warm-up": {}
+            },
+            "邀请赛": {
+              "official": {},
+              "warm-up": {}
+            }
+          },
+          "无": {
+            "省赛暨邀请赛": {
+              "official": {},
+              "warm-up": {}
+            },
+            "省赛": {
+              "official": {},
+              "warm-up": {}
+            },
+            "邀请赛": {
+              "official": {},
+              "warm-up": {}
+            }
+          },
+          "无归类": {},
+          "上游异常": {},
+          "未归类": {}
+        },
+        "无归类": {},
+        "上游异常": {}
+      },
+      "ucup": {},
+      "无归类": {},
+      "上游异常": {}
+    },
+    "nk": {
+      "多校": {},
+      "无归类": {},
+      "上游异常": {}
+    },
+    "hdu": {
+      "多校": {},
+      "无归类": {},
+      "上游异常": {}
+    },
+    "pta": {
+      "无归类": {},
+      "上游异常": {}
+    }
+  }
+}

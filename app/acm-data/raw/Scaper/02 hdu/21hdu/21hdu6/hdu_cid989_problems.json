@@ -1,0 +1,112 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Yes, Prime Minister",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1001",
+    "ratio": "17.07% (753/4410)",
+    "accepted": 753,
+    "submitted": 4410,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Might and Magic",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1002",
+    "ratio": "11.59% (8/69)",
+    "accepted": 8,
+    "submitted": 69,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "0 tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1003",
+    "ratio": "15.19% (24/158)",
+    "accepted": 24,
+    "submitted": 158,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Decomposition",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1004",
+    "ratio": "7.56% (62/820)",
+    "accepted": 62,
+    "submitted": 820,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Median",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1005",
+    "ratio": "10.74% (417/3882)",
+    "accepted": 417,
+    "submitted": 3882,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "The Struggle",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1006",
+    "ratio": "0.00% (0/15)",
+    "accepted": 0,
+    "submitted": 15,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Power Station of Art",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1007",
+    "ratio": "24.04% (25/104)",
+    "accepted": 25,
+    "submitted": 104,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Command and Conquer: Red Alert 2",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1008",
+    "ratio": "4.88% (2/41)",
+    "accepted": 2,
+    "submitted": 41,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Typing Contest",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1009",
+    "ratio": "4.27% (5/117)",
+    "accepted": 5,
+    "submitted": 117,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Array",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1010",
+    "ratio": "3.83% (7/183)",
+    "accepted": 7,
+    "submitted": 183,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=989&pid=1011",
+    "ratio": "26.92% (7/26)",
+    "accepted": 7,
+    "submitted": 26,
+    "solved": false
+  }
+]

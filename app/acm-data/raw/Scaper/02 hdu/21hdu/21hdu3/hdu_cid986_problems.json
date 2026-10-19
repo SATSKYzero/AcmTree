@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Bookshop",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1001",
+    "ratio": "5.37% (8/149)",
+    "accepted": 8,
+    "submitted": 149,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Destinations",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1002",
+    "ratio": "16.00% (4/25)",
+    "accepted": 4,
+    "submitted": 25,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Forgiving Matching",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1003",
+    "ratio": "27.46% (170/619)",
+    "accepted": 170,
+    "submitted": 619,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Game on Plane",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1004",
+    "ratio": "13.67% (598/4376)",
+    "accepted": 598,
+    "submitted": 4376,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Kart Race",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1005",
+    "ratio": "0.00% (0/16)",
+    "accepted": 0,
+    "submitted": 16,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "New Equipments II",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1006",
+    "ratio": "2.96% (4/135)",
+    "accepted": 4,
+    "submitted": 135,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Photoshop Layers",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1007",
+    "ratio": "26.19% (722/2757)",
+    "accepted": 722,
+    "submitted": 2757,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Restore Atlantis II",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1008",
+    "ratio": "0.00% (0/6)",
+    "accepted": 0,
+    "submitted": 6,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Rise in Price",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1009",
+    "ratio": "5.63% (162/2877)",
+    "accepted": 162,
+    "submitted": 2877,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Road Discount",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1010",
+    "ratio": "16.73% (44/263)",
+    "accepted": 44,
+    "submitted": 263,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Segment Tree with Pruning",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1011",
+    "ratio": "42.75% (743/1738)",
+    "accepted": 743,
+    "submitted": 1738,
+    "solved": true
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Tree Planting",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=986&pid=1012",
+    "ratio": "12.28% (7/57)",
+    "accepted": 7,
+    "submitted": 57,
+    "solved": false
+  }
+]

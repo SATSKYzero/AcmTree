@@ -1,0 +1,158 @@
+{
+  "crateVersion": 1,
+  "source": {
+    "id": "qoj-scraper",
+    "label": "QOJ 爬虫",
+    "platform": "qoj"
+  },
+  "generatedAt": "2026-09-19T22:58:55+08:00",
+  "fieldMap": {
+    "cfDifficulty": "cfDifficulty",
+    "contestTime": "contestTime",
+    "link": "link",
+    "name": "name",
+    "problemId": "problemId",
+    "ratio": "ratio",
+    "status": "status",
+    "tags": "tags",
+    "time": "time"
+  },
+  "records": [
+    {
+      "节点类型": "W",
+      "extKey": "qoj",
+      "name": "QOJ"
+    },
+    {
+      "节点类型": "S",
+      "extKey": "qoj:contest",
+      "父extKey": "qoj",
+      "name": "QOJ Contest"
+    },
+    {
+      "节点类型": "C",
+      "extKey": "qoj:4113",
+      "父extKey": "qoj:contest"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20236",
+      "父extKey": "qoj:4113",
+      "name": "All Closed",
+      "problemId": "A",
+      "link": "https://qoj.ac/contest/4113/problem/20236"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20237",
+      "父extKey": "qoj:4113",
+      "name": "Bread",
+      "problemId": "B",
+      "link": "https://qoj.ac/contest/4113/problem/20237"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20238",
+      "父extKey": "qoj:4113",
+      "name": "Cut Tree",
+      "problemId": "C",
+      "link": "https://qoj.ac/contest/4113/problem/20238"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20239",
+      "父extKey": "qoj:4113",
+      "name": "Divide and Conquer",
+      "problemId": "D",
+      "link": "https://qoj.ac/contest/4113/problem/20239"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20240",
+      "父extKey": "qoj:4113",
+      "name": "Exponent",
+      "problemId": "E",
+      "link": "https://qoj.ac/contest/4113/problem/20240"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20241",
+      "父extKey": "qoj:4113",
+      "name": "Folding Game of Ohto Ai",
+      "problemId": "F",
+      "link": "https://qoj.ac/contest/4113/problem/20241"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20242",
+      "父extKey": "qoj:4113",
+      "name": "Ghost of Tsushima",
+      "problemId": "G",
+      "link": "https://qoj.ac/contest/4113/problem/20242"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20243",
+      "父extKey": "qoj:4113",
+      "name": "Hidden Track (Easy Version)",
+      "problemId": "H",
+      "link": "https://qoj.ac/contest/4113/problem/20243"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20244",
+      "父extKey": "qoj:4113",
+      "name": "Island",
+      "problemId": "I",
+      "link": "https://qoj.ac/contest/4113/problem/20244"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20245",
+      "父extKey": "qoj:4113",
+      "name": "Joker or Judger",
+      "problemId": "J",
+      "link": "https://qoj.ac/contest/4113/problem/20245"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20246",
+      "父extKey": "qoj:4113",
+      "name": "K-MEX",
+      "problemId": "K",
+      "link": "https://qoj.ac/contest/4113/problem/20246"
+    },
+    {
+      "节点类型": "P",
+      "extKey": "qoj:4113:20247",
+      "父extKey": "qoj:4113",
+      "name": "Loop",
+      "problemId": "L",
+      "link": "https://qoj.ac/contest/4113/problem/20247"
+    },
+    {
+      "节点类型": "R",
+      "extKey": "qoj:sub:2951241",
+      "父extKey": "qoj:4113:20244",
+      "status": "AC",
+      "time": "2026.09.13 22:06",
+      "link": "https://qoj.ac/submission/2951241"
+    },
+    {
+      "节点类型": "R",
+      "extKey": "qoj:sub:2951231",
+      "父extKey": "qoj:4113:20244",
+      "status": "WA",
+      "time": "2026.09.13 22:04",
+      "link": "https://qoj.ac/submission/2951231"
+    },
+    {
+      "节点类型": "R",
+      "extKey": "qoj:sub:2951230",
+      "父extKey": "qoj:4113:20244",
+      "status": "TLE",
+      "time": "2026.09.13 22:04",
+      "link": "https://qoj.ac/submission/2951230"
+    }
+  ]
+}

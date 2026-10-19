@@ -1,0 +1,1748 @@
+{
+  "format": "nature-assignments",
+  "version": 1,
+  "generatedAt": "2026-10-16T20:18:38.729Z",
+  "registryVersion": 1,
+  "count": 58,
+  "fields": 80,
+  "bindings": 31,
+  "assignments": [
+    {
+      "extKey": "aux-rankland:c:ccpc2019final",
+      "synthKey": "",
+      "type": "C",
+      "name": "2019年中国大学生程序设计竞赛 总决赛 （中国传媒大学）",
+      "fields": {
+        "natureYear": {
+          "v": "2021",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-rankland:c:ccpc2019qinhuangdao",
+      "synthKey": "",
+      "type": "C",
+      "name": "2019年中国大学生程序设计竞赛 秦皇岛站 （东北大学秦皇岛分校）",
+      "fields": {
+        "natureYear": {
+          "v": "2020",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-rankland:c:gxcpc8th",
+      "synthKey": "",
+      "type": "C",
+      "name": "第八届广西大学生程序设计大赛暨2025中国-东盟国际大学生程序设计大赛",
+      "fields": {
+        "natureClass": {
+          "v": "xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-rankland:c:hecpc6th",
+      "synthKey": "",
+      "type": "C",
+      "name": "HBCPC2022-第六届河北省大学生程序设计竞赛",
+      "fields": {
+        "natureClass": {
+          "v": "xcpc/provincial&invitational/CC/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-rankland:c:hecpc7th",
+      "synthKey": "",
+      "type": "C",
+      "name": "2023 年 CCPC 河北省大学生程序设计竞赛（东北大学秦皇岛分校）",
+      "fields": {
+        "natureRegion": {
+          "v": "河北",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-rankland:c:icpc2019ecfinal",
+      "synthKey": "",
+      "type": "C",
+      "name": "2019 ICPC Asia-East Continent Final",
+      "fields": {
+        "natureYear": {
+          "v": "2021",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-rankland:c:icpc2022ecfinal",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2022 ICPC Asia East Continent Final Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2023",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-rankland:c:sdcpc15th",
+      "synthKey": "",
+      "type": "C",
+      "name": "2025年山东省大学生程序设计竞赛（山东大学）",
+      "fields": {
+        "natureClass": {
+          "v": "xcpc/provincial&invitational/CC/省赛暨邀请赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-xcpcio:c:gxcpc8th",
+      "synthKey": "",
+      "type": "C",
+      "name": "第八届广西大学生程序设计大赛暨2025邀请赛",
+      "fields": {
+        "natureClass": {
+          "v": "xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-xcpcio:c:hecpc7th",
+      "synthKey": "",
+      "type": "C",
+      "name": "2023 年 CCPC 河北省大学生程序设计竞赛（正式赛）",
+      "fields": {
+        "natureRegion": {
+          "v": "河北",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "aux-xcpcio:c:sdcpc15th",
+      "synthKey": "",
+      "type": "C",
+      "name": "2025年山东省大学生程序设计竞赛 - 正式赛",
+      "fields": {
+        "natureClass": {
+          "v": "xcpc/provincial&invitational/CC/省赛暨邀请赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:102431",
+      "synthKey": "",
+      "type": "C",
+      "name": "2019 China Collegiate Programming Contest Final (CCPC-Final 2019)",
+      "fields": {
+        "natureYear": {
+          "v": "2021",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:102471",
+      "synthKey": "",
+      "type": "C",
+      "name": "2019 ICPC Asia-East Continent Final",
+      "fields": {
+        "natureYear": {
+          "v": "2021",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:102770",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 17th Zhejiang Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2020",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2020",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:103055",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 18th Zhejiang Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2021",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2021",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:103687",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 19th Zhejiang Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2022",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2022",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:104337",
+      "synthKey": "",
+      "type": "C",
+      "name": "2023 Hubei Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "cf/gyms/xcpc/provincial&invitational/CC/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:104373",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2021 ICPC Asia Macau Regional Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2022",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:104417",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 13th Shandong ICPC Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2023",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2023",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:104459",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 10th Shandong Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2019",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2019",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:104461",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 14th Zhejiang Provincial Collegiate Programming Contest Sponsored by TuSimple",
+      "fields": {
+        "natureClass": {
+          "v": "cf/gyms/xcpc/provincial&invitational/IC/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureYear": {
+          "v": "2017",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2017",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:104813",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 9th CCPC (Harbin) Onsite(The 2nd Universal Cup. Stage 10: Harbin)",
+      "fields": {
+        "natureYear": {
+          "v": "2023",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2023",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:105139",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2024 International Collegiate Programming Contest in Hubei Province, China",
+      "fields": {
+        "natureClass": {
+          "v": "cf/gyms/xcpc/provincial&invitational/IC/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:105173",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2024 CCPC National Invitational Contest (Northeast), The 18th Northeast Collegiate Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "cf/gyms/xcpc/provincial&invitational/CC/邀请赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:105184",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 8th Hebei Collegiate Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "cf/gyms/xcpc/provincial&invitational/CC/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureYear": {
+          "v": "2024",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2024",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:105481",
+      "synthKey": "",
+      "type": "C",
+      "name": "2024 CCPC Liaoning Provincial Contest",
+      "fields": {
+        "natureClass": {
+          "v": "cf/gyms/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:105887",
+      "synthKey": "",
+      "type": "C",
+      "name": "第十三届重庆市大学生程序设计竞赛",
+      "fields": {
+        "natureYear": {
+          "v": "2025",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2025",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:105891",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 13th Shaanxi Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2025",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2025",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:105930",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 15th Shandong CCPC Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "cf/gyms/xcpc/provincial&invitational/CC/省赛暨邀请赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "cf:c:106697",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 7th Guangxi Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2024",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2024",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:1281",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2019 ICPC China Shandong Provincial Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:1292",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2021 ICPC China Sichuan Provincial Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:1316",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2018 ICPC China Multi-Provincial Collegiate Programming Contest",
+      "fields": {
+        "natureRegion": {
+          "v": "东北四省",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:1464",
+      "synthKey": "",
+      "type": "C",
+      "name": "2023 北京市大学生程序设计竞赛",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:1780",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2024 ICPC China Zhejiang Province Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:1862",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2024 ICPC China Sichuan Provincial Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2014",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2021 ICPC China Zhejiang Provincial Programming Contest (18th)",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2020",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2020 ICPC China Zhejiang Provincial Programming Contest (17th)",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2021",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2025 ICPC China Zhejiang Province Programming Contest (22nd)",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2039",
+      "synthKey": "",
+      "type": "C",
+      "name": "第一届中国大学生程序设计竞赛（CCPC 2015）",
+      "fields": {
+        "natureRegion": {
+          "v": "河南",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2056",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2022 ICPC China Zhejiang Provincial Programming Contest (19th)",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2152",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2025 ICPC China Sichuan Provincial Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2180",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2016 ACM-ICPC Asia Pyongyang Regional Contest",
+      "fields": {
+        "natureRegion": {
+          "v": "平壤",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2182",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 12th Fujian Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2025",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2025",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2624",
+      "synthKey": "",
+      "type": "C",
+      "name": "获取数据失败",
+      "fields": {
+        "natureYear": {
+          "v": "不确定",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "不确定",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:2629",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 9th Hebei Collegiate Programming Contest (CCPC 2025 河北省赛)",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3658",
+      "synthKey": "",
+      "type": "C",
+      "name": "CCPC Final 2025 补题",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/ccpc/final/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureYear": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "2026.10.08 06:53:56",
+          "account": ""
+        },
+        "natureRegion": {
+          "v": "待填写",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3711",
+      "synthKey": "",
+      "type": "C",
+      "name": "ZJCPC 2026 补题",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureYear": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "2026.10.08 06:52:17",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3749",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2026 ICPC China Zhejiang Province Programming Contest (23rd)",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3768",
+      "synthKey": "",
+      "type": "C",
+      "name": "CCPC 2026 黑龙江省大学生程序设计竞赛",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3784",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 13th Fujian Collegiate Programming Contest",
+      "fields": {
+        "natureYear": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3786",
+      "synthKey": "",
+      "type": "C",
+      "name": "第十九届吉林省大学生程序设计竞赛",
+      "fields": {
+        "natureYear": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3789",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2026 ICPC China Sichuan Provincial Programming Contest",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3869",
+      "synthKey": "",
+      "type": "C",
+      "name": "ACM-HK Programming Contest 2026",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3871",
+      "synthKey": "",
+      "type": "C",
+      "name": "ACM-HK Programming Contest 2023",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3918",
+      "synthKey": "",
+      "type": "C",
+      "name": "ACM-HK Programming Contest 2022",
+      "fields": {
+        "natureClass": {
+          "v": "qoj/xcpc/provincial&invitational/无/省赛/official",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3934",
+      "synthKey": "",
+      "type": "C",
+      "name": "第二十届东北地区大学生程序设计竞赛",
+      "fields": {
+        "natureYear": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    },
+    {
+      "extKey": "qoj:c:3935",
+      "synthKey": "",
+      "type": "C",
+      "name": "第八届 CCPC 河南省大学生程序设计竞赛",
+      "fields": {
+        "natureYear": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        },
+        "natureSeason": {
+          "v": "2026",
+          "priority": "M",
+          "rule": "manual:set",
+          "src": "manual",
+          "at": "",
+          "account": ""
+        }
+      }
+    }
+  ],
+  "ownerBindings": [
+    {
+      "extKey": "aux-rankland:c:gxcpc8th",
+      "synthKey": "",
+      "type": "C",
+      "name": "第八届广西大学生程序设计大赛暨2025中国-东盟国际大学生程序设计大赛",
+      "ownerSynth": "synth:xcpc:2025provincial-广西",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "aux-rankland:c:hecpc6th",
+      "synthKey": "",
+      "type": "C",
+      "name": "HBCPC2022-第六届河北省大学生程序设计竞赛",
+      "ownerSynth": "synth:xcpc:2022cc_provincial-河北",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "aux-rankland:c:hecpc7th",
+      "synthKey": "",
+      "type": "C",
+      "name": "2023 年 CCPC 河北省大学生程序设计竞赛（东北大学秦皇岛分校）",
+      "ownerSynth": "synth:xcpc:2023cc_provincial-河北",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "aux-rankland:c:sdcpc15th",
+      "synthKey": "",
+      "type": "C",
+      "name": "2025年山东省大学生程序设计竞赛（山东大学）",
+      "ownerSynth": "synth:xcpc:2025cc_prov&invi-山东",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "aux-xcpcio:c:gxcpc8th",
+      "synthKey": "",
+      "type": "C",
+      "name": "第八届广西大学生程序设计大赛暨2025邀请赛",
+      "ownerSynth": "synth:xcpc:2025provincial-广西",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "aux-xcpcio:c:hecpc7th",
+      "synthKey": "",
+      "type": "C",
+      "name": "2023 年 CCPC 河北省大学生程序设计竞赛（正式赛）",
+      "ownerSynth": "synth:xcpc:2023cc_provincial-河北",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "aux-xcpcio:c:sdcpc15th",
+      "synthKey": "",
+      "type": "C",
+      "name": "2025年山东省大学生程序设计竞赛 - 正式赛",
+      "ownerSynth": "synth:xcpc:2025cc_prov&invi-山东",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:104337",
+      "synthKey": "",
+      "type": "C",
+      "name": "2023 Hubei Provincial Collegiate Programming Contest",
+      "ownerSynth": "synth:xcpc:2023cc_provincial-湖北",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:104417",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 13th Shandong ICPC Provincial Collegiate Programming Contest",
+      "ownerSynth": "synth:xcpc:2023ic_provincial-山东",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:104461",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 14th Zhejiang Provincial Collegiate Programming Contest Sponsored by TuSimple",
+      "ownerSynth": "synth:xcpc:2017ic_provincial-浙江",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:105139",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2024 International Collegiate Programming Contest in Hubei Province, China",
+      "ownerSynth": "synth:xcpc:2024ic_provincial-湖北",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:105173",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2024 CCPC National Invitational Contest (Northeast), The 18th Northeast Collegiate Programming Contest",
+      "ownerSynth": "synth:xcpc:2024cc_invitational-东北",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:105184",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 8th Hebei Collegiate Programming Contest",
+      "ownerSynth": "synth:xcpc:2024cc_provincial-河北",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:105481",
+      "synthKey": "",
+      "type": "C",
+      "name": "2024 CCPC Liaoning Provincial Contest",
+      "ownerSynth": "synth:xcpc:2024provincial-辽宁",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:105887",
+      "synthKey": "",
+      "type": "C",
+      "name": "第十三届重庆市大学生程序设计竞赛",
+      "ownerSynth": "synth:xcpc:2025provincial-重庆",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:105930",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 15th Shandong CCPC Provincial Collegiate Programming Contest",
+      "ownerSynth": "synth:xcpc:2025cc_prov&invi-山东",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "cf:c:106697",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 7th Guangxi Collegiate Programming Contest",
+      "ownerSynth": "synth:xcpc:2024provincial-广西",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:1281",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2019 ICPC China Shandong Provincial Programming Contest",
+      "ownerSynth": "synth:xcpc:2019provincial-山东",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:1292",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2021 ICPC China Sichuan Provincial Programming Contest",
+      "ownerSynth": "synth:xcpc:2021provincial-四川",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:1464",
+      "synthKey": "",
+      "type": "C",
+      "name": "2023 北京市大学生程序设计竞赛",
+      "ownerSynth": "synth:xcpc:2023provincial-北京",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:1780",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2024 ICPC China Zhejiang Province Programming Contest",
+      "ownerSynth": "synth:xcpc:2024provincial-浙江",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:1862",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2024 ICPC China Sichuan Provincial Programming Contest",
+      "ownerSynth": "synth:xcpc:2024provincial-四川",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:2014",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2021 ICPC China Zhejiang Provincial Programming Contest (18th)",
+      "ownerSynth": "synth:xcpc:2021provincial-浙江",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:2020",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2020 ICPC China Zhejiang Provincial Programming Contest (17th)",
+      "ownerSynth": "synth:xcpc:2020provincial-浙江",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:2021",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2025 ICPC China Zhejiang Province Programming Contest (22nd)",
+      "ownerSynth": "synth:xcpc:2025provincial-浙江",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:2056",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2022 ICPC China Zhejiang Provincial Programming Contest (19th)",
+      "ownerSynth": "synth:xcpc:2022provincial-浙江",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:2152",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2025 ICPC China Sichuan Provincial Programming Contest",
+      "ownerSynth": "synth:xcpc:2025provincial-四川",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:2629",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 9th Hebei Collegiate Programming Contest (CCPC 2025 河北省赛)",
+      "ownerSynth": "synth:xcpc:2025provincial-河北",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:3658",
+      "synthKey": "",
+      "type": "C",
+      "name": "CCPC Final 2025 补题",
+      "ownerSynth": "synth:xcpc:2025ccpcf",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:3711",
+      "synthKey": "",
+      "type": "C",
+      "name": "ZJCPC 2026 补题",
+      "ownerSynth": "synth:xcpc:2026provincial-浙江",
+      "rule": "manual:set"
+    },
+    {
+      "extKey": "qoj:c:3789",
+      "synthKey": "",
+      "type": "C",
+      "name": "The 2026 ICPC China Sichuan Provincial Programming Contest",
+      "ownerSynth": "synth:xcpc:2026provincial-四川",
+      "rule": "manual:set"
+    }
+  ],
+  "confirmedGroups": [
+    {
+      "synthKey": "synth:problem:2022ec_pre2-C",
+      "name": "C（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022ec_pre2-D",
+      "name": "D（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022ec_pre2-E",
+      "name": "E（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022ec_pre2-F",
+      "name": "F（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022ec_pre2-H",
+      "name": "H（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022ec_pre2-I",
+      "name": "I（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022ec_pre2-J",
+      "name": "J（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022ec_pre2-K",
+      "name": "K（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2021ec_regional-上海-L",
+      "name": "Three,Three,Three"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-A",
+      "name": "k-子集和最大公约数问题"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-B",
+      "name": "液压机"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-D",
+      "name": "比赛"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-E",
+      "name": "函数求和"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-G",
+      "name": "扫雪"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-I",
+      "name": "六边形翻转"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-J",
+      "name": "幻想乡的裁判长"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-K",
+      "name": "01 背包"
+    },
+    {
+      "synthKey": "synth:problem:2025cc_regional-哈尔滨-L",
+      "name": "网格避障"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-A",
+      "name": "Box"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-B",
+      "name": "Aho-Corasick Automaton"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-D",
+      "name": "Excellent Splitting"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-E",
+      "name": "Centroid Tree"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-F",
+      "name": "Perfect Square"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-G",
+      "name": "Increasing Sequence"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-H",
+      "name": "Square Root"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-I",
+      "name": "String Duplication"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-J",
+      "name": "Sum of Squares of GCDs"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-K",
+      "name": "Xiao Kai's Dream of Provincial Scholarship"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-L",
+      "name": "Puzzle"
+    },
+    {
+      "synthKey": "synth:problem:2024ccpc-female-M",
+      "name": "Covering a Tree"
+    },
+    {
+      "synthKey": "synth:problem:2021ccpcf-F",
+      "name": "Module"
+    },
+    {
+      "synthKey": "synth:problem:2019ccpcf-M",
+      "name": "M（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-A",
+      "name": "A（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-B",
+      "name": "B（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-C",
+      "name": "C（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-D",
+      "name": "D（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-E",
+      "name": "E（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-F",
+      "name": "F（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-G",
+      "name": "G（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-H",
+      "name": "H（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-I",
+      "name": "I（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-J",
+      "name": "J（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-K",
+      "name": "K（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2019cc_regional-东北-L",
+      "name": "L（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2025prov&invi-北京-H",
+      "name": "矩阵除法"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-广西-B",
+      "name": "Beats"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-A",
+      "name": "Genius Cirno's Genius Computer"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-B",
+      "name": "Triangle Uika"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-C",
+      "name": "SSPPSPSP"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-D",
+      "name": "Coprime"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-G",
+      "name": "Rock-Paper-Scissors"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-H",
+      "name": "Another Palindromes Problem"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-I",
+      "name": "Black and White Coloring"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-J",
+      "name": "Odd-Even Game"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-K",
+      "name": "Maximum Profit"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-吉林-L",
+      "name": "Good Matrix"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-A",
+      "name": "海鸥奇遇"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-B",
+      "name": "被抠的键盘"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-C",
+      "name": "彩绘标志"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-D",
+      "name": "点击平衡球"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-F",
+      "name": "前后缀石子博弈"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-G",
+      "name": "广义菊花图计数"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-H",
+      "name": "前线支援"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-I",
+      "name": "子鼠"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-J",
+      "name": "计组实验"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-L",
+      "name": "裂痕"
+    },
+    {
+      "synthKey": "synth:problem:2025provincial-辽宁-M",
+      "name": "猫猫虫打 CF"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-A",
+      "name": "A（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-B",
+      "name": "B（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-C",
+      "name": "C（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-D",
+      "name": "D（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-E",
+      "name": "E（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-F",
+      "name": "F（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-G",
+      "name": "G（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-H",
+      "name": "H（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-I",
+      "name": "I（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-J",
+      "name": "J（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-K",
+      "name": "K（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-L",
+      "name": "L（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_invitational-东北-M",
+      "name": "M（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2024cc_provincial-河北-C",
+      "name": "Goose Goose Duck"
+    },
+    {
+      "synthKey": "synth:problem:2023provincial-湖南-H",
+      "name": "H（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-A",
+      "name": "A（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-B",
+      "name": "B（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-C",
+      "name": "C（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-D",
+      "name": "D（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-E",
+      "name": "E（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-F",
+      "name": "F（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-G",
+      "name": "G（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-H",
+      "name": "H（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-I",
+      "name": "I（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-J",
+      "name": "J（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-K",
+      "name": "K（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-L",
+      "name": "L（题名缺失）"
+    },
+    {
+      "synthKey": "synth:problem:2022cc_provincial-华南-M",
+      "name": "M（题名缺失）"
+    }
+  ],
+  "splitMembers": []
+}

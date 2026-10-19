@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Typhoon",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1001",
+    "ratio": "11.21% (604/5388)",
+    "accepted": 604,
+    "submitted": 5388,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "GCD Magic",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1002",
+    "ratio": "21.02% (107/509)",
+    "accepted": 107,
+    "submitted": 509,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "String Magic (Easy Version)",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1003",
+    "ratio": "32.59% (263/807)",
+    "accepted": 263,
+    "submitted": 807,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "String Magic (Hard Version)",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1004",
+    "ratio": "37.50% (96/256)",
+    "accepted": 96,
+    "submitted": 256,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Snake",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1005",
+    "ratio": "73.30% (162/221)",
+    "accepted": 162,
+    "submitted": 221,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Touhou Red Red Blue",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1006",
+    "ratio": "45.13% (699/1549)",
+    "accepted": 699,
+    "submitted": 1549,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Expectation (Easy Version)",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1007",
+    "ratio": "29.09% (865/2974)",
+    "accepted": 865,
+    "submitted": 2974,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Expectation (Hard Version)",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1008",
+    "ratio": "26.67% (40/150)",
+    "accepted": 40,
+    "submitted": 150,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1009",
+    "ratio": "13.86% (446/3217)",
+    "accepted": 446,
+    "submitted": 3217,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Cut The Tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1010",
+    "ratio": "12.58% (20/159)",
+    "accepted": 20,
+    "submitted": 159,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Cactus Circuit",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1011",
+    "ratio": "24.20% (137/566)",
+    "accepted": 137,
+    "submitted": 566,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Counting Stars",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1098&pid=1012",
+    "ratio": "24.86% (846/3403)",
+    "accepted": 846,
+    "submitted": 3403,
+    "solved": true
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "A. Signal",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1001",
+    "ratio": "26.91% (60/223)",
+    "accepted": 60,
+    "submitted": 223,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "B. Binary Choice",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1002",
+    "ratio": "31.95% (146/457)",
+    "accepted": 146,
+    "submitted": 457,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "C. Stalin Sort",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1003",
+    "ratio": "37.67% (709/1882)",
+    "accepted": 709,
+    "submitted": 1882,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "D. EERT",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1004",
+    "ratio": "31.40% (108/344)",
+    "accepted": 108,
+    "submitted": 344,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "E. TREE",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1005",
+    "ratio": "31.93% (250/783)",
+    "accepted": 250,
+    "submitted": 783,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "F. Median Shuffle",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1006",
+    "ratio": "29.40% (456/1551)",
+    "accepted": 456,
+    "submitted": 1551,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "G. Perfect Palindrome",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1007",
+    "ratio": "41.27% (948/2297)",
+    "accepted": 948,
+    "submitted": 2297,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "H. Mode",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1008",
+    "ratio": "17.53% (27/154)",
+    "accepted": 27,
+    "submitted": 154,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "I. Gather",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1009",
+    "ratio": "30.00% (9/30)",
+    "accepted": 9,
+    "submitted": 30,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "J. Rare Game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1010",
+    "ratio": "31.52% (813/2579)",
+    "accepted": 813,
+    "submitted": 2579,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "K. Union MEX",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1011",
+    "ratio": "85.43% (915/1071)",
+    "accepted": 915,
+    "submitted": 1071,
+    "solved": true
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "L. Yet Another Suffix Array Problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1232&pid=1012",
+    "ratio": "17.86% (5/28)",
+    "accepted": 5,
+    "submitted": 28,
+    "solved": false
+  }
+]

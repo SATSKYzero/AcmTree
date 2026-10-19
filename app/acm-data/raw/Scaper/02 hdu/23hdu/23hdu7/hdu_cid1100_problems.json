@@ -1,0 +1,132 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "A. Xcellent Tree Query Problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1001",
+    "ratio": "6.58% (10/152)",
+    "accepted": 10,
+    "submitted": 152,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "B. Random Nim Game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1002",
+    "ratio": "66.38% (930/1401)",
+    "accepted": 930,
+    "submitted": 1401,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "C. Rotation",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1003",
+    "ratio": "10.00% (2/20)",
+    "accepted": 2,
+    "submitted": 20,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "D. Medians Strike Back",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1004",
+    "ratio": "16.98% (446/2627)",
+    "accepted": 446,
+    "submitted": 2627,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "E. Subsequence Not Substring",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1005",
+    "ratio": "5.98% (80/1338)",
+    "accepted": 80,
+    "submitted": 1338,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "F. Product of Sorting Powers",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1006",
+    "ratio": "0.83% (3/360)",
+    "accepted": 3,
+    "submitted": 360,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "G. Sum of Binomial Coefficients",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1007",
+    "ratio": "5.63% (4/71)",
+    "accepted": 4,
+    "submitted": 71,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "H. HEX-A-GONE Trails",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1008",
+    "ratio": "11.33% (171/1509)",
+    "accepted": 171,
+    "submitted": 1509,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "I. Colorings Counting",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1009",
+    "ratio": "30.00% (3/10)",
+    "accepted": 3,
+    "submitted": 10,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "J. Widely Known Problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1010",
+    "ratio": "0.00% (0/16)",
+    "accepted": 0,
+    "submitted": 16,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "K. Three Operations",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1011",
+    "ratio": "44.60% (1040/2332)",
+    "accepted": 1040,
+    "submitted": 2332,
+    "solved": true
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "L. Landmine",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1012",
+    "ratio": "15.86% (49/309)",
+    "accepted": 49,
+    "submitted": 309,
+    "solved": false
+  },
+  {
+    "problem_id": "1013",
+    "problem_id2": "M",
+    "title": "M. Minimal and Maximal XOR Sum",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1100&pid=1013",
+    "ratio": "27.46% (761/2771)",
+    "accepted": 761,
+    "submitted": 2771,
+    "solved": true
+  }
+]

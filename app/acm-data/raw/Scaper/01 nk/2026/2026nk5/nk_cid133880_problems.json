@@ -1,0 +1,114 @@
+[
+  {
+    "题号": "A",
+    "标题": "Echo Prefixes",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/A",
+    "通过率": "38/64",
+    "过题均次": "2.16 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "B",
+    "标题": "Enlarged Badge",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/B",
+    "通过率": "102/137",
+    "过题均次": "3.28 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "C",
+    "标题": "Number",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/C",
+    "通过率": "105/318",
+    "过题均次": "2.90 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "D",
+    "标题": "Half-plane Cover",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/D",
+    "通过率": "5/24",
+    "过题均次": "8.80 次",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "E",
+    "标题": "Koishi and Function",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/E",
+    "通过率": "867/960",
+    "过题均次": "1.90 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "F",
+    "标题": "Four",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/F",
+    "通过率": "2/14",
+    "过题均次": "1.50 次",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "G",
+    "标题": "Bipartite Graph",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/G",
+    "通过率": "0/6",
+    "过题均次": "",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "H",
+    "标题": "Count it",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/H",
+    "通过率": "10/21",
+    "过题均次": "3.50 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "I",
+    "标题": "Sequence Operation 2",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/I",
+    "通过率": "621/765",
+    "过题均次": "2.04 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "J",
+    "标题": "Sequence（Median Version）",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/J",
+    "通过率": "3/249",
+    "过题均次": "5.00 次",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "K",
+    "标题": "Sequence（Mex Version）",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/K",
+    "通过率": "1390/1470",
+    "过题均次": "3.07 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "L",
+    "标题": "Matrix",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/L",
+    "通过率": "892/1130",
+    "过题均次": "3.63 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "M",
+    "标题": "Je t'aime encore",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/M",
+    "通过率": "0/4",
+    "过题均次": "",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "N",
+    "标题": "Welcome to HIT",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133880/N",
+    "通过率": "1530/1530",
+    "过题均次": "1.30 次",
+    "团队状态": "通过"
+  }
+]

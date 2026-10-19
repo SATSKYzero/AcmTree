@@ -1,0 +1,102 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Chords",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1001",
+    "ratio": "11.54% (33/286)",
+    "accepted": 33,
+    "submitted": 286,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Delivery Robot",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1002",
+    "ratio": "42.67% (64/150)",
+    "accepted": 64,
+    "submitted": 150,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Congruences",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1003",
+    "ratio": "16.09% (56/348)",
+    "accepted": 56,
+    "submitted": 348,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "GG and YY's Binary Number",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1004",
+    "ratio": "20.83% (95/456)",
+    "accepted": 95,
+    "submitted": 456,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "0 vs 1",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1005",
+    "ratio": "23.24% (712/3064)",
+    "accepted": 712,
+    "submitted": 3064,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Nested String",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1006",
+    "ratio": "3.98% (114/2862)",
+    "accepted": 114,
+    "submitted": 2862,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Solubility",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1007",
+    "ratio": "41.09% (1024/2492)",
+    "accepted": 1024,
+    "submitted": 2492,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Expectation of Rank",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1008",
+    "ratio": "37.48% (208/555)",
+    "accepted": 208,
+    "submitted": 555,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Diagonal Fancy",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1009",
+    "ratio": "18.32% (131/715)",
+    "accepted": 131,
+    "submitted": 715,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Rikka with Square Numbers",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1101&pid=1010",
+    "ratio": "17.42% (890/5110)",
+    "accepted": 890,
+    "submitted": 5110,
+    "solved": true
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "一个更无聊的游戏",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1001",
+    "ratio": "32.89% (344/1046)",
+    "accepted": 344,
+    "submitted": 1046,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "\"合理\"避税",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1002",
+    "ratio": "33.33% (871/2613)",
+    "accepted": 871,
+    "submitted": 2613,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "黑白球",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1003",
+    "ratio": "19.67% (12/61)",
+    "accepted": 12,
+    "submitted": 61,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "信赖跃迁：置换轨迹计算",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1004",
+    "ratio": "62.73% (877/1398)",
+    "accepted": 877,
+    "submitted": 1398,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "四角洲行动",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1005",
+    "ratio": "41.51% (702/1691)",
+    "accepted": 702,
+    "submitted": 1691,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "支配游戏",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1006",
+    "ratio": "24.87% (482/1938)",
+    "accepted": 482,
+    "submitted": 1938,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "k-MEX",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1007",
+    "ratio": "91.07% (1040/1142)",
+    "accepted": 1040,
+    "submitted": 1142,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "双端魔咒",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1008",
+    "ratio": "20.84% (339/1627)",
+    "accepted": 339,
+    "submitted": 1627,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "切排列",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1009",
+    "ratio": "72.25% (1213/1679)",
+    "accepted": 1213,
+    "submitted": 1679,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "随机反馈",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1010",
+    "ratio": "44.21% (1123/2540)",
+    "accepted": 1123,
+    "submitted": 2540,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "营火",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1011",
+    "ratio": "17.59% (70/398)",
+    "accepted": 70,
+    "submitted": 398,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "最小值",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1176&pid=1012",
+    "ratio": "47.93% (1135/2368)",
+    "accepted": 1135,
+    "submitted": 2368,
+    "solved": true
+  }
+]

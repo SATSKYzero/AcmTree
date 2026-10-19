@@ -1,0 +1,102 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Pty loves sequence",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1001",
+    "ratio": "25.00% (52/208)",
+    "accepted": 52,
+    "submitted": 208,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Pty with card",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1002",
+    "ratio": "13.33% (2/15)",
+    "accepted": 2,
+    "submitted": 15,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Pty loves lines",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1003",
+    "ratio": "11.97% (443/3700)",
+    "accepted": 443,
+    "submitted": 3700,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Pty hates prime numbers",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1004",
+    "ratio": "5.89% (44/747)",
+    "accepted": 44,
+    "submitted": 747,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Pty loves book",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1005",
+    "ratio": "0.00% (0/4)",
+    "accepted": 0,
+    "submitted": 4,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Pty loves lcm",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1006",
+    "ratio": "19.30% (11/57)",
+    "accepted": 11,
+    "submitted": 57,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Pty loves graph",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1007",
+    "ratio": "4.28% (14/327)",
+    "accepted": 14,
+    "submitted": 327,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Pty loves string",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1008",
+    "ratio": "13.87% (113/815)",
+    "accepted": 113,
+    "submitted": 815,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Pty loves SegmentTree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1009",
+    "ratio": "22.22% (6/27)",
+    "accepted": 6,
+    "submitted": 27,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Pty plays game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=993&pid=1010",
+    "ratio": "6.82% (36/528)",
+    "accepted": 36,
+    "submitted": 528,
+    "solved": false
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Miserable Faith",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1001",
+    "ratio": "33.33% (19/57)",
+    "accepted": 19,
+    "submitted": 57,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "String Mod",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1002",
+    "ratio": "26.50% (31/117)",
+    "accepted": 31,
+    "submitted": 117,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "VC Is All You Need",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1003",
+    "ratio": "41.56% (845/2033)",
+    "accepted": 845,
+    "submitted": 2033,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Another String",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1004",
+    "ratio": "57.30% (102/178)",
+    "accepted": 102,
+    "submitted": 178,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Random Walk 2",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1005",
+    "ratio": "52.67% (79/150)",
+    "accepted": 79,
+    "submitted": 150,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Cute Tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1006",
+    "ratio": "64.94% (876/1349)",
+    "accepted": 876,
+    "submitted": 1349,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Banzhuan",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1007",
+    "ratio": "19.98% (664/3324)",
+    "accepted": 664,
+    "submitted": 3324,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Supermarket",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1008",
+    "ratio": "61.40% (35/57)",
+    "accepted": 35,
+    "submitted": 57,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Array",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1009",
+    "ratio": "15.03% (112/745)",
+    "accepted": 112,
+    "submitted": 745,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Guess Or Not 2",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1010",
+    "ratio": "0.00% (0/7)",
+    "accepted": 0,
+    "submitted": 7,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Jsljgame",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1011",
+    "ratio": "1.22% (1/82)",
+    "accepted": 1,
+    "submitted": 82,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Yet Another Matrix Problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1012",
+    "ratio": "15.45% (17/110)",
+    "accepted": 17,
+    "submitted": 110,
+    "solved": false
+  },
+  {
+    "problem_id": "1013",
+    "problem_id2": "M",
+    "title": "Penguin Love Tour",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=988&pid=1013",
+    "ratio": "14.83% (39/263)",
+    "accepted": 39,
+    "submitted": 263,
+    "solved": false
+  }
+]

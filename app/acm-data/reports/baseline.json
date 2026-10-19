@@ -1,0 +1,691 @@
+{
+ "generatedAt": "2026-10-19T09:48:12Z",
+ "source": "scripts/nature-baseline.py",
+ "baseline": {
+  "path": "acm-data/nature-assignments.json",
+  "generatedAt": "2026-10-16T20:18:38.729Z",
+  "registryVersion": 1,
+  "nodes": 58,
+  "fields": 80
+ },
+ "listed": 200,
+ "applied": 80,
+ "unchanged": 0,
+ "sourced": 80,
+ "sameAsAuto": 0,
+ "differs": 51,
+ "filledEmpty": 29,
+ "sameAsAutoItems": [],
+ "differsItems": [
+  {
+   "key": "qoj:c:2180",
+   "field": "natureRegion",
+   "was": "不需要",
+   "now": "平壤",
+   "rule": "qoj:region-foreign"
+  },
+  {
+   "key": "qoj:c:3869",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/未归类",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:3768",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/CC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:3789",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:3749",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:2152",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:2021",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:2629",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/CC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:1862",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:1780",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:1464",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/CC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:3871",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/未归类",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:3918",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/未归类",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:2056",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:1292",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:2014",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:2020",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:1281",
+   "field": "natureClass",
+   "was": "qoj/xcpc/provincial&invitational/IC/省赛/official",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:name-provincial"
+  },
+  {
+   "key": "qoj:c:3935",
+   "field": "natureYear",
+   "was": "待同步",
+   "now": "2026",
+   "rule": "qoj:year-tbd"
+  },
+  {
+   "key": "qoj:c:3934",
+   "field": "natureYear",
+   "was": "待同步",
+   "now": "2026",
+   "rule": "qoj:year-tbd"
+  },
+  {
+   "key": "qoj:c:3786",
+   "field": "natureYear",
+   "was": "待同步",
+   "now": "2026",
+   "rule": "qoj:year-tbd"
+  },
+  {
+   "key": "qoj:c:2624",
+   "field": "natureYear",
+   "was": "待同步",
+   "now": "不确定",
+   "rule": "qoj:year-tbd"
+  },
+  {
+   "key": "qoj:c:2182",
+   "field": "natureYear",
+   "was": "待同步",
+   "now": "2025",
+   "rule": "qoj:year-tbd"
+  },
+  {
+   "key": "qoj:c:3784",
+   "field": "natureYear",
+   "was": "待同步",
+   "now": "2026",
+   "rule": "qoj:year-tbd"
+  },
+  {
+   "key": "qoj:c:3658",
+   "field": "natureClass",
+   "was": "qoj/无归类",
+   "now": "qoj/xcpc/ccpc/final/official",
+   "rule": "qoj:no-category"
+  },
+  {
+   "key": "qoj:c:3658",
+   "field": "natureYear",
+   "was": "待同步",
+   "now": "2026",
+   "rule": "qoj:year-tbd"
+  },
+  {
+   "key": "qoj:c:3711",
+   "field": "natureClass",
+   "was": "qoj/无归类",
+   "now": "qoj/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "qoj:no-category"
+  },
+  {
+   "key": "qoj:c:3711",
+   "field": "natureYear",
+   "was": "待同步",
+   "now": "2026",
+   "rule": "qoj:year-tbd"
+  },
+  {
+   "key": "aux-xcpcio:c:sdcpc15th",
+   "field": "natureClass",
+   "was": "xcpc/provincial&invitational/无/省赛/official",
+   "now": "xcpc/provincial&invitational/CC/省赛暨邀请赛/official",
+   "rule": "xcpc:name-provincial"
+  },
+  {
+   "key": "aux-xcpcio:c:gxcpc8th",
+   "field": "natureClass",
+   "was": "xcpc/provincial&invitational/IC&CC/省赛/official",
+   "now": "xcpc/provincial&invitational/无/省赛/official",
+   "rule": "xcpc:name-provincial"
+  },
+  {
+   "key": "aux-xcpcio:c:hecpc7th",
+   "field": "natureRegion",
+   "was": "东北",
+   "now": "河北",
+   "rule": "xcpc:region-province"
+  },
+  {
+   "key": "aux-rankland:c:sdcpc15th",
+   "field": "natureClass",
+   "was": "xcpc/provincial&invitational/无/省赛/official",
+   "now": "xcpc/provincial&invitational/CC/省赛暨邀请赛/official",
+   "rule": "xcpc:name-provincial"
+  },
+  {
+   "key": "aux-rankland:c:gxcpc8th",
+   "field": "natureClass",
+   "was": "xcpc/provincial&invitational/IC&CC/省赛/official",
+   "now": "xcpc/provincial&invitational/无/省赛/official",
+   "rule": "xcpc:name-provincial"
+  },
+  {
+   "key": "aux-rankland:c:hecpc7th",
+   "field": "natureRegion",
+   "was": "东北",
+   "now": "河北",
+   "rule": "xcpc:region-province"
+  },
+  {
+   "key": "aux-rankland:c:hecpc6th",
+   "field": "natureClass",
+   "was": "xcpc/provincial&invitational/无/省赛/official",
+   "now": "xcpc/provincial&invitational/CC/省赛/official",
+   "rule": "xcpc:name-provincial"
+  },
+  {
+   "key": "aux-rankland:c:ccpc2019final",
+   "field": "natureYear",
+   "was": "2019",
+   "now": "2021",
+   "rule": "rankland:year-time"
+  },
+  {
+   "key": "aux-rankland:c:ccpc2019qinhuangdao",
+   "field": "natureYear",
+   "was": "2019",
+   "now": "2020",
+   "rule": "rankland:year-time"
+  },
+  {
+   "key": "aux-rankland:c:icpc2019ecfinal",
+   "field": "natureYear",
+   "was": "2019",
+   "now": "2021",
+   "rule": "rankland:year-time"
+  },
+  {
+   "key": "aux-rankland:c:icpc2022ecfinal",
+   "field": "natureYear",
+   "was": "2022",
+   "now": "2023",
+   "rule": "rankland:year-time"
+  },
+  {
+   "key": "cf:c:102431",
+   "field": "natureYear",
+   "was": "2019",
+   "now": "2021",
+   "rule": "gym:year-time"
+  },
+  {
+   "key": "cf:c:105930",
+   "field": "natureClass",
+   "was": "cf/gyms/xcpc/provincial&invitational/CC/省赛/official",
+   "now": "cf/gyms/xcpc/provincial&invitational/CC/省赛暨邀请赛/official",
+   "rule": "gym:name-provincial"
+  },
+  {
+   "key": "cf:c:105481",
+   "field": "natureClass",
+   "was": "cf/gyms/xcpc/provincial&invitational/CC/省赛/official",
+   "now": "cf/gyms/xcpc/provincial&invitational/无/省赛/official",
+   "rule": "gym:name-provincial"
+  },
+  {
+   "key": "cf:c:105173",
+   "field": "natureClass",
+   "was": "cf/gyms/xcpc/provincial&invitational/CC/省赛暨邀请赛/official",
+   "now": "cf/gyms/xcpc/provincial&invitational/CC/邀请赛/official",
+   "rule": "gym:name-provincial"
+  },
+  {
+   "key": "cf:c:105139",
+   "field": "natureClass",
+   "was": "cf/gyms/xcpc/provincial&invitational/无/省赛/official",
+   "now": "cf/gyms/xcpc/provincial&invitational/IC/省赛/official",
+   "rule": "gym:name-provincial"
+  },
+  {
+   "key": "cf:c:105184",
+   "field": "natureClass",
+   "was": "cf/gyms/xcpc/provincial&invitational/无/省赛/official",
+   "now": "cf/gyms/xcpc/provincial&invitational/CC/省赛/official",
+   "rule": "gym:name-provincial"
+  },
+  {
+   "key": "cf:c:105184",
+   "field": "natureYear",
+   "was": "2023",
+   "now": "2024",
+   "rule": "gym:year-time"
+  },
+  {
+   "key": "cf:c:105184",
+   "field": "natureSeason",
+   "was": "2023",
+   "now": "2024",
+   "rule": "gym:season-time"
+  },
+  {
+   "key": "cf:c:104337",
+   "field": "natureClass",
+   "was": "cf/gyms/xcpc/provincial&invitational/无/省赛/official",
+   "now": "cf/gyms/xcpc/provincial&invitational/CC/省赛/official",
+   "rule": "gym:name-provincial"
+  },
+  {
+   "key": "cf:c:104461",
+   "field": "natureClass",
+   "was": "cf/gyms/xcpc/provincial&invitational/无/省赛/official",
+   "now": "cf/gyms/xcpc/provincial&invitational/IC/省赛/official",
+   "rule": "gym:name-provincial"
+  },
+  {
+   "key": "cf:c:104373",
+   "field": "natureYear",
+   "was": "2021",
+   "now": "2022",
+   "rule": "gym:year-name"
+  },
+  {
+   "key": "cf:c:102471",
+   "field": "natureYear",
+   "was": "2019",
+   "now": "2021",
+   "rule": "gym:year-time"
+  }
+ ],
+ "filledEmptyItems": [
+  {
+   "key": "qoj:c:2039",
+   "field": "natureRegion",
+   "value": "河南"
+  },
+  {
+   "key": "qoj:c:1316",
+   "field": "natureRegion",
+   "value": "东北四省"
+  },
+  {
+   "key": "qoj:c:3935",
+   "field": "natureSeason",
+   "value": "2026"
+  },
+  {
+   "key": "qoj:c:3934",
+   "field": "natureSeason",
+   "value": "2026"
+  },
+  {
+   "key": "qoj:c:3786",
+   "field": "natureSeason",
+   "value": "2026"
+  },
+  {
+   "key": "qoj:c:2624",
+   "field": "natureSeason",
+   "value": "不确定"
+  },
+  {
+   "key": "qoj:c:2182",
+   "field": "natureSeason",
+   "value": "2025"
+  },
+  {
+   "key": "qoj:c:3784",
+   "field": "natureSeason",
+   "value": "2026"
+  },
+  {
+   "key": "qoj:c:3658",
+   "field": "natureRegion",
+   "value": "待填写"
+  },
+  {
+   "key": "cf:c:104813",
+   "field": "natureYear",
+   "value": "2023"
+  },
+  {
+   "key": "cf:c:104813",
+   "field": "natureSeason",
+   "value": "2023"
+  },
+  {
+   "key": "cf:c:105887",
+   "field": "natureYear",
+   "value": "2025"
+  },
+  {
+   "key": "cf:c:105887",
+   "field": "natureSeason",
+   "value": "2025"
+  },
+  {
+   "key": "cf:c:104459",
+   "field": "natureYear",
+   "value": "2019"
+  },
+  {
+   "key": "cf:c:104459",
+   "field": "natureSeason",
+   "value": "2019"
+  },
+  {
+   "key": "cf:c:105891",
+   "field": "natureYear",
+   "value": "2025"
+  },
+  {
+   "key": "cf:c:105891",
+   "field": "natureSeason",
+   "value": "2025"
+  },
+  {
+   "key": "cf:c:104417",
+   "field": "natureYear",
+   "value": "2023"
+  },
+  {
+   "key": "cf:c:104417",
+   "field": "natureSeason",
+   "value": "2023"
+  },
+  {
+   "key": "cf:c:104461",
+   "field": "natureYear",
+   "value": "2017"
+  },
+  {
+   "key": "cf:c:104461",
+   "field": "natureSeason",
+   "value": "2017"
+  },
+  {
+   "key": "cf:c:102770",
+   "field": "natureYear",
+   "value": "2020"
+  },
+  {
+   "key": "cf:c:102770",
+   "field": "natureSeason",
+   "value": "2020"
+  },
+  {
+   "key": "cf:c:103055",
+   "field": "natureYear",
+   "value": "2021"
+  },
+  {
+   "key": "cf:c:103055",
+   "field": "natureSeason",
+   "value": "2021"
+  },
+  {
+   "key": "cf:c:103687",
+   "field": "natureYear",
+   "value": "2022"
+  },
+  {
+   "key": "cf:c:103687",
+   "field": "natureSeason",
+   "value": "2022"
+  },
+  {
+   "key": "cf:c:106697",
+   "field": "natureYear",
+   "value": "2024"
+  },
+  {
+   "key": "cf:c:106697",
+   "field": "natureSeason",
+   "value": "2024"
+  }
+ ],
+ "bindings": 31,
+ "bindingsSame": 0,
+ "bindingItems": [
+  {
+   "key": "qoj:c:3789",
+   "was": "",
+   "now": "synth:xcpc:2026provincial-四川"
+  },
+  {
+   "key": "qoj:c:2152",
+   "was": "",
+   "now": "synth:xcpc:2025provincial-四川"
+  },
+  {
+   "key": "qoj:c:2021",
+   "was": "",
+   "now": "synth:xcpc:2025provincial-浙江"
+  },
+  {
+   "key": "qoj:c:2629",
+   "was": "",
+   "now": "synth:xcpc:2025provincial-河北"
+  },
+  {
+   "key": "qoj:c:1862",
+   "was": "",
+   "now": "synth:xcpc:2024provincial-四川"
+  },
+  {
+   "key": "qoj:c:1780",
+   "was": "",
+   "now": "synth:xcpc:2024provincial-浙江"
+  },
+  {
+   "key": "qoj:c:1464",
+   "was": "",
+   "now": "synth:xcpc:2023provincial-北京"
+  },
+  {
+   "key": "qoj:c:2056",
+   "was": "",
+   "now": "synth:xcpc:2022provincial-浙江"
+  },
+  {
+   "key": "qoj:c:1292",
+   "was": "",
+   "now": "synth:xcpc:2021provincial-四川"
+  },
+  {
+   "key": "qoj:c:2014",
+   "was": "",
+   "now": "synth:xcpc:2021provincial-浙江"
+  },
+  {
+   "key": "qoj:c:2020",
+   "was": "",
+   "now": "synth:xcpc:2020provincial-浙江"
+  },
+  {
+   "key": "qoj:c:1281",
+   "was": "",
+   "now": "synth:xcpc:2019provincial-山东"
+  },
+  {
+   "key": "qoj:c:3658",
+   "was": "",
+   "now": "synth:xcpc:2025ccpcf"
+  },
+  {
+   "key": "qoj:c:3711",
+   "was": "",
+   "now": "synth:xcpc:2026provincial-浙江"
+  },
+  {
+   "key": "aux-xcpcio:c:sdcpc15th",
+   "was": "",
+   "now": "synth:xcpc:2025cc_prov&invi-山东"
+  },
+  {
+   "key": "aux-xcpcio:c:gxcpc8th",
+   "was": "",
+   "now": "synth:xcpc:2025provincial-广西"
+  },
+  {
+   "key": "aux-xcpcio:c:hecpc7th",
+   "was": "",
+   "now": "synth:xcpc:2023cc_provincial-河北"
+  },
+  {
+   "key": "aux-rankland:c:sdcpc15th",
+   "was": "",
+   "now": "synth:xcpc:2025cc_prov&invi-山东"
+  },
+  {
+   "key": "aux-rankland:c:gxcpc8th",
+   "was": "",
+   "now": "synth:xcpc:2025provincial-广西"
+  },
+  {
+   "key": "aux-rankland:c:hecpc7th",
+   "was": "",
+   "now": "synth:xcpc:2023cc_provincial-河北"
+  },
+  {
+   "key": "aux-rankland:c:hecpc6th",
+   "was": "",
+   "now": "synth:xcpc:2022cc_provincial-河北"
+  },
+  {
+   "key": "cf:c:105930",
+   "was": "",
+   "now": "synth:xcpc:2025cc_prov&invi-山东"
+  },
+  {
+   "key": "cf:c:105481",
+   "was": "",
+   "now": "synth:xcpc:2024provincial-辽宁"
+  },
+  {
+   "key": "cf:c:105173",
+   "was": "",
+   "now": "synth:xcpc:2024cc_invitational-东北"
+  },
+  {
+   "key": "cf:c:105139",
+   "was": "",
+   "now": "synth:xcpc:2024ic_provincial-湖北"
+  },
+  {
+   "key": "cf:c:105184",
+   "was": "",
+   "now": "synth:xcpc:2024cc_provincial-河北"
+  },
+  {
+   "key": "cf:c:104337",
+   "was": "",
+   "now": "synth:xcpc:2023cc_provincial-湖北"
+  },
+  {
+   "key": "cf:c:105887",
+   "was": "",
+   "now": "synth:xcpc:2025provincial-重庆"
+  },
+  {
+   "key": "cf:c:104417",
+   "was": "",
+   "now": "synth:xcpc:2023ic_provincial-山东"
+  },
+  {
+   "key": "cf:c:104461",
+   "was": "",
+   "now": "synth:xcpc:2017ic_provincial-浙江"
+  },
+  {
+   "key": "cf:c:106697",
+   "was": "",
+   "now": "synth:xcpc:2024provincial-广西"
+  }
+ ],
+ "missing": 0,
+ "missingKeys": [],
+ "renamed": 0,
+ "renamedItems": [],
+ "invalid": 0,
+ "invalidItems": [],
+ "dryRun": false
+}

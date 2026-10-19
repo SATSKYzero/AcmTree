@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Hide-And-Seek Game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1001",
+    "ratio": "17.03% (228/1339)",
+    "accepted": 228,
+    "submitted": 1339,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "City Upgrading",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1002",
+    "ratio": "18.96% (704/3713)",
+    "accepted": 704,
+    "submitted": 3713,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Mr. Liang play Card Game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1003",
+    "ratio": "25.23% (83/329)",
+    "accepted": 83,
+    "submitted": 329,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Amazing spacecraft",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1004",
+    "ratio": "14.29% (15/105)",
+    "accepted": 15,
+    "submitted": 105,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Cyclically Isomorphic",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1005",
+    "ratio": "19.84% (972/4898)",
+    "accepted": 972,
+    "submitted": 4898,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Escape The Maze",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1006",
+    "ratio": "27.35% (67/245)",
+    "accepted": 67,
+    "submitted": 245,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Travel",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1007",
+    "ratio": "26.32% (5/19)",
+    "accepted": 5,
+    "submitted": 19,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Umamusume",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1008",
+    "ratio": "40.00% (14/35)",
+    "accepted": 14,
+    "submitted": 35,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Assertion",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1009",
+    "ratio": "43.11% (1429/3315)",
+    "accepted": 1429,
+    "submitted": 3315,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Easy problem I",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1010",
+    "ratio": "16.29% (257/1578)",
+    "accepted": 257,
+    "submitted": 1578,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Easy problem II",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1011",
+    "ratio": "34.10% (74/217)",
+    "accepted": 74,
+    "submitted": 217,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Play on Tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1094&pid=1012",
+    "ratio": "21.47% (415/1933)",
+    "accepted": 415,
+    "submitted": 1933,
+    "solved": true
+  }
+]

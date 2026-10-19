@@ -1,0 +1,433 @@
+{
+ "package": "acm-data\\nodes\\all_nodes.json",
+ "registryVersion": 1,
+ "registrySha": "34aa19ad5d50",
+ "records": 33768,
+ "rows": [
+  {
+   "type": "C",
+   "field": "natureClass",
+   "expect": "required",
+   "applies": 1894,
+   "filled": 1894,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "**分类路径是整棵树的骨架**（用户 2026-10-01：「分类路径是骨架」）—— 没有它这一场挂不上任何一类，界面/统计/筛选全部失效。实测 1426 个 C（含 128 个合成节点）**一处不空**：规则读不出来时也有兜底叶子（`…/无归类`）⇒ 所以敢标 required。"
+  },
+  {
+   "type": "C",
+   "field": "natureYear",
+   "expect": "expected",
+   "applies": 1894,
+   "filled": 1894,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "比赛年份（用户 2026-10-01 第十二~十六轮定的口径：gym 靠赛名、UC 写 `无`、拿不到写 `待同步`）。⚠️ 这些**特殊值都算「有值」**（`无`/`待同步`/`不确定` 是结论，不是空缺）⇒ 真缺时只提示（可疑），不中断链条 —— 新赛季头几场常常还没定。"
+  },
+  {
+   "type": "C",
+   "field": "natureSeason",
+   "expect": "expected",
+   "applies": 1894,
+   "filled": 1894,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "赛季（口径：gym 取**赛名里的年份**、CF 正式轮次跟举办年、拿不到写 `无`；见 `docs/v8.5-plan.md` 第二十一/二十八节）。与年份同理：特殊值算有值，缺了只提示。"
+  },
+  {
+   "type": "C",
+   "field": "natureRegion",
+   "expect": "expected",
+   "applies": 1894,
+   "filled": 1894,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "地区（用户 2026-10-01 第十二~十四轮：统一中文城市/省名；网络赛写 `无`；UC/总决赛/女生·高职场写 `待填写`；国外英文地名写 `不需要`）。⚠️ `无`/`待填写`/`不需要`/`不知道` **都算已填**（判定层面视为有值，见 `NATURE_REGION_TBD`）—— 所以「缺」= 这四种都没写，那确实该看一眼（可疑），但不中断链条。"
+  },
+  {
+   "type": "C",
+   "field": "name",
+   "expect": "required",
+   "applies": 1507,
+   "filled": 1507,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "没有名字的容器/比赛/题没法读，也没法判重。⚠️ 两条豁免都是实测出来的：① R（提交）根本没有 name 字段；② 辅助树（`aux-*`）的占位题只承载 ratio/题号，题名由主树那份提供（实测 1898 条全在这里）—— 规则要照实写，不能一律 '*'"
+  },
+  {
+   "type": "C",
+   "field": "kind",
+   "expect": "optional",
+   "applies": 119,
+   "filled": 119,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "空是常态；只有能分辨「练习容器」的来源才会写 `practice`。⚠️ **2026-10-03 收紧**：① `cf` / `qoj` / `atcoder` 的比赛**都是正式比赛**（QOJ 那些 VP 是**提交**的参与方式，由 `submitKind` 逐条记，不是比赛的性质）；② **合成节点**（`synth:` / `aux-cf-contest:`）是**组头**，逐来源的性质由成员表达，组头不重复携带；③ `nk` / `hdu` / `aux-*` 几家的适配器**不产这个字段**（它们没有「练习赛」这个概念）⇒ 一律不适用。"
+  },
+  {
+   "type": "C",
+   "field": "contestTime",
+   "expect": "optional",
+   "applies": 1148,
+   "filled": 1137,
+   "missing": 0,
+   "missingLow": 11,
+   "missingLowSample": [
+    "aux-rankland:c:ccpc2024invitational-changchun",
+    "aux-rankland:c:ccpc2025invitational-guangdong-preliminary",
+    "aux-rankland:c:cqcpc13th",
+    "aux-rankland:c:ccpc2025invitational-fujian",
+    "aux-rankland:c:hbcpc4th"
+   ],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "low",
+   "pursueCounts": {
+    "low": 11
+   },
+   "why": "开赛时间只有部分来源给。⚠️ **2026-10-03 收紧**：① QOJ **结构性没有** —— 官方名册 3506 场只有 **107 场**带真日期（适配器因此从不从它取时间，年份靠赛季反推）；② **CF 号 ≥ 100000 的那些**（实测 44 场，如 `cf:c:102431`）**根本不在 CF 的 `contest.list` 里** ⇒ 上游没有时间（它们多半是 gym/镜像场，名字与时间都得从别处拿）；③ ~~**合成节点**是组头，不重复携带成员的时间~~ —— **这条已推翻**（它把「组头不带时间」当成了结论，于是「这一组几点开赛」在整棵树上没有一处答得出来）。现在的口径：时间是**组值** —— `core/groupValue.js` 的 `AGG_BUILDERS.contestTime`，**按需聚合、不落盘**；一个组的开赛时间 = **组头与各成员里最新的那个非空时间**。为什么取最新而不是最早：实测 C 组里成员时间不一致**只有 6 例、全部是「延期/补办」**（旧来源留着原定日期，真实日期是较晚那个：`2022ecfinal` 2023.03.25 ←→ 2022.03.25 · `2019ccpcf` 2021.05.30 ←→ 2019.11.17 · `2018ec_regional-青岛` 2018.11.04 ←→ 2018.10.21 …）⇒ 取最新才对得上真实日期。⚠️ **2026-10-03 加「追值」**：`aux-rankland` 那 8 格标 **low** —— 用户：「开赛时间如果没有，那很可能永远不会有」。"
+  },
+  {
+   "type": "P",
+   "field": "name",
+   "expect": "required",
+   "applies": 14654,
+   "filled": 14654,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "没有名字的容器/比赛/题没法读，也没法判重。⚠️ 两条豁免都是实测出来的：① R（提交）根本没有 name 字段；② 辅助树（`aux-*`）的占位题只承载 ratio/题号，题名由主树那份提供（实测 1898 条全在这里）—— 规则要照实写，不能一律 '*'"
+  },
+  {
+   "type": "P",
+   "field": "problemId",
+   "expect": "required",
+   "applies": 18201,
+   "filled": 18201,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "题号是 P 的身份之一（extKey 里也有，但界面上要显示）"
+  },
+  {
+   "type": "P",
+   "field": "atcoderDifficulty",
+   "expect": "expected",
+   "applies": 306,
+   "filled": 268,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 38,
+   "exemptSample": [
+    "atcoder:c:abc299:p:A",
+    "atcoder:c:abc299:p:B",
+    "atcoder:c:agc066:p:F",
+    "atcoder:c:agc059:p:F",
+    "atcoder:c:agc040:p:F"
+   ],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "AtCoder 题目的**数值难度**（kenkoooo `problem-models.json` 的 `difficulty`，**可以是负数**，如 `abc138_a: -848`）。**数值难度字段组**的一员（用户 2026-10-02：「现在 cf 就有本身难度 & clist 难度两个，所以是时候让数值难度也成为字段组了」）。⚠️ 还没估出难度的**新题不写**（缺失 ≠ 0；待办 41a 的口径：「缺失不写负结论」）。⚠️ **但缺的 38 格不是「新题」，是结构性缺口 —— 爬不到、重跑也永远补不上**（2026-10-03 复核，用户问「确定爬不到吗？」）：现场重下 `problem-models.json`（1,156,532 B / 5148 条）里那 38 道**根本没有 `difficulty` 键**，分三类：① 最难 F（`arc146_f`/`arc120_f2`/`arc155_f`/`agc**f`…）只有 `{\"is_experimental\": false}` —— 够格的评分者太少，估不出来；② 教育 DP 场 26 题只有 `slope`/`intercept` —— 全程无难度模型；③ `abc299_a/b` 只有 `slope`/`intercept`/`variance` —— 太简单（饱和）。三个旁证：上游**保留**负难度（944 条负数，`abc459_a: -921`），可见不是我们滤掉了；前端 `APIClient.ts → useProblemModelMap()` 的 Rating 也只取这一处 ⇒ **kenkoooo 自己那页同样不显示**；`load_models()` 的 `diff is None ⇒ continue` 正是照这条口径写的。⚠️ 用户截图里的 `ARC146 F = 3696` / `ARC120 F2 = 4596` 其实是**我们自己的 `clistDifficulty`**（逐值相等）—— 显示上**并不缺**，缺的只是这一员；只有 `abc299 A/B` 是真的一分没有。处置：**做成证据源** `when.evidence: atcoder-models`（`lib/atcoder_models_evidence.py`，与 CLIST 那套同一形状、**30 天 TTL**）⇒ 这些格从「应该有而缺」改成「**有证据：上游没估出来**」，需求清单不再派那条永远补不上的命令。⚠️ 两条护栏：① **同场一道题都没有** ⇒ kenkoooo 压根没收这场（说不上「上游没有」）；② 上游**哪天估出来了、我们却没写进去** ⇒ 判 `has`（那是回写 bug，**不许**洗成「上游没有」）—— 证据过期后照旧算缺（用户：「**不然新题怎么办？**」）。"
+  },
+  {
+   "type": "P",
+   "field": "cfDifficulty",
+   "expect": "expected",
+   "applies": 4312,
+   "filled": 4267,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 45,
+   "exemptSample": [
+    "cf:c:2214:p:A",
+    "cf:c:2214:p:B",
+    "cf:c:2214:p:C",
+    "cf:c:2214:p:D",
+    "cf:c:2214:p:E"
+   ],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "CF 的【常规轮次】题按说都有官方难度分。⚠️ **两条判据别混**（用户 2026-10-02）：① **应该有** = 场次计不计分（官网「Past contests filter → Rated: Yes/No」`rated_list.json`，判在 `scripts/material-needs.py`）；② **实际有** = 题目页面上写没写 `Difficulty`（`when.evidence: cf-page`，参考 `https://codeforces.com/problemset`）。⚠️ 我一度把 663/664/1345 「Rated: No 却有难度分」当成”Rated 判据被推翻” —— **幻觉**：那是”实际有”，与”应该有 = 否”同时成立（用户：”应不应该有就是按场次的 Rated: Yes/No 判的”）。三条实测边界：① **gym / 大号比赛（≥100000）CF 不给难度分**（865 个”缺”里 832 个是 gym）⇒ `contestIdBelow`；② 老轮次在 **API** 里不全（663 只有 A=1800），题目页面上却有（B=2000/D=3100/E=2600）⇒ 按题查页面补；③ 页面也没写的（1662 15 + 2214 10）才算”实际没有” ⇒ 由 `when.evidence` 指到的证据判，不算可疑。⚠️ 也别拿逐题 rating 判”要不要抓”（用户：”不能看逐题的 rating！不然新题怎么办？”）。"
+  },
+  {
+   "type": "P",
+   "field": "link",
+   "expect": "optional",
+   "applies": 12799,
+   "filled": 12576,
+   "missing": 0,
+   "missingLow": 223,
+   "missingLowSample": [
+    "aux-rankland:c:hncpc19th:p:H",
+    "aux-rankland:c:hbcpc5th:p:A",
+    "aux-rankland:c:hbcpc5th:p:B",
+    "aux-rankland:c:hbcpc5th:p:C",
+    "aux-rankland:c:hbcpc5th:p:D"
+   ],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "low",
+   "pursueCounts": {
+    "low": 223
+   },
+   "why": "有的渠道就是没有链接（题名有、链接无）。⚠️ **2026-10-03 收紧**：① **C/S/W 整体不适用** —— 契约明写「爬取层**绝不写** C 的 `link` 列」（链接走 `链接分类` 元列、由**应用**导入时派生；`buildWSNodeMeta` 也只画按类别分组的链接块）⇒ 包里的 C/S/W 永远没有 `link`，**那不是缺**；② `aux-xcpcio` / `aux-pta` / `aux-nk` 这些**榜单/仓库侧**的题不给题链接，**合成节点**（`synth:`）是组头也不重复携带。⚠️ `aux-rankland` 那 171 格**照旧记账** —— 它给得出（1778 道里 1607 道有链接），缺的那些在 rankland 索引与 refs 片段里**压根没有 URL**（实测 0 命中）。⚠️ **2026-10-03 加「追值」**：`aux-rankland` 那 171 格标 **low（多半拿不到）** —— rankland 那份索引按设计就**不给题链接**（用户：「当然是没有题目链接的」；实测它的索引与 refs 片段里对这些题 0 命中）⇒ 记账、别花力气。⚠️ 它给得出的那些照旧算已填（1778 道里 1607 道有链接）。"
+  },
+  {
+   "type": "P",
+   "field": "ratio",
+   "expect": "optional",
+   "applies": 2908,
+   "filled": 2556,
+   "missing": 352,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {
+    "normal": 352
+   },
+   "why": "只有**带榜单**的渠道才算得出通过率（xcpcio / pta / hdu / 牛客 / cf gym 榜单）。⚠️ **2026-10-03 收紧**：`qoj` / `atcoder` / `aux-rankland`（仓库索引）/ `aux-srk` 这些来源**不发布通过率** ⇒ 不适用；`cf` 的**正式轮次**我们**决定不算**（能算：CF 的 `api/problemset.problems` 里有 `solvedCount`，但用户 2026-10-03 拍了「都不填，只声明」）；**合成节点**是组头，也不重复携带。已有的 393 条 cf ratio 来自 `cf_board_adapter` 的 **gym 榜单**，照旧留着。"
+  },
+  {
+   "type": "P",
+   "field": "clistDifficulty",
+   "expect": "expected",
+   "applies": 5228,
+   "filled": 5049,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 179,
+   "exemptSample": [
+    "cf:c:2214:p:A",
+    "cf:c:2214:p:B",
+    "cf:c:2214:p:C",
+    "cf:c:2214:p:D",
+    "cf:c:2214:p:E"
+   ],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "CLIST（clist.by）给这道题算的难度（`problem.rating`）——**数值难度字段组**的第三员（覆盖多个 judge，所以是「官方没给时的那一份」）。**覆盖范围（2026-10-02 实测）**：CF 正式轮次 ✅（11317 条）／AtCoder ✅（7905 条）／牛客 ✅（1000 条里 889 带 rating）／**gym ❌**（832/832 全缺 ⇒ 用 `{cf:c: : 100000}` 按前缀排除）／**杭电 ❌**（`acm.hdu.edu.cn` 0 题、`bestcoder.hdu.edu.cn` 624 题但 0 带 rating）／**QOJ ❌**（clist 根本没有这个 resource）。⚠️ `contestIdBelow` 支持**按前缀分设**（CF gym 10 万+ vs 牛客多校 13 万+，同一个数字界分不开）。⚠️ clist 里 `rating` 为 null 的题**不写**（缺失 ≠ 0；老题居多）；⚠️ 抓取要 apiKey（`me.json` 的 `clist`）、限速 10 请求/分钟，且**难度几乎不变** ⇒ `scripts/clist-difficulty.py` 默认只回写缓存，重抓用 `--refresh`（补新题）/ `--force`（全量兜底）。 ⚠️ **2026-10-03 探针实测**（用户：先探一页）：缺的那 530 格是**上游根本没有**，不是我们没抓到 —— 缓存里 `abc217` 只有 D/F/G/H（缺的正是 A/B/C/E）、CF `2202` 只有 A/B/G1、CF `2269` 只有 A/B，与缺失集合**互补不重叠**；牛客那 50 格 clist **有题**但 `rating` 为 null。⇒ 全量重抓（20–30 分钟 / 20–30 MB）**一格都不会变**。判据落在 `when.evidence: clist`（`lib/clist_evidence.py`：表里有这个 judge 的别的题、就是没有这一条，且缓存 30 天内新鲜 ⇒ 有证据「实际没有」）。 ⚠️ **2026-10-03（41g ④）补一条来源**：CF 的**同轮共用题**（Div.1/Div.2 那种同一轮里题名相同的题）在 clist 里常常**只有一边**算了难度 —— 这不是「上游没有」，而是「这一份 clist 挂在另一边」（实测 52 对**全部**如此：`2202:G2` 没值、`2201:F2`=2924）。对应关系由 `cf_contest_adapter` 按「同一轮 + 同题名」写进 `cache/cf_contest/reuse.json`（**CF 的结构**，不是题名像就猜）⇒ `scripts/clist-difficulty.py` 的 `expand_reuse()` 把缺的那一边补上（只补缺、两边都有值谁都不动、两边都缺不动），**只在内存里派生、不写回 `cache/clist/difficulty.json`**（那份是「clist 说了什么」的原始证据）。实测补上 **52 格**（有 `clistDifficulty` 的 P 3972 → 4024），体检里「CLIST 上游没有」那类 **530 → 478**。"
+  },
+  {
+   "type": "R",
+   "field": "time",
+   "expect": "required",
+   "applies": 13379,
+   "filled": 13379,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "提交时间是排序/判定赛时的根据"
+  },
+  {
+   "type": "R",
+   "field": "status",
+   "expect": "required",
+   "applies": 13379,
+   "filled": 13379,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "没有判定的提交没有意义"
+  },
+  {
+   "type": "R",
+   "field": "language",
+   "expect": "optional",
+   "applies": 13346,
+   "filled": 13346,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "**可有可无**（用户 2026-10-02：「language 直接标可有可无」）—— 语言是**展示用**的附加信息，缺了不影响这棵树能不能读、能不能统计，各渠道给不给也不一致（CF/QOJ 给，PTA 那条页面根本没有 ⇒ `aux-pta:` 豁免；那是规则错，不是数据缺）。⚠️ 原来是 `expected`（缺 ⇒ 可疑），实测那只是**少数几条解析漏了**，不值得每次体检都报 —— 降为 optional。★ **需求清单同样不派**（`material-needs.py`：optional 且没标 `pursue`/`pursueByPrefix` ⇒ 直接跳过；2026-10-15 修）：这条需求曾经写着「重跑该渠道的提交适配器」，而 QOJ 场次页**根本没有语言那一列**（只有全局列表页 `/submissions?submitter=` 有，见 `docs/auto-import.md`）—— 那条命令永远补不上。"
+  },
+  {
+   "type": "R",
+   "field": "link",
+   "expect": "optional",
+   "applies": 13346,
+   "filled": 13346,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "有的渠道就是没有链接（题名有、链接无）。⚠️ **2026-10-03 收紧**：① **C/S/W 整体不适用** —— 契约明写「爬取层**绝不写** C 的 `link` 列」（链接走 `链接分类` 元列、由**应用**导入时派生；`buildWSNodeMeta` 也只画按类别分组的链接块）⇒ 包里的 C/S/W 永远没有 `link`，**那不是缺**；② `aux-xcpcio` / `aux-pta` / `aux-nk` 这些**榜单/仓库侧**的题不给题链接，**合成节点**（`synth:`）是组头也不重复携带。⚠️ `aux-rankland` 那 171 格**照旧记账** —— 它给得出（1778 道里 1607 道有链接），缺的那些在 rankland 索引与 refs 片段里**压根没有 URL**（实测 0 命中）。⚠️ **2026-10-03 加「追值」**：`aux-rankland` 那 171 格标 **low（多半拿不到）** —— rankland 那份索引按设计就**不给题链接**（用户：「当然是没有题目链接的」；实测它的索引与 refs 片段里对这些题 0 命中）⇒ 记账、别花力气。⚠️ 它给得出的那些照旧算已填（1778 道里 1607 道有链接）。"
+  },
+  {
+   "type": "R",
+   "field": "timeUsed",
+   "expect": "optional",
+   "applies": 12763,
+   "filled": 12763,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "只有部分渠道给运行信息。⚠️ **2026-10-03 收紧**：`atcoder` / `pta` 不返回耗时；**`CE` 没有时间**（程序没跑起来）、**`MLE` 那几格牛客也不给时间** ⇒ 不适用。⚠️ 另外 `JF` / `PD` / `JG` 同样没有运行信息 ⇒ 一并声明。"
+  },
+  {
+   "type": "R",
+   "field": "memoryUsed",
+   "expect": "optional",
+   "applies": 11700,
+   "filled": 11700,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "⚠️ **2026-10-03 收紧（用户：「处理其他缺失」）**：`atcoder` / `aux-pta` 的接口不返回内存 ⇒ 不适用；**另外 `CE`（程序没跑起来）与牛客的 `TLE`（只给时间、不给内存）本来就没有这一项** —— 实测牛客缺的 342 格里 TLE 302 + CE 40，原始档案里 `使用内存(KB)` 就是空。⚠️ 牛客的 **MLE/WA/AC 那几格照旧记账**（它给得出）。⚠️ 另外 `JF`（判题机自己出错）/ `PD`（排队等待）/ `JG`（评测中）**也没有运行信息**（还没跑完或压根没跑）⇒ 一并声明。"
+  },
+  {
+   "type": "R",
+   "field": "codeLength",
+   "expect": "optional",
+   "applies": 3074,
+   "filled": 3074,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "⚠️ **2026-10-03 收紧**：CF / HDU / AtCoder 的接口**不返回代码长度**（实测缺的 6720 条里，cf 5985 + hdu 519 + atcoder 174 + aux-pta 33 全是这个原因）；只有**牛客页面**带它（1832 条全有）+ QOJ 大部分（961/970）⇒ 那四个来源上不适用。"
+  },
+  {
+   "type": "S",
+   "field": "name",
+   "expect": "required",
+   "applies": 199,
+   "filled": 199,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "没有名字的容器/比赛/题没法读，也没法判重。⚠️ 两条豁免都是实测出来的：① R（提交）根本没有 name 字段；② 辅助树（`aux-*`）的占位题只承载 ratio/题号，题名由主树那份提供（实测 1898 条全在这里）—— 规则要照实写，不能一律 '*'"
+  },
+  {
+   "type": "W",
+   "field": "name",
+   "expect": "required",
+   "applies": 7,
+   "filled": 7,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 0,
+   "exemptSample": [],
+   "pursue": "normal",
+   "pursueCounts": {},
+   "why": "没有名字的容器/比赛/题没法读，也没法判重。⚠️ 两条豁免都是实测出来的：① R（提交）根本没有 name 字段；② 辅助树（`aux-*`）的占位题只承载 ratio/题号，题名由主树那份提供（实测 1898 条全在这里）—— 规则要照实写，不能一律 '*'"
+  },
+  {
+   "type": "P",
+   "field": "数值难度",
+   "group": [
+    "cfDifficulty",
+    "atcoderDifficulty",
+    "clistDifficulty"
+   ],
+   "expect": "expected",
+   "applies": 5228,
+   "filled": 5156,
+   "missing": 0,
+   "missingLow": 0,
+   "missingLowSample": [],
+   "exempt": 72,
+   "exemptSample": [
+    "cf:c:2214:p:A",
+    "cf:c:2214:p:B",
+    "cf:c:2214:p:C",
+    "cf:c:2214:p:D",
+    "cf:c:2214:p:E"
+   ],
+   "why": "**同一道题的数值难度**，各来源各写各的字段 —— 这是一**组**，不是互不相干的几个字段（用户 2026-10-02：「现在 cf 就有本身难度 & clist 难度两个，所以是时候让数值难度也成为字段组了」）。三员：`cfDifficulty`（CF 官方 rating）/ `atcoderDifficulty`（AtCoder kenkoooo difficulty）/ `clistDifficulty`（CLIST 自己的难度口径，覆盖多个 judge）。⚠️ `anyOf: true` = **任一成员有值 ⇒ 这一组就算「已有」**；组级「缺」= 所有成员都缺。⚠️ 成员顺序 = **界面默认显示哪一员**（CF 官方 > AtCoder > clist，越靠前越\"原厂\"）；用户可以用字段条上的快捷切换改成别的（存 `trust.groupPrefer`）。⚠️ 谁的值胜出仍由**来源优先级**管（`KIND_RANK` + 级别），组只管「这是同一类信息」和「该不该有」。"
+  }
+ ],
+ "inconsistent": [],
+ "deltas": {
+  "worse": [],
+  "better": [
+   [
+    [
+     "C",
+     "contestTime"
+    ],
+    8
+   ],
+   [
+    [
+     "P",
+     "ratio"
+    ],
+    97
+   ]
+  ]
+ }
+}

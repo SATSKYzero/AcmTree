@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Grand Mex",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1001",
+    "ratio": "40.89% (449/1098)",
+    "accepted": 449,
+    "submitted": 1098,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Dice Tower",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1002",
+    "ratio": "50.43% (586/1162)",
+    "accepted": 586,
+    "submitted": 1162,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Phi Master",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1003",
+    "ratio": "27.70% (226/816)",
+    "accepted": 226,
+    "submitted": 816,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Three Colors",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1004",
+    "ratio": "32.83% (218/664)",
+    "accepted": 218,
+    "submitted": 664,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Yougou Cleansing",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1005",
+    "ratio": "16.30% (15/92)",
+    "accepted": 15,
+    "submitted": 92,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Gcd Master",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1006",
+    "ratio": "68.80% (333/484)",
+    "accepted": 333,
+    "submitted": 484,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Multicon",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1007",
+    "ratio": "49.29% (69/140)",
+    "accepted": 69,
+    "submitted": 140,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "CuteSafari",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1008",
+    "ratio": "22.10% (601/2719)",
+    "accepted": 601,
+    "submitted": 2719,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Imperfect Permutation",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1009",
+    "ratio": "27.69% (206/744)",
+    "accepted": 206,
+    "submitted": 744,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Card Damage",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1010",
+    "ratio": "29.49% (843/2859)",
+    "accepted": 843,
+    "submitted": 2859,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Push Box",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1011",
+    "ratio": "16.81% (19/113)",
+    "accepted": 19,
+    "submitted": 113,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "P2P",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1234&pid=1012",
+    "ratio": "32.52% (995/3060)",
+    "accepted": 995,
+    "submitted": 3060,
+    "solved": true
+  }
+]

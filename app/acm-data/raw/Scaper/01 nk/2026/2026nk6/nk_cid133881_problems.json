@@ -1,0 +1,98 @@
+[
+  {
+    "题号": "A",
+    "标题": "A Permutation Problem",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/A",
+    "通过率": "98/190",
+    "过题均次": "2.39 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "B",
+    "标题": "B1702FC",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/B",
+    "通过率": "0/63",
+    "过题均次": "",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "C",
+    "标题": "Cutting Trees",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/C",
+    "通过率": "6/18",
+    "过题均次": "1.00 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "D",
+    "标题": "Divisibility",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/D",
+    "通过率": "1108/1235",
+    "过题均次": "2.61 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "E",
+    "标题": "Expropriate",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/E",
+    "通过率": "0/37",
+    "过题均次": "",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "F",
+    "标题": "Full Alphabet",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/F",
+    "通过率": "574/691",
+    "过题均次": "2.65 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "G",
+    "标题": "Game on a Graph",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/G",
+    "通过率": "986/1101",
+    "过题均次": "1.91 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "H",
+    "标题": "Hard Problem",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/H",
+    "通过率": "1489/1531",
+    "过题均次": "2.32 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "I",
+    "标题": "Integer Function",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/I",
+    "通过率": "215/280",
+    "过题均次": "1.78 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "J",
+    "标题": "Just Add and Divide",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/J",
+    "通过率": "31/61",
+    "过题均次": "2.84 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "K",
+    "标题": "Konstruct",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/K",
+    "通过率": "1/13",
+    "过题均次": "1.00 次",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "L",
+    "标题": "Longest Palindromic Substring Queries",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133881/L",
+    "通过率": "10/35",
+    "过题均次": "3.10 次",
+    "团队状态": "未通过"
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "题号": "A",
+    "标题": "14 Minesweeper Variants",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/A",
+    "通过率": "9/36",
+    "过题均次": "1.78 次",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "B",
+    "标题": "Deep Finesse",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/B",
+    "通过率": "1063/1107",
+    "过题均次": "1.92 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "C",
+    "标题": "Fraction on a Ring",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/C",
+    "通过率": "42/51",
+    "过题均次": "2.14 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "D",
+    "标题": "Sea, you & copriMe II",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/D",
+    "通过率": "5/14",
+    "过题均次": "2.60 次",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "E",
+    "标题": "Prefix Codes",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/E",
+    "通过率": "128/158",
+    "过题均次": "2.28 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "F",
+    "标题": "Tree shifts there",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/F",
+    "通过率": "53/76",
+    "过题均次": "2.17 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "G",
+    "标题": "Multiplication",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/G",
+    "通过率": "1282/1359",
+    "过题均次": "2.22 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "H",
+    "标题": "It's Magic, Not a Trick!",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/H",
+    "通过率": "947/1115",
+    "过题均次": "4.05 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "I",
+    "标题": "Bridge VI",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/I",
+    "通过率": "1388/1428",
+    "过题均次": "2.41 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "J",
+    "标题": "Oni's Ring",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/J",
+    "通过率": "6/10",
+    "过题均次": "1.83 次",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "K",
+    "标题": "Al Fine II",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/K",
+    "通过率": "87/124",
+    "过题均次": "2.79 次",
+    "团队状态": "通过"
+  },
+  {
+    "题号": "L",
+    "标题": "Shattered Minimum",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/L",
+    "通过率": "25/37",
+    "过题均次": "2.96 次",
+    "团队状态": "未通过"
+  },
+  {
+    "题号": "M",
+    "标题": "KV Cache",
+    "题目链接": "https://ac.nowcoder.com/acm/contest/133883/M",
+    "通过率": "384/531",
+    "过题均次": "2.31 次",
+    "团队状态": "通过"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "NJU emulator",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1001",
+    "ratio": "23.27% (37/159)",
+    "accepted": 37,
+    "submitted": 159,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Just another board game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1002",
+    "ratio": "24.38% (569/2334)",
+    "accepted": 569,
+    "submitted": 2334,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Dota2 Pro Circuit",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1003",
+    "ratio": "28.72% (664/2312)",
+    "accepted": 664,
+    "submitted": 2312,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Into the woods",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1004",
+    "ratio": "40.00% (2/5)",
+    "accepted": 2,
+    "submitted": 5,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Did I miss the lethal?",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1005",
+    "ratio": "21.69% (36/166)",
+    "accepted": 36,
+    "submitted": 166,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Guess the weight",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1006",
+    "ratio": "25.00% (120/480)",
+    "accepted": 120,
+    "submitted": 480,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Boring data structure problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1007",
+    "ratio": "17.04% (445/2611)",
+    "accepted": 445,
+    "submitted": 2611,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Integers Have Friends 2.0",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1008",
+    "ratio": "10.16% (129/1270)",
+    "accepted": 129,
+    "submitted": 1270,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Little prince and the garden of roses",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1009",
+    "ratio": "6.12% (3/49)",
+    "accepted": 3,
+    "submitted": 49,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Unfair contest",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1010",
+    "ratio": "12.40% (254/2049)",
+    "accepted": 254,
+    "submitted": 2049,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "ZYB's kingdom",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=991&pid=1011",
+    "ratio": "17.50% (7/40)",
+    "accepted": 7,
+    "submitted": 40,
+    "solved": false
+  }
+]

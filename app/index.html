@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acm_Tree_ToBeCovered</title>
+    <!-- 内联 favicon：避免浏览器请求 /favicon.ico 得到 404（纯噪音，非故障） -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%93%82%3C/text%3E%3C/svg%3E" />
+    <style>
+        /* ============================================================
+           全局样式
+           ============================================================ */
+        /* 树形选择器专用样式 */
+        .tree-selector-node:hover {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        .tree-selector-node input[type="radio"] {
+            accent-color: #2563eb;
+        }
+        .tree-toggle-btn:hover {
+            background: #e2e8f0;
+        }
+
+        :root { --app-max-width: 1200px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: #f0f2f5;
+            padding: 24px 32px;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+        #app {
+            max-width: var(--app-max-width);
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 24px 28px 32px;
+        }
+
+        /* ==================== ★ v6.9.0 分页栏 ==================== */
+        .tab-bar {
+            display: flex;
+            gap: 4px;
+            padding: 0 0 12px 0;
+            border-bottom: 2px solid #eef2f6;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        /* 节点信息层：独立于内置分页栏的**上一层**（浏览器式，可同时开多个）
+           空的时候整条栏隐藏（由 ui/tabs.js 控制 display） */
+        .tab-bar-nodeinfo {
+            padding: 6px 8px;
+            gap: 6px;
+            background: #f8fafc;
+            border: 1px solid #eef2f6;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .tab-bar-nodeinfo .tab-btn {
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            background: #eef2f6;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .tab-bar-nodeinfo .tab-btn.active {
+            background: #e0edff;
+            border-bottom: none;
+        }
+        .tab-btn {
+            padding: 6px 18px;
+            border: none;
+            border-radius: 8px 8px 0 0;
+            background: transparent;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+        .tab-btn:hover {
+            color: #0f172a;
+            background: #f1f5f9;
+        }
+        .tab-btn.active {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+            background: transparent;
+        }
+        .tab-btn .tab-badge {
+            font-size: 11px;
+            font-weight: 400;
+            color: #94a3b8;
+            margin-left: 4px;
+        }
+        .tab-btn.active .tab-badge {
+            color: #2563eb;
+        }
+
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* ==================== ★ v6.9.0 二级 Tab ==================== */
+        .sub-tab-bar {
+            display: flex;
+            gap: 4px;
+            padding: 0 0 10px 0;
+            border-bottom: 1px solid #eef2f6;
+            margin-bottom: 12px;
+        }
+        .sub-tab-btn {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 6px;
+            background: transparent;
+            font-size: 13px;
+            font-weight: 500;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .sub-tab-btn:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+        .sub-tab-btn.active {
+            background: #2563eb;
+            color: #fff;
+        }
+        .sub-tab-content {
+            display: none;
+        }
+        .sub-tab-content.active {
+            display: block;
+        }
+
+        /* ==================== 原有样式 ==================== */
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eef2f6;
+        }
+        .app-header h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .app-header h1 small { font-size: 14px; font-weight: 400; color: #94a3b8; }
+        .app-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            padding: 8px 12px;
+            background: #f8fafc;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #0f172a;
+        }
+        .app-stats span {
+            background: #ffffff;
+            padding: 2px 10px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+        .info-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+            padding: 6px 12px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #334155;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+        .info-bar .label { font-weight: 400; color: #64748b; }
+        .info-bar .value { font-weight: 500; color: #0f172a; }
+        .info-bar .unsaved { color: #dc2626; font-weight: 700; }
+        .info-bar .saved { color: #16a34a; font-weight: 700; }
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 6px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            background: #ffffff;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1e293b;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+            white-space: nowrap;
+        }
+        .btn:hover { background: #f8fafc; border-color: #94a3b8; }
+        .btn:active { transform: scale(0.96); }
+        .btn-primary { background: #2563eb; border-color: #2563eb; color: #fff; }
+        .btn-primary:hover { background: #1d4ed8; }
+        .btn-success { background: #16a34a; border-color: #16a34a; color: #fff; }
+        .btn-success:hover { background: #15803d; }
+        .btn-warning { background: #f59e0b; border-color: #f59e0b; color: #fff; }
+        .btn-warning:hover { background: #d97706; }
+        .btn-danger { background: #dc2626; border-color: #dc2626; color: #fff; }
+        .btn-danger:hover { background: #b91c1c; }
+        .btn-info { background: #17a2b8; border-color: #17a2b8; color: #fff; }
+        .btn-info:hover { background: #138496; }
+        .btn-secondary { background: #6c757d; border-color: #6c757d; color: #fff; }
+        .btn-secondary:hover { background: #5a6268; }
+        .btn-icon {
+            padding: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1;
+            background: transparent;
+            border: 1px solid transparent;
+        }
+        .btn-icon:hover { background: #f1f5f9; border-color: #e2e8f0; }
+        .btn-icon.btn-danger:hover { background: #fef2f2; border-color: #fca5a5; color: #dc2626; }
+        .btn-icon:disabled { opacity: 0.3; cursor: not-allowed; pointer-events: none; }
+        .io-area { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .io-area .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .io-area .file-input-wrapper input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 48px 20px;
+            color: #94a3b8;
+        }
+        .empty-state .empty-icon { font-size: 48px; margin-bottom: 12px; opacity: 0.5; }
+        .empty-state p { font-size: 15px; }
+        .node-wrapper { margin: 4px 0; position: relative; }
+        .node-box {
+            position: relative;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 10px;
+            background: #ffffff;
+            padding: 12px 12px 8px 36px;
+            transition: border-color 0.15s, box-shadow 0.15s;
+            overflow: hidden;
+            min-height: 50px;
+        }
+        .node-box:hover { border-color: #b9c7da; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        /* ★ 合成节点的方框：**淡色斜纹**（用户 2026 方案：给合成节点背景打淡花纹，
+           原料节点保持纯底色）。判定口径 = `view/helpers.js` 里 `isSynthesis(node)`
+           挂上的 `.synth-box-pattern`。
+           三条硬约束：
+             ① 只叠 `background-image`，**不碰 `background-color`** —— 底色（含将来
+                的选中/悬停底色）照样透出来，花纹是叠上去的一层，不是替换；
+             ② 极淡（rgba 4.5%）+ 7px 间距 ⇒ 一眼能区分，但压不过文字 / 徽标 / 状态条
+                （`z-index` 更高，见下面 `.node-row` / `.status-bar`）；
+             ③ 用 alpha 而不是固定浅灰 ⇒ 浅色底偏冷灰纹、深色底偏亮纹，两种主题都看得见。
+           实现只用 CSS 渐变：不加图片、不加依赖、不新增文件。 */
+        .node-box.synth-box-pattern {
+            /* ⚠️ 用户 2026-09-29 反馈"淡色斜纹可以深一些"：alpha 0.045 → 0.10；
+               用户 2026-10-06 反馈"合成节点斜线颜色调淡"：0.10 → 0.06（只动这一个 alpha，
+               间距不动 —— 想再淡/再深就改这两个 0.06，其余一个字不用碰）。
+               仍是"叠在既有底色之上"，不写 `background-color` ⇒ 状态色/选中/悬停照旧透出。 */
+            background-image: repeating-linear-gradient(45deg,
+                rgba(100, 116, 139, 0.06) 0,
+                rgba(100, 116, 139, 0.06) 4px,
+                rgba(100, 116, 139, 0) 4px,
+                rgba(100, 116, 139, 0) 8px);
+        }
+        /* ★ R 行的「被忽略」态（`v9.1.26`）：题目 AC 时间规则选了第 4 种
+           （「取截断之后的最早一次，并忽略截断前的所有提交」）时，**早于截断的那些提交
+           整体变淡** —— 它们还在、还能点、还能展开，只是"不算数"。
+           判定口径 = `view/renderers.js` 的 `isSubmissionIgnored(...)` 挂上的 `.node-ignored`。
+           ⚠️ 用 `opacity` 而不是改底色：不碰状态色/选中/悬停那几层（与 `.synth-box-pattern` 同一姿态），
+              也不会跟"合成分支的斜纹"打架（两者可以同时挂）。
+           ⚠️ 数值别往"看不清"调：这些行仍要能读（用户还要看它是哪一发提交）。 */
+        .node-box.node-ignored {
+            opacity: 0.45;
+        }
+        .node-box .color-bar {
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 25px;
+            border-radius: 10px 0 0 10px;
+            background: transparent;
+            transition: background 0.2s;
+            pointer-events: none;
+        }
+        .node-box .status-bar {
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 5px;
+            border-radius: 10px 0 0 10px;
+            background: transparent;
+            transition: background 0.2s;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .node-box .status-bar.active { background: #f97316; }
+        .node-type-badge {
+            position: absolute;
+            top: 4px;
+            left: 30px;
+            font-weight: 700;
+            font-size: 10px;
+            color: #4b5563;
+            pointer-events: none;
+            letter-spacing: 0.3px;
+            line-height: 1;
+            z-index: 1;
+        }
+        /* 计划强度角标（`剩 X / 共 Y`）—— 副页方框上有计划时才有这个元素。
+           ⚠️ **默认不显示**：只有按住 Ctrl（`body.ctrl-held`，由 `ui/floaters.js` 那条唯一的
+           Ctrl 监听器开关）时才露出来 —— 平时它是零噪声的（用户 2026-10-15 的口径）。
+           ★ **它是"悬浮"的（`position:absolute`），完全不参与排版**（用户 2026-10-15：
+           "希望用悬浮的语法放入该元素，以完全不影响其他元素的排版"）：定位参照是
+           `.node-meta`（下面那条 `position:relative`）⇒ 钉在这一块**右下角**
+           （⚠️ 因此观感是**右对齐到 `.node-meta` 的右缘**，不再紧贴 nature 芯片 ——
+           用户 2026-10-15 看过实物后定稿："位置变了…但也能接受，就这样吧"）。
+           病根（实测）：它在流里时，`.node-meta` 是 `flex-wrap` 容器 ⇒ 这一行满了会被挤到
+           **下一行** ⇒ 方框变高 ⇒ 展开的子树一累加，靠下的节点整体往下漂。
+           ⚠️ 所以 `.node-badge` 里**不许**再出现影响排版的属性（`margin` / `vertical-align`）。 */
+        .node-badge {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: none;
+            font-size: 12px;
+            color: #0369a1;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 4px;
+            padding: 0 5px;
+            white-space: nowrap;
+        }
+        body.ctrl-held .node-badge { display: inline-block; }
+        .node-box .node-row {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 4px;
+            min-height: 34px;
+            position: relative;
+            z-index: 1;
+        }
+        .toggle-btn {
+            width: 26px;
+            height: 26px;
+            border: none;
+            background: transparent;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .toggle-btn:hover { background: #f1f5f9; }
+        .toggle-btn:disabled { opacity: 0.2; cursor: default; }
+        .node-main { flex: 1; min-width: 60px; }
+        .node-title {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 4px 8px;
+            margin-bottom: 2px;
+        }
+        .node-title .problem-id { font-weight: 700; font-size: 15px; color: #0f172a; }
+        .node-title .cf-difficulty { font-weight: 700; font-size: 15px; }
+        .node-title .node-name { font-size: 15px; font-weight: 500; color: #0f172a; word-break: break-word; cursor: default; }
+        .node-title .tag-badge {
+            display: inline-block;
+            padding: 0 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-right: 2px;
+            border: 1px solid #d1d5db;
+        }
+        .node-title .stats-summary {
+            display: inline-block;
+            padding: 0 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 13px;
+            color: #1e293b;
+            background: #f8fafc;
+            border: 1px solid #d1d5db;
+            margin-left: 4px;
+        }
+        .node-title .ratio-badge {
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 700;
+            margin-right: 2px;
+            white-space: nowrap;
+            background: transparent;
+            border: none;
+            padding: 0;
+            border-radius: 0;
+        }
+        .node-title .problem-box {
+            display: inline-block;
+            padding: 0 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 500;
+            color: #000;
+            margin-right: 1px;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        .node-meta {
+            /* ★ 这一块是**计划强度角标**（`.node-badge`）的定位参照 —— 那个角标是
+               `position:absolute` 悬浮在这一块的右下角，**完全不参与排版**
+               （理由与踩过的坑见上面 `.node-badge` 那段注释）。删掉这行会让角标
+               退到 `.node-row` 上定位（跑到字母按钮那一列去）。 */
+            position: relative;
+            font-size: 11px;
+            color: #6b7280;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 12px;
+            align-items: center;
+            margin-top: 2px;
+        }
+        .node-meta .tag { background: #f1f5f9; padding: 0 6px; border-radius: 4px; white-space: nowrap; }
+        .node-meta .link { color: #2563eb; text-decoration: none; cursor: pointer; }
+        .node-meta .link:hover { text-decoration: underline; }
+        /* v8.2 链接块：折叠头 + 按类别分组的一整块（原生 <details>，无需 JS） */
+        .node-meta .link-block { flex-basis: auto; }
+        .node-meta .link-block-toggle {
+            cursor: pointer; color: #2563eb; list-style: none;
+            background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px;
+            padding: 0 6px; white-space: nowrap; user-select: none;
+        }
+        .node-meta .link-block-toggle::-webkit-details-marker { display: none; }
+        .node-meta .link-block-toggle:hover { background: #dbeafe; }
+        .node-meta .link-block[open] .link-block-toggle { background: #dbeafe; }
+        .node-meta .link-block-body {
+            display: flex; flex-direction: column; gap: 2px;
+            margin: 4px 0 2px 4px; padding-left: 8px;
+            border-left: 2px solid #dbeafe;
+        }
+        .node-meta .link-group { display: flex; gap: 6px; align-items: baseline; }
+        .node-meta .link-kind {
+            flex: 0 0 68px; color: #6b7280; white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+        .node-meta .link-list { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+        /* 被投影选中的那条（`node.link`）加粗，其余链接正常字重 */
+        .node-meta .link.pick { font-weight: 700; }
+        .node-meta .contest-time-box {
+            background: #dbeafe;
+            border: 1px solid #93c5fd;
+            padding: 1px 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+        .node-meta .ac-time-bold { font-weight: 700; }
+        .node-meta .last-submit-time { font-weight: 700; color: #6b7280; }
+        .node-actions {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            flex-shrink: 0;
+            margin-left: auto;
+            margin-top: 2px;
+        }
+        .node-actions .btn-icon { width: 26px; height: 26px; font-size: 13px; }
+        .node-children {
+            margin-top: 6px;
+            padding-left: 20px;
+            border-left: 2px dashed #e2e8f0;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .node-children.collapsed { display: none; }
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(2px);
+        }
+        .modal-panel {
+            background: #fff;
+            padding: 28px 32px 24px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            max-width: 550px;
+            width: 100%;
+            text-align: left;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal-panel h3 { margin: 0 0 16px 0; font-weight: 600; color: #0f172a; text-align: center; }
+        .modal-panel label { display: block; font-size: 13px; font-weight: 500; margin-top: 10px; color: #374151; }
+        /* ⚠️ 这条**必须排除 checkbox / radio**：它们被 `width:100%` 撑成整行，
+           于是"勾选框 + 说明文字"会裂成上下两行（用户 2026-09-29 报的
+           「标记为合成节点」那个框跑到文字右上角/上方）。弹窗里所有勾选框都吃这一条。 */
+        .modal-panel input:not([type="checkbox"]):not([type="radio"]), .modal-panel select {
+            width: 100%;
+            padding: 6px 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+        .modal-panel .btn-row { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
+        .modal-panel .btn-row .btn { min-width: 60px; }
+        .tag-list { margin: 8px 0; max-height: 200px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 6px; padding: 4px 0; }
+        .tag-item { display: flex; align-items: center; gap: 8px; padding: 4px 8px; border-bottom: 1px solid #f1f5f9; }
+        .tag-item .tag-color-sample { width: 20px; height: 20px; border-radius: 4px; border: 1px solid #d1d5db; }
+        .tag-item .tag-text { flex: 1; font-size: 14px; }
+        .tag-item .btn-icon { width: 24px; height: 24px; font-size: 12px; }
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 10px 28px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateX(-50%) translateY(10px);
+            pointer-events: none;
+            z-index: 1001;
+        }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+        .toast.error { background: #b91c1c; }
+        .toast.success { background: #15803d; }
+        .delete-countdown {
+            font-size: 32px;
+            font-weight: 700;
+            color: #dc2626;
+            text-align: center;
+            margin: 12px 0;
+        }
+        .delete-countdown .seconds { font-size: 48px; display: inline-block; min-width: 60px; }
+        .delete-countdown .label { font-size: 18px; font-weight: 400; color: #475569; }
+        .more-actions-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .more-actions-grid .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 10px;
+            font-size: 15px;
+        }
+        .boxes-scroll {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            max-height: 60px;
+            overflow-y: auto;
+            margin-left: 4px;
+            vertical-align: middle;
+            transform: translateY(1px);
+        }
+        .submit-total {
+            font-size: 11px;
+            vertical-align: bottom;
+            margin-left: 1px;
+        }
+        .status-distribution {
+            display: inline-block;
+            margin-left: 6px;
+            font-size: 12px;
+            color: #6b7280;
+            cursor: default;
+            background: #f1f5f9;
+            padding: 0 6px;
+            border-radius: 4px;
+            border: 1px solid #d1d5db;
+        }
+        .status-distribution .dist-item {
+            display: inline-block;
+            margin: 0 2px;
+        }
+        .storage-warning {
+            color: #dc2626;
+            font-weight: 700;
+            cursor: help;
+        }
+        .settings-icon {
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 1;
+            padding: 4px 6px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .settings-icon:hover { background: #e2e8f0; }
+
+        .empty-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            color: #94a3b8;
+            text-align: center;
+        }
+        .empty-tab .icon { font-size: 56px; margin-bottom: 16px; opacity: 0.5; }
+        .empty-tab .title { font-size: 20px; font-weight: 500; color: #64748b; }
+        .empty-tab .desc { font-size: 14px; margin-top: 6px; }
+
+        /* ★ v6.9.4：文件夹视图Tab按钮悬停 */
+        .folder-view-tab-btn:hover {
+            background: #f1f5f9 !important;
+            color: #0f172a !important;
+        }
+        .folder-view-tab-btn.active:hover {
+            background: #1d4ed8 !important;
+            color: #fff !important;
+        }
+
+        @media (max-width:700px) {
+            body { padding: 12px; }
+            #app { padding: 16px; }
+            .app-header { flex-direction: column; align-items: stretch; }
+            .toolbar { justify-content: flex-start; }
+            .node-box { padding: 12px 8px 6px 32px; }
+            .node-box .node-row { flex-wrap: wrap; }
+            .node-actions { margin-left: 0; width: 100%; justify-content: flex-end; padding-top: 4px; }
+            .node-children { padding-left: 12px; }
+            .tab-bar { gap: 2px; }
+            .tab-btn { padding: 4px 12px; font-size: 13px; }
+            .sub-tab-bar { gap: 2px; }
+            .sub-tab-btn { padding: 3px 10px; font-size: 12px; }
+        }
+        @media (max-width:480px) {
+            .toolbar .btn { font-size: 12px; padding: 4px 10px; }
+            .node-box { padding: 10px 6px 6px 28px; }
+            .node-title .problem-id, .node-title .cf-difficulty,
+            .node-title .node-name, .node-title .stats-summary { font-size: 13px; }
+            .node-actions .btn-icon { width: 24px; height: 24px; font-size: 12px; }
+            .tab-btn { padding: 4px 10px; font-size: 12px; }
+            .sub-tab-btn { padding: 3px 8px; font-size: 11px; }
+        }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 8px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        /* 按住 Ctrl：节点框上显示这一条的 nature（就在「修改」后面那一格）。
+           隐藏/显示**只在这里一处**说了算 —— JS 只给 body 挂 `data-nature-peek`，
+           于是重画出来的新方框也自动跟着亮，不用逐个元素设 display。 */
+        .node-nature { display: none; }
+        body[data-nature-peek] .node-nature { display: inline; }
+        .node-nature-miss { color: #b45309; }
+        .node-nature-sep { color: #cbd5e1; }
+    </style>
+    <script type="importmap">
+    {
+        "imports": {
+            "immer": "./src/vendor/immer.mjs"
+        }
+    }
+</script>
+</head>
+<body>
+    <div id="app">
+        <!-- ==================== ★ v6.9.0 分页栏 ==================== -->
+        <!-- 内置 Tab 的权威清单就是这里；运行时由 ui/tabs.js 读取并合并插件页。
+             注：原「🔍 排序筛选（开发中）」占位页已移除 —— 该能力由
+             features/Search 插件以「🔍 检索」形式提供（其下分 比赛检索 / 题目检索，
+             见 features/ContestSearch 与 features/ProblemSearch）。 -->
+        <!-- 「节点信息」界面（**第三类 tab**）单独成层，位于内置分页栏之上。
+             按钮由 ui/tabs.js 运行时生成：可同时开多个、各自带 ✕；空时整条栏隐藏。 -->
+        <!-- ==================== ★ v9.4.28 顶部栏（全局） ==================== -->
+        <!-- 用户 2026-10-18："能不能把 Acm_Tree 标题和右边的若干按钮,这一整栏移到一级 tab 栏上方,
+             也就是在主界面恒可见"。它原来住在 `#tab-main` 里 ⇒ 切到统计/判重/设置/体检就看不见了。
+             ⚠️ **副页栏不跟着上来**（`#page-tabs` 和副页仪表盘留在主视图里）：
+                `ui/G_pageUI.js:renderPageTabs()` 现在挂到 `#page-tabs-host`，不再挂 `.app-header` 后面 ——
+                原来那句 `header.after(...)` 正是"顶部栏挪不动"的原因。
+             判据：`src/test/shellBars.test.js`（顶部栏必须在 `#tab-bar` 之前、副页宿主必须在 `#tab-main` 里面）。 -->
+        <header class="app-header">
+            <h1></h1>
+            <div class="toolbar">
+                <div class="io-area" style="display:inline-flex; align-items:center; gap:6px; margin-left:8px;">
+                    <button class="btn btn-info" id="btn-guide" style="background:#17a2b8;border-color:#17a2b8;color:#fff;">📖 指南</button>
+                    <label for="width-control" style="font-size:13px; color:#4b5563;">宽度</label>
+                    <input type="number" id="width-control" value="1200" min="600" max="2000" step="50"
+                        style="width:70px; padding:4px 6px; border:1px solid #d1d5db; border-radius:6px; font-size:13px;">
+                    <span style="font-size:13px; color:#6b7280;">px</span>
+                    <button id="reset-width" class="btn" style="padding:2px 8px; font-size:12px;">↺</button>
+                </div>
+                <div class="io-area">
+                    <!-- ★ v6.10.15：导入下拉框 -->
+                    <button class="btn btn-success" id="btn-import-dropdown">📥 导入</button>
+                    <!-- ★ v6.10.15：导出下拉框 -->
+                    <button class="btn btn-warning" id="btn-export-dropdown">📤 导出</button>
+                    <!-- ★ v6.10.15：保留隐藏的 file input（由下拉框触发） -->
+                    <input type="file" id="file-input-full" accept=".json,application/json,.gz,.json.gz" style="display:none;" />
+                    <button class="btn" id="btn-reset" style="color:#dc2626;">🗑 清空</button>
+                </div>
+                <button class="btn btn-secondary" id="btn-collapse-all" style="background:#6c757d;border-color:#6c757d;color:#fff;">🔽 折叠全部</button>
+                <!-- ★ v8.1：账户标记（点开账户管理界面）。只读时这里会变红并写出"在查看谁" -->
+                <span id="account-chip" title="账户" style="cursor:pointer;font-size:12px;color:#334155;white-space:nowrap;">👤 本机</span>
+                <span class="settings-icon" id="settings-icon" title="自动保存设置">⚙️</span>
+            </div>
+        </header>
+
+        <div class="tab-bar tab-bar-nodeinfo" id="nodeinfo-tab-bar" style="display:none;"></div>
+
+        <div class="tab-bar" id="tab-bar">
+            <button class="tab-btn active" data-tab="main">🏠 主视图</button>
+            <button class="tab-btn" data-tab="stats">📊 数据统计 <span class="tab-badge">AC追踪</span></button>
+            <!-- v8.4 判重整理：独立一页（内容由 ui/dedup/dedupPage.js 在切过去时渲染）。
+                 用户 2026-09-29：移到「📥 节点自动导入」**右侧（最后一位）**——
+                 插件页 order ≥1000，所以这里显式给 `data-order`（见 ui/tabs.js readBuiltinTabs）。 -->
+            <button class="tab-btn" data-tab="dedup" data-order="1500">🧩 判重整理</button>
+            <!-- v8.5 设置：用户 2026-10-03："我发现现在的设置框都太小了，或许设置应该独占一个一级 tab 栏"。
+                 内容由 ui/settings/settingsPage.js 在切过去时渲染（与判重整理同一套路）。
+                 order 1600 = 排在内置页最后、也在插件页（≥1000）之后。 -->
+            <button class="tab-btn" data-tab="settings" data-order="1600">⚙️ 设置</button>
+            <!-- v8.5 体检/需求：用户 2026-10-03："体检报告应该能在应用里看"。
+                 数据 = 包顶层 `reports`（导入时存进 AppState，见 features/AutoImport/apply.js），
+                 内容由 ui/coverage/coveragePage.js 在切过去时渲染。order 1700 = 排在一级栏最后。 -->
+            <button class="tab-btn" data-tab="coverage" data-order="1700">🩺 体检 / 需求</button>
+        </div>
+
+        <!-- ==================== ★ 判重整理 ==================== -->
+        <div class="tab-content" id="tab-dedup"></div>
+
+        <!-- ==================== ★ 设置（独占一页） ==================== -->
+        <div class="tab-content" id="tab-settings"></div>
+
+        <!-- ==================== ★ 体检 / 需求（报告页，独占一页） ==================== -->
+        <div class="tab-content" id="tab-coverage"></div>
+
+        <!-- ==================== ★ 主页分页 ==================== -->
+        <div class="tab-content active" id="tab-main">
+            <!-- v9.4.28：**副页栏的宿主**。原来这里放的是顶部栏（`.app-header`），
+                 而 `ui/G_pageUI.js:renderPageTabs()` 是"插在 `.app-header` 后面" ⇒ 顶部栏一挪，
+                 副页栏就会跟着跑到一级 tab 栏上面去。现在给它一个自己的槽位（副页栏只属于主视图）。 -->
+            <div id="page-tabs-host"></div>
+            <div id="info-bar" class="info-bar"></div>
+
+            <!-- ★ v6.9.5：文件夹模式面包屑 -->
+            <div id="folder-breadcrumb" style="display:block; min-height:24px;"></div>
+
+            <!-- ★ v6.9.5：文件夹模式统计/节点方框 -->
+            <div id="folder-stats" class="app-stats" style="display:none;"></div>
+
+            <!-- ★ v6.9.5：文件夹视图 Tab -->
+            <div id="folder-view-tabs" style="display:block; min-height:20px;"></div>
+
+            <!-- ★ v6.9.5：树容器（树模式：包含统计+树节点；文件夹模式：包含子节点列表） -->
+            <div id="tree-container">
+                <!-- ★ v6.11.4：统计栏 + 按钮 -->
+                <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+                    <div id="tree-stats" class="app-stats" style="display:flex; flex-wrap:wrap; gap:12px 24px; flex:1;"></div>
+                    <!-- ★ v9.1.19：超级根 / 副页根自己的 📋（根不画方框 ⇒ 这是它唯一的详页入口） -->
+                    <span id="tree-root-info-container"></span>
+                    <span id="mode-action-btn-container"></span>
+                </div>
+                <!-- ★ 训练计划条（设计稿 `docs/training-plan.md` ⑤⑥）：
+                     **总览统计与树之间**；自己可折叠（折叠态住视图态 `state.view`，不进数据）。
+                     内容是 `ui/plan/planBar.js` 用**真元素**画出来的（DOM 桩里查得到 ⇒ 冒烟测得住）。 -->
+                <div id="plan-bar" style="margin-bottom:8px;"></div>
+                <!-- ★ v6.9.5：树内容 -->
+                <div id="tree-body"></div>
+            </div>
+        </div>
+
+        <!-- ==================== ★ 数据统计分页 ==================== -->
+        <div class="tab-content" id="tab-stats">
+            <!-- ★ v6.10.0：二级Tab栏（加“数据统计-”前缀） -->
+            <div class="sub-tab-bar" id="data-stats-sub-tabs">
+                <button class="sub-tab-btn active" data-subtab="data-training">📊 训练强度追踪</button>
+                <button class="sub-tab-btn" data-subtab="data-ac-tracking">📈 最近AC题目列表</button>
+                <button class="sub-tab-btn" data-subtab="data-compare">👥 账户对比</button>
+            </div>
+
+            <!-- ★ 训练强度追踪（默认激活） -->
+            <div class="sub-tab-content active" id="subtab-data-training">
+                <!-- 控制栏 -->
+                <div id="training-controls" style="display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap;">
+                    <span style="font-size:13px; color:#64748b;">📊 每日AC题目数</span>
+                    <span style="flex:1;"></span>
+                    <span id="training-stats" style="font-size:12px; color:#94a3b8;">加载中...</span>
+                </div>
+                <!-- 热力图容器 -->
+                <div id="training-heatmap" style="min-height:200px; overflow-x:auto; padding:8px 0;">
+                    <div class="empty-state" style="padding:40px 20px; text-align:center; color:#94a3b8;">
+                        <div style="font-size:40px; margin-bottom:12px; opacity:0.5;">📊</div>
+                        <p>加载中...</p>
+                    </div>
+                </div>
+                <!-- ★ v6.10.8：时间范围筛选 + 每日AC题目列表容器 -->
+                <div id="daily-ac-container" style="min-height:20px;">
+                    <!-- ★ v6.10.8 修复：时间范围视图（默认显示） -->
+                    <div id="time-range-view" style="display:block;">
+                        <div id="time-range-controls" style="display:flex; align-items:center; gap:10px; padding:8px 0; flex-wrap:wrap; border-top:1px solid #eef2f6; margin-top:8px;">
+                            <span style="font-size:13px; color:#475569; font-weight:500;">📅 时间范围</span>
+                            <!-- ★ v9.2.2：这六个下拉 + 两颗按钮改由**共用组件**建
+                                 （`ui/kit/dateRangePicker.js:buildDateRangePicker`，前缀就用 `tr-start` / `tr-end`）
+                                 ⇒ 级联（改年⇒月归1、改月⇒重填"日"）只有一份实现，与计划页同一套。
+                                 元素 id 没变 ⇒ `renderTimeRangeACList` 读那六个 id 的代码一个字没动。 -->
+                            <span id="tr-picker"></span>
+                            <span id="tr-result-count" style="font-size:12px; color:#94a3b8; margin-left:4px;"></span>
+                        </div>
+                        <div id="time-range-ac-list" style="min-height:20px;"></div>
+                    </div>
+
+                    <!-- ★ v6.10.8 修复：每日AC题目视图（点击方框时显示，默认隐藏） -->
+                    <div id="daily-ac-view" style="display:none;">
+                        <div id="daily-ac-list-container" style="min-height:20px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ★ 最近AC题目列表 -->
+            <div class="sub-tab-content" id="subtab-data-ac-tracking">
+                <div id="ac-tracking-controls" style="display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap;">
+                    <label style="font-size:13px; color:#475569; display:flex; align-items:center; gap:6px;">
+                        每页：
+                        <input type="number" id="ac-page-size" min="1" max="100" value="20" style="width:60px; padding:4px 6px; border:1px solid #d1d5db; border-radius:6px; font-size:13px;">
+                        <span style="color:#94a3b8;">条</span>
+                    </label>
+                    <span id="ac-total-count" style="font-size:13px; color:#64748b;">共 0 条</span>
+                    <span style="flex:1;"></span>
+                    <div id="ac-pagination" style="display:flex; align-items:center; gap:6px; font-size:13px;">
+                        <button id="ac-prev" class="btn" style="padding:2px 10px;" disabled>◀</button>
+                        <span id="ac-page-info">0 / 0</span>
+                        <button id="ac-next" class="btn" style="padding:2px 10px;" disabled>▶</button>
+                    </div>
+                </div>
+                <div id="ac-tracking-list" style="min-height:80px;">
+                    <div class="empty-state" style="padding:48px 20px; text-align:center; color:#94a3b8;">
+                        <div style="font-size:48px; margin-bottom:12px; opacity:0.5;">📊</div>
+                        <p>加载中...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ★ v8.1 P7 阶段 3：账户对比（与文件夹面板的「👥 账户对比」栏同一份渲染） -->
+            <div class="sub-tab-content" id="subtab-data-compare">
+                <div class="empty-state" style="padding:48px 20px; text-align:center; color:#94a3b8;">
+                    <div style="font-size:48px; margin-bottom:12px; opacity:0.5;">👥</div>
+                    <p>加载中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script type="module" src="src/I_app.js"></script>
+</body>
+</html>

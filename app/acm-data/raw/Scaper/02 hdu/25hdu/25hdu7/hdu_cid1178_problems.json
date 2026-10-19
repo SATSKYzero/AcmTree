@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "矩形框选",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1001",
+    "ratio": "17.61% (876/4975)",
+    "accepted": 876,
+    "submitted": 4975,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "龙族栖息地",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1002",
+    "ratio": "19.08% (579/3035)",
+    "accepted": 579,
+    "submitted": 3035,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "质疑概率",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1003",
+    "ratio": "14.97% (311/2078)",
+    "accepted": 311,
+    "submitted": 2078,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "梦醒时刻",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1004",
+    "ratio": "19.94% (65/326)",
+    "accepted": 65,
+    "submitted": 326,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "地图编辑器",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1005",
+    "ratio": "46.74% (1053/2253)",
+    "accepted": 1053,
+    "submitted": 2253,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "伤害冷却比",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1006",
+    "ratio": "29.22% (1015/3474)",
+    "accepted": 1015,
+    "submitted": 3474,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "满员电车",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1007",
+    "ratio": "21.83% (31/142)",
+    "accepted": 31,
+    "submitted": 142,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "飞行训练",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1008",
+    "ratio": "32.19% (47/146)",
+    "accepted": 47,
+    "submitted": 146,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "崭新的假日",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1009",
+    "ratio": "64.26% (989/1539)",
+    "accepted": 989,
+    "submitted": 1539,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "情报污染",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1010",
+    "ratio": "10.71% (3/28)",
+    "accepted": 3,
+    "submitted": 28,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "切披萨",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1011",
+    "ratio": "8.96% (93/1038)",
+    "accepted": 93,
+    "submitted": 1038,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "字典树逆向",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1178&pid=1012",
+    "ratio": "16.44% (185/1125)",
+    "accepted": 185,
+    "submitted": 1125,
+    "solved": true
+  }
+]

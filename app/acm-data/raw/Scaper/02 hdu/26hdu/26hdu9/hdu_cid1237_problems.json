@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "歪歪巧克力",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1001",
+    "ratio": "85.88% (833/970)",
+    "accepted": 833,
+    "submitted": 970,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "小笨蛋",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1002",
+    "ratio": "24.18% (74/306)",
+    "accepted": 74,
+    "submitted": 306,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Secluded Sensei",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1003",
+    "ratio": "45.20% (193/427)",
+    "accepted": 193,
+    "submitted": 427,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "歪歪01串",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1004",
+    "ratio": "57.36% (799/1393)",
+    "accepted": 799,
+    "submitted": 1393,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Cartesian Sensei",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1005",
+    "ratio": "51.03% (222/435)",
+    "accepted": 222,
+    "submitted": 435,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "好多石头",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1006",
+    "ratio": "12.71% (45/354)",
+    "accepted": 45,
+    "submitted": 354,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "小乖的在益起",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1007",
+    "ratio": "38.66% (624/1614)",
+    "accepted": 624,
+    "submitted": 1614,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "水豚噜噜的平衡树",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1008",
+    "ratio": "14.52% (9/62)",
+    "accepted": 9,
+    "submitted": 62,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "息息壤壤武陵的管道",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1009",
+    "ratio": "34.78% (8/23)",
+    "accepted": 8,
+    "submitted": 23,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "合法括号",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1010",
+    "ratio": "31.29% (454/1451)",
+    "accepted": 454,
+    "submitted": 1451,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "奶龙和噜噜的糖豆",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1011",
+    "ratio": "37.11% (488/1315)",
+    "accepted": 488,
+    "submitted": 1315,
+    "solved": true
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Grand Swap Master",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1237&pid=1012",
+    "ratio": "28.91% (662/2290)",
+    "accepted": 662,
+    "submitted": 2290,
+    "solved": true
+  }
+]

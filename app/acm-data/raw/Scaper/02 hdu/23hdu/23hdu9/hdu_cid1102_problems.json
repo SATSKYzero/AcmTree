@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Capoo on tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1001",
+    "ratio": "6.00% (3/50)",
+    "accepted": 3,
+    "submitted": 50,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Shortest path",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1002",
+    "ratio": "13.77% (608/4414)",
+    "accepted": 608,
+    "submitted": 4414,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Reasoning",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1003",
+    "ratio": "28.00% (49/175)",
+    "accepted": 49,
+    "submitted": 175,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Broken Dream",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1004",
+    "ratio": "8.39% (25/298)",
+    "accepted": 25,
+    "submitted": 298,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "List Reshape",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1005",
+    "ratio": "68.01% (976/1435)",
+    "accepted": 976,
+    "submitted": 1435,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Peek",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1006",
+    "ratio": "0.96% (1/104)",
+    "accepted": 1,
+    "submitted": 104,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Average",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1007",
+    "ratio": "10.78% (22/204)",
+    "accepted": 22,
+    "submitted": 204,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Coins",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1008",
+    "ratio": "20.98% (477/2274)",
+    "accepted": 477,
+    "submitted": 2274,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Sequence",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1009",
+    "ratio": "20.59% (7/34)",
+    "accepted": 7,
+    "submitted": 34,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "MST problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1010",
+    "ratio": "4.05% (6/148)",
+    "accepted": 6,
+    "submitted": 148,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Cargo",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1011",
+    "ratio": "31.34% (126/402)",
+    "accepted": 126,
+    "submitted": 402,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Inference",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1102&pid=1012",
+    "ratio": "39.46% (395/1001)",
+    "accepted": 395,
+    "submitted": 1001,
+    "solved": true
+  }
+]

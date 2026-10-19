@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "I love cube",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1001",
+    "ratio": "26.03% (925/3554)",
+    "accepted": 925,
+    "submitted": 3554,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "I love tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1002",
+    "ratio": "22.91% (104/454)",
+    "accepted": 104,
+    "submitted": 454,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "I love playing games",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1003",
+    "ratio": "11.05% (21/190)",
+    "accepted": 21,
+    "submitted": 190,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "I love counting",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1004",
+    "ratio": "19.61% (131/668)",
+    "accepted": 131,
+    "submitted": 668,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "I love string",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1005",
+    "ratio": "46.62% (965/2070)",
+    "accepted": 965,
+    "submitted": 2070,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "I love sequences",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1006",
+    "ratio": "61.29% (19/31)",
+    "accepted": 19,
+    "submitted": 31,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "I love data structure",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1007",
+    "ratio": "13.54% (31/229)",
+    "accepted": 31,
+    "submitted": 229,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "I love exam",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1008",
+    "ratio": "18.95% (274/1446)",
+    "accepted": 274,
+    "submitted": 1446,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "I love triples",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1009",
+    "ratio": "16.30% (22/135)",
+    "accepted": 22,
+    "submitted": 135,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "I love permutation",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1010",
+    "ratio": "15.79% (78/494)",
+    "accepted": 78,
+    "submitted": 494,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "I love max and multiply",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1011",
+    "ratio": "9.55% (279/2921)",
+    "accepted": 279,
+    "submitted": 2921,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "I love 114514",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=985&pid=1012",
+    "ratio": "77.87% (1098/1410)",
+    "accepted": 1098,
+    "submitted": 1410,
+    "solved": false
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "深度自同构",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1001",
+    "ratio": "28.66% (753/2627)",
+    "accepted": 753,
+    "submitted": 2627,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "旅行",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1002",
+    "ratio": "18.99% (105/553)",
+    "accepted": 105,
+    "submitted": 553,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "游走",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1003",
+    "ratio": "11.19% (201/1796)",
+    "accepted": 201,
+    "submitted": 1796,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "游戏",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1004",
+    "ratio": "9.09% (22/242)",
+    "accepted": 22,
+    "submitted": 242,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "数论",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1005",
+    "ratio": "34.55% (19/55)",
+    "accepted": 19,
+    "submitted": 55,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "字符串",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1006",
+    "ratio": "28.00% (14/50)",
+    "accepted": 14,
+    "submitted": 50,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "单峰数列",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1007",
+    "ratio": "23.83% (631/2648)",
+    "accepted": 631,
+    "submitted": 2648,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "比特跳跃",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1008",
+    "ratio": "16.82% (466/2771)",
+    "accepted": 466,
+    "submitted": 2771,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "圣芙蕾雅",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1009",
+    "ratio": "8.00% (4/50)",
+    "accepted": 4,
+    "submitted": 50,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "绘世之卷",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1010",
+    "ratio": "5.96% (14/235)",
+    "accepted": 14,
+    "submitted": 235,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "抓拍",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1011",
+    "ratio": "32.91% (568/1726)",
+    "accepted": 568,
+    "submitted": 1726,
+    "solved": true
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "死亡之组",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1126&pid=1012",
+    "ratio": "24.27% (988/4071)",
+    "accepted": 988,
+    "submitted": 4071,
+    "solved": true
+  }
+]

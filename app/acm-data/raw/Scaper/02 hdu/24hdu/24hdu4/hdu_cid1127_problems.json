@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "超维攻坚",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1001",
+    "ratio": "4.32% (16/370)",
+    "accepted": 16,
+    "submitted": 370,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "黑白边游戏",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1002",
+    "ratio": "9.09% (2/22)",
+    "accepted": 2,
+    "submitted": 22,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "最优 K 子段",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1003",
+    "ratio": "7.28% (224/3077)",
+    "accepted": 224,
+    "submitted": 3077,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "分组",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1004",
+    "ratio": "4.90% (41/837)",
+    "accepted": 41,
+    "submitted": 837,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "多层血条",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1005",
+    "ratio": "42.51% (982/2310)",
+    "accepted": 982,
+    "submitted": 2310,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "延时操控",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1006",
+    "ratio": "31.32% (88/281)",
+    "accepted": 88,
+    "submitted": 281,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "序列更新",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1007",
+    "ratio": "5.38% (324/6023)",
+    "accepted": 324,
+    "submitted": 6023,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "魔法卡牌",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1008",
+    "ratio": "6.12% (3/49)",
+    "accepted": 3,
+    "submitted": 49,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "昵称检索",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1009",
+    "ratio": "23.00% (675/2935)",
+    "accepted": 675,
+    "submitted": 2935,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "矩阵的周期",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1010",
+    "ratio": "7.84% (4/51)",
+    "accepted": 4,
+    "submitted": 51,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "找环",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1011",
+    "ratio": "7.35% (5/68)",
+    "accepted": 5,
+    "submitted": 68,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "寻找宝藏",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1127&pid=1012",
+    "ratio": "14.69% (83/565)",
+    "accepted": 83,
+    "submitted": 565,
+    "solved": true
+  }
+]

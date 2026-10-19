@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Magma Cave",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1001",
+    "ratio": "4.46% (7/157)",
+    "accepted": 7,
+    "submitted": 157,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "King's Ruins",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1002",
+    "ratio": "5.47% (75/1370)",
+    "accepted": 75,
+    "submitted": 1370,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Leshphon",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1003",
+    "ratio": "11.11% (3/27)",
+    "accepted": 3,
+    "submitted": 27,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Chaos Begin",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1004",
+    "ratio": "7.86% (250/3181)",
+    "accepted": 250,
+    "submitted": 3181,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Out of Control",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1005",
+    "ratio": "37.04% (700/1890)",
+    "accepted": 700,
+    "submitted": 1890,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Dragon Seal",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1006",
+    "ratio": "11.54% (3/26)",
+    "accepted": 3,
+    "submitted": 26,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Casino Royale",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1007",
+    "ratio": "15.38% (2/13)",
+    "accepted": 2,
+    "submitted": 13,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Teyberrs",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1008",
+    "ratio": "11.85% (16/135)",
+    "accepted": 16,
+    "submitted": 135,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Operation Hope",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1009",
+    "ratio": "21.10% (96/455)",
+    "accepted": 96,
+    "submitted": 455,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "The Mine of Abyss",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1010",
+    "ratio": "21.57% (55/255)",
+    "accepted": 55,
+    "submitted": 255,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "8-bit Zoom",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1011",
+    "ratio": "39.37% (970/2464)",
+    "accepted": 970,
+    "submitted": 2464,
+    "solved": true
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "Noblesse Code",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1096&pid=1012",
+    "ratio": "10.55% (254/2408)",
+    "accepted": 254,
+    "submitted": 2408,
+    "solved": true
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "最遥远的路",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1001",
+    "ratio": "21.75% (112/515)",
+    "accepted": 112,
+    "submitted": 515,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "不最近的路",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1002",
+    "ratio": "21.97% (38/173)",
+    "accepted": 38,
+    "submitted": 173,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "最中间的数",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1003",
+    "ratio": "17.62% (46/261)",
+    "accepted": 46,
+    "submitted": 261,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "最糖的题目",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1004",
+    "ratio": "20.47% (526/2570)",
+    "accepted": 526,
+    "submitted": 2570,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "最自律的松鼠",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1005",
+    "ratio": "32.25% (583/1808)",
+    "accepted": 583,
+    "submitted": 1808,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "最甜的小情侣",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1006",
+    "ratio": "27.88% (774/2776)",
+    "accepted": 774,
+    "submitted": 2776,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "最绝望的 hidesuwa",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1007",
+    "ratio": "24.05% (177/736)",
+    "accepted": 177,
+    "submitted": 736,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "最完全的替换",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1008",
+    "ratio": "50.54% (1068/2113)",
+    "accepted": 1068,
+    "submitted": 2113,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "最努力的活着",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1009",
+    "ratio": "21.59% (887/4109)",
+    "accepted": 887,
+    "submitted": 4109,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "最好的位置",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1010",
+    "ratio": "35.23% (347/985)",
+    "accepted": 347,
+    "submitted": 985,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "最有节目效果的一集",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1011",
+    "ratio": "13.63% (169/1240)",
+    "accepted": 169,
+    "submitted": 1240,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "最多变的序列",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1179&pid=1012",
+    "ratio": "33.04% (484/1465)",
+    "accepted": 484,
+    "submitted": 1465,
+    "solved": true
+  }
+]

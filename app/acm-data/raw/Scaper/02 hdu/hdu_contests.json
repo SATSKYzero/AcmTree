@@ -1,0 +1,602 @@
+[
+ {
+  "contest_id": "1199",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计春季联赛（3）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1199",
+  "start_time": "2026-04-03 18:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-04-03 22:30:00"
+ },
+ {
+  "contest_id": "1200",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计春季联赛（4）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1200",
+  "start_time": "2026-04-10 18:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-04-10 22:30:00"
+ },
+ {
+  "contest_id": "1201",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计春季联赛（5）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1201",
+  "start_time": "2026-04-17 18:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-04-17 22:30:00"
+ },
+ {
+  "contest_id": "1202",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计春季联赛（6）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1202",
+  "start_time": "2026-04-24 18:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-04-24 22:30:00"
+ },
+ {
+  "contest_id": "1203",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计春季联赛（7）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1203",
+  "start_time": "2026-05-08 18:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-05-08 22:30:00"
+ },
+ {
+  "contest_id": "1204",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计春季联赛（8）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1204",
+  "start_time": "2026-05-15 18:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-05-15 22:30:00"
+ },
+ {
+  "contest_id": "1205",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计春季联赛（9）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1205",
+  "start_time": "2026-05-22 18:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-05-22 22:30:00"
+ },
+ {
+  "contest_id": "1206",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计春季联赛（10）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1206",
+  "start_time": "2026-05-29 18:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-05-29 22:30:00"
+ },
+ {
+  "contest_id": "1224",
+  "contest_name": "2026 DEBUG 杯程序设计大赛",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1224",
+  "start_time": "2026-04-29 13:30:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-04-29 17:30:00"
+ },
+ {
+  "contest_id": "1225",
+  "contest_name": "“华为杯”杭州电子科技大学第二十六届大学生程序设计竞赛",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1225",
+  "start_time": "2026-06-14 12:00:00",
+  "type": "Register PrivateStart: 2026-04-28 14:04:00End : 2026-06-10 20:00:00",
+  "status": "Ended",
+  "register_info": "Registration ended",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-06-14 16:00:00"
+ },
+ {
+  "contest_id": "1229",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（1）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1229",
+  "start_time": "2026-07-21 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-07-21 17:00:00"
+ },
+ {
+  "contest_id": "1230",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（2）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1230",
+  "start_time": "2026-07-23 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-07-23 17:00:00"
+ },
+ {
+  "contest_id": "1231",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（3）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1231",
+  "start_time": "2026-07-28 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-07-28 17:00:00"
+ },
+ {
+  "contest_id": "1232",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（4）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1232",
+  "start_time": "2026-07-30 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-07-30 17:00:00"
+ },
+ {
+  "contest_id": "1233",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（5）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1233",
+  "start_time": "2026-08-04 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-08-04 17:00:00"
+ },
+ {
+  "contest_id": "1234",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（6）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1234",
+  "start_time": "2026-08-06 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-08-06 17:00:00"
+ },
+ {
+  "contest_id": "1235",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（7）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1235",
+  "start_time": "2026-08-11 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-08-11 17:00:00"
+ },
+ {
+  "contest_id": "1236",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（8）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1236",
+  "start_time": "2026-08-13 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-08-13 17:00:00"
+ },
+ {
+  "contest_id": "1237",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（9）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1237",
+  "start_time": "2026-08-18 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-08-18 17:00:00"
+ },
+ {
+  "contest_id": "1238",
+  "contest_name": "2026“钉耙编程”中国大学生算法设计暑期联赛（10）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1238",
+  "start_time": "2026-08-20 12:00:00",
+  "type": "Private",
+  "status": "Ended",
+  "register_info": "---------",
+  "register_link": "",
+  "extra": "",
+  "end_time": "2026-08-20 17:00:00"
+ },
+ {
+  "contest_id": "984",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（1）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=984",
+  "start_time": "2021-07-20 12:10:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "985",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（2）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=985",
+  "start_time": "2021-07-22 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "986",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（3）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=986",
+  "start_time": "2021-07-27 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "987",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（4）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=987",
+  "start_time": "2021-07-29 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "988",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（5）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=988",
+  "start_time": "2021-08-03 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "989",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（6）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=989",
+  "start_time": "2021-08-05 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "990",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（7）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=990",
+  "start_time": "2021-08-10 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "991",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（9）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=991",
+  "start_time": "2021-08-17 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "992",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（8）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=992",
+  "start_time": "2021-08-12 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "993",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛（10）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=993",
+  "start_time": "2021-08-19 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1023",
+  "contest_name": "2021“MINIEYE杯”中国大学生算法设计超级联赛-热身赛（2021湘潭全国邀请赛-重现）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1023",
+  "start_time": "2021-07-18 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1094",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（1）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1094",
+  "start_time": "2023-07-18 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1095",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（2）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1095",
+  "start_time": "2023-07-20 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1096",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（3）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1096",
+  "start_time": "2023-07-25 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1097",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（4）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1097",
+  "start_time": "2023-07-27 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1098",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（5）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1098",
+  "start_time": "2023-08-01 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1099",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（6）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1099",
+  "start_time": "2023-08-03 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1100",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（7）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1100",
+  "start_time": "2023-08-08 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1101",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（8）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1101",
+  "start_time": "2023-08-10 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1102",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（9）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1102",
+  "start_time": "2023-08-15 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1103",
+  "contest_name": "2023“钉耙编程”中国大学生算法设计超级联赛（10）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1103",
+  "start_time": "2023-08-17 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1125",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（2）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1125",
+  "start_time": "2024-07-22 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1126",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（3）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1126",
+  "start_time": "2024-07-26 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1127",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（4）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1127",
+  "start_time": "2024-07-29 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1128",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（5）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1128",
+  "start_time": "2024-08-02 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1129",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（6）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1129",
+  "start_time": "2024-08-05 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1130",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（7）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1130",
+  "start_time": "2024-08-09 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1131",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（8）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1131",
+  "start_time": "2024-08-12 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1132",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（9）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1132",
+  "start_time": "2024-08-16 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1133",
+  "contest_name": "2024“钉耙编程”中国大学生算法设计超级联赛（10）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1133",
+  "start_time": "2024-08-18 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1172",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（1）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1172",
+  "start_time": "2025-07-18 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1173",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（2）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1173",
+  "start_time": "2025-07-21 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1174",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（3）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1174",
+  "start_time": "2025-07-25 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1175",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（4）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1175",
+  "start_time": "2025-07-28 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1176",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（5）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1176",
+  "start_time": "2025-08-01 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1177",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（6）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1177",
+  "start_time": "2025-08-04 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1178",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（7）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1178",
+  "start_time": "2025-08-08 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1179",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（8）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1179",
+  "start_time": "2025-08-11 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1180",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（9）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1180",
+  "start_time": "2025-08-15 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ },
+ {
+  "contest_id": "1181",
+  "contest_name": "2025“钉耙编程”中国大学生算法设计暑期联赛（10）",
+  "link": "https://acm.hdu.edu.cn/contest/problems?cid=1181",
+  "start_time": "2025-08-18 12:00:00",
+  "end_time": "",
+  "type": "Private",
+  "status": ""
+ }
+]

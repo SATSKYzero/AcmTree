@@ -1,0 +1,112 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "Calculus",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1001",
+    "ratio": "23.59% (852/3611)",
+    "accepted": 852,
+    "submitted": 3611,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Kanade Loves Maze Designing",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1002",
+    "ratio": "35.74% (892/2496)",
+    "accepted": 892,
+    "submitted": 2496,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Cycle Binary",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1003",
+    "ratio": "34.78% (24/69)",
+    "accepted": 24,
+    "submitted": 69,
+    "solved": false
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Display Substring",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1004",
+    "ratio": "20.09% (212/1055)",
+    "accepted": 212,
+    "submitted": 1055,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Didn't I Say to Make My Abilities Average in the Next Life?!",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1005",
+    "ratio": "19.95% (86/431)",
+    "accepted": 86,
+    "submitted": 431,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "Directed Minimum Spanning Tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1006",
+    "ratio": "22.22% (6/27)",
+    "accepted": 6,
+    "submitted": 27,
+    "solved": false
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "Increasing Subsequence",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1007",
+    "ratio": "11.08% (40/361)",
+    "accepted": 40,
+    "submitted": 361,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Lawn of the Dead",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1008",
+    "ratio": "19.82% (436/2200)",
+    "accepted": 436,
+    "submitted": 2200,
+    "solved": false
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "License Plate Recognition",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1009",
+    "ratio": "30.21% (819/2711)",
+    "accepted": 819,
+    "submitted": 2711,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Pony Running",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1010",
+    "ratio": "52.63% (10/19)",
+    "accepted": 10,
+    "submitted": 19,
+    "solved": false
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "Travel on Tree",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=987&pid=1011",
+    "ratio": "8.97% (26/290)",
+    "accepted": 26,
+    "submitted": 290,
+    "solved": false
+  }
+]

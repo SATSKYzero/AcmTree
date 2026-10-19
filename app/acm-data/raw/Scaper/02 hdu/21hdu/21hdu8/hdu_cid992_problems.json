@@ -1,0 +1,102 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "X-liked Counting",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1001",
+    "ratio": "15.15% (35/231)",
+    "accepted": 35,
+    "submitted": 231,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "Buying Snacks",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1002",
+    "ratio": "33.18% (70/211)",
+    "accepted": 70,
+    "submitted": 211,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "Ink on paper",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1003",
+    "ratio": "19.94% (743/3727)",
+    "accepted": 743,
+    "submitted": 3727,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "Counting Stars",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1004",
+    "ratio": "16.76% (299/1784)",
+    "accepted": 299,
+    "submitted": 1784,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "Separated Number",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1005",
+    "ratio": "31.65% (138/436)",
+    "accepted": 138,
+    "submitted": 436,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "GCD Game",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1006",
+    "ratio": "20.05% (730/3640)",
+    "accepted": 730,
+    "submitted": 3640,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "A Simple Problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1007",
+    "ratio": "0.00% (0/28)",
+    "accepted": 0,
+    "submitted": 28,
+    "solved": false
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "Square Card",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1008",
+    "ratio": "22.40% (353/1576)",
+    "accepted": 353,
+    "submitted": 1576,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "Singing Superstar",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1009",
+    "ratio": "28.63% (635/2218)",
+    "accepted": 635,
+    "submitted": 2218,
+    "solved": true
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "Yinyang",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=992&pid=1010",
+    "ratio": "12.73% (7/55)",
+    "accepted": 7,
+    "submitted": 55,
+    "solved": false
+  }
+]

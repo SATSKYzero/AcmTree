@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "鸡爪",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1001",
+    "ratio": "26.07% (741/2842)",
+    "accepted": 741,
+    "submitted": 2842,
+    "solved": true
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "梦中的地牢战斗",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1002",
+    "ratio": "17.31% (67/387)",
+    "accepted": 67,
+    "submitted": 387,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "绝对不模拟的简单魔方",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1003",
+    "ratio": "23.73% (345/1454)",
+    "accepted": 345,
+    "submitted": 1454,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "a*b problem",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1004",
+    "ratio": "22.22% (6/27)",
+    "accepted": 6,
+    "submitted": 27,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "小塔的养成游戏之梦",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1005",
+    "ratio": "5.41% (2/37)",
+    "accepted": 2,
+    "submitted": 37,
+    "solved": false
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "传奇勇士小凯",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1006",
+    "ratio": "48.04% (859/1788)",
+    "accepted": 859,
+    "submitted": 1788,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "URL划分",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1007",
+    "ratio": "39.14% (984/2514)",
+    "accepted": 984,
+    "submitted": 2514,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "成长，生命，幸福",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1008",
+    "ratio": "22.51% (217/964)",
+    "accepted": 217,
+    "submitted": 964,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "强攻计策",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1009",
+    "ratio": "7.34% (8/109)",
+    "accepted": 8,
+    "submitted": 109,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "女神的睿智",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1010",
+    "ratio": "53.38% (1004/1881)",
+    "accepted": 1004,
+    "submitted": 1881,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "在 A 里面找有 C 的 B",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1011",
+    "ratio": "18.00% (629/3495)",
+    "accepted": 629,
+    "submitted": 3495,
+    "solved": true
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "图计算",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1125&pid=1012",
+    "ratio": "10.50% (61/581)",
+    "accepted": 61,
+    "submitted": 581,
+    "solved": true
+  }
+]

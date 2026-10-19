@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "简单多项式问题",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1001",
+    "ratio": "25.93% (28/108)",
+    "accepted": 28,
+    "submitted": 108,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "希望灯塔",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1002",
+    "ratio": "15.27% (51/334)",
+    "accepted": 51,
+    "submitted": 334,
+    "solved": false
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "括号凸包",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1003",
+    "ratio": "34.30% (236/688)",
+    "accepted": 236,
+    "submitted": 688,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "探索宝物",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1004",
+    "ratio": "24.54% (282/1149)",
+    "accepted": 282,
+    "submitted": 1149,
+    "solved": false
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "indigo 究竟是谁？",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1005",
+    "ratio": "25.60% (911/3559)",
+    "accepted": 911,
+    "submitted": 3559,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "三串共鸣",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1006",
+    "ratio": "26.79% (101/377)",
+    "accepted": 101,
+    "submitted": 377,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "反弹小球",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1007",
+    "ratio": "30.86% (25/81)",
+    "accepted": 25,
+    "submitted": 81,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "病毒片段",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1008",
+    "ratio": "34.43% (970/2817)",
+    "accepted": 970,
+    "submitted": 2817,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "自乘",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1009",
+    "ratio": "12.48% (174/1394)",
+    "accepted": 174,
+    "submitted": 1394,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "链上 Nim",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1010",
+    "ratio": "52.42% (823/1570)",
+    "accepted": 823,
+    "submitted": 1570,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "树形广播",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1011",
+    "ratio": "22.75% (48/211)",
+    "accepted": 48,
+    "submitted": 211,
+    "solved": false
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "仙人掌图",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1233&pid=1012",
+    "ratio": "22.08% (268/1214)",
+    "accepted": 268,
+    "submitted": 1214,
+    "solved": true
+  }
+]

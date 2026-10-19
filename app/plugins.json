@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    {
+      "name": "ContestOverview",
+      "path": "/src/features/ContestOverview/index.js",
+      "activate": "activateContestOverview"
+    },
+    {
+      "name": "Search",
+      "path": "/src/features/Search/index.js",
+      "activate": "activateSearch"
+    },
+    {
+      "name": "AutoImport",
+      "path": "/src/features/AutoImport/index.js",
+      "activate": "activateAutoImport"
+    }
+  ]
+}

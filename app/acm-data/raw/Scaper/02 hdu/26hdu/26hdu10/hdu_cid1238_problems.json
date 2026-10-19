@@ -1,0 +1,122 @@
+[
+  {
+    "problem_id": "1001",
+    "problem_id2": "A",
+    "title": "串串",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1001",
+    "ratio": "19.19% (38/198)",
+    "accepted": 38,
+    "submitted": 198,
+    "solved": false
+  },
+  {
+    "problem_id": "1002",
+    "problem_id2": "B",
+    "title": "大户爱的硬币",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1002",
+    "ratio": "55.79% (159/285)",
+    "accepted": 159,
+    "submitted": 285,
+    "solved": true
+  },
+  {
+    "problem_id": "1003",
+    "problem_id2": "C",
+    "title": "大户爱的宿舍",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1003",
+    "ratio": "34.36% (582/1694)",
+    "accepted": 582,
+    "submitted": 1694,
+    "solved": true
+  },
+  {
+    "problem_id": "1004",
+    "problem_id2": "D",
+    "title": "大户爱的干草堆",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1004",
+    "ratio": "48.66% (345/709)",
+    "accepted": 345,
+    "submitted": 709,
+    "solved": true
+  },
+  {
+    "problem_id": "1005",
+    "problem_id2": "E",
+    "title": "大户爱的生成树2",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1005",
+    "ratio": "30.30% (230/759)",
+    "accepted": 230,
+    "submitted": 759,
+    "solved": true
+  },
+  {
+    "problem_id": "1006",
+    "problem_id2": "F",
+    "title": "恋恋的序列",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1006",
+    "ratio": "47.37% (703/1484)",
+    "accepted": 703,
+    "submitted": 1484,
+    "solved": true
+  },
+  {
+    "problem_id": "1007",
+    "problem_id2": "G",
+    "title": "小白的烦恼",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1007",
+    "ratio": "29.65% (185/624)",
+    "accepted": 185,
+    "submitted": 624,
+    "solved": true
+  },
+  {
+    "problem_id": "1008",
+    "problem_id2": "H",
+    "title": "恋恋的排列",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1008",
+    "ratio": "68.25% (733/1074)",
+    "accepted": 733,
+    "submitted": 1074,
+    "solved": true
+  },
+  {
+    "problem_id": "1009",
+    "problem_id2": "I",
+    "title": "大改革",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1009",
+    "ratio": "38.74% (74/191)",
+    "accepted": 74,
+    "submitted": 191,
+    "solved": false
+  },
+  {
+    "problem_id": "1010",
+    "problem_id2": "J",
+    "title": "歪歪朋友圈",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1010",
+    "ratio": "66.96% (535/799)",
+    "accepted": 535,
+    "submitted": 799,
+    "solved": true
+  },
+  {
+    "problem_id": "1011",
+    "problem_id2": "K",
+    "title": "奶蛙的奶糖",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1011",
+    "ratio": "76.44% (759/993)",
+    "accepted": 759,
+    "submitted": 993,
+    "solved": true
+  },
+  {
+    "problem_id": "1012",
+    "problem_id2": "L",
+    "title": "飞翔的甲鱼",
+    "link": "https://acm.hdu.edu.cn/contest/problem?cid=1238&pid=1012",
+    "ratio": "15.75% (43/273)",
+    "accepted": 43,
+    "submitted": 273,
+    "solved": false
+  }
+]
